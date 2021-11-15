@@ -1,0 +1,75 @@
+.counter {
+    border: 1px solid #c7c7c7;
+    background: #fff;
+    border-radius: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100px;
+    height: 35px;
+    position: relative;
+    input[type="number"] {
+        text-align: center;
+        border: none;
+        outline: none;
+        width: 100%;
+        height: 100%;
+        -moz-appearance: textfield;
+        border-radius: 50px;
+    }
+    &-minus,
+    &-plus {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        span {
+            width: 13px;
+            height: 13px;
+            position: relative;
+            &:after {
+                width: 100%;
+                height: 1px;
+                position: absolute;
+                content: "";
+                background: #ed4040;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+    &-minus {
+        left: 0;
+        border-radius: 50px;
+    }
+    &-plus {
+        right: 0;
+        border-radius: 50px;
+        span {
+            &:before {
+                width: 1px;
+                height: 100%;
+                position: absolute;
+                content: "";
+                background: #ed4040;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+    &-minus:disabled,
+    &-plus:disabled {
+        span {
+            &:before,
+            &:after {
+                background: #c7c7c7;
+            }
+        }
+    }
+}

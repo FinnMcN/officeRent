@@ -1,0 +1,1700 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="public/css/office.min.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="overlay"></div>
+            <div class="header">
+    <div class="container">
+        <div class="header__top">
+            <a class="logo" href="./search.html">
+                <div class="logo-img">
+                    <img src="./public/images/logo-img.png" alt="" />
+                </div>
+                <div class="header__logo-company logo-company">
+                    <img src="./public/images/logo-company.png" alt="" />
+                </div>
+            </a>
+            <div class="header__input-blocks">
+                <div class="city__input def__input">
+                    <svg
+                        class="map-icon left-icon"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M12.2505 8.5C11.2855 8.5 10.5005 9.285 10.5005 10.251C10.5005 11.216 11.2855 12 12.2505 12C13.2155 12 14.0005 11.216 14.0005 10.251C14.0005 9.285 13.2155 8.5 12.2505 8.5ZM12.2505 13.5C10.4585 13.5 9.00049 12.043 9.00049 10.251C9.00049 8.458 10.4585 7 12.2505 7C14.0425 7 15.5005 8.458 15.5005 10.251C15.5005 12.043 14.0425 13.5 12.2505 13.5Z"
+                            fill="#131313"
+                        />
+                        <mask
+                            id="mask0"
+                            mask-type="alpha"
+                            maskUnits="userSpaceOnUse"
+                            x="4"
+                            y="2"
+                            width="17"
+                            height="20"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M4 2H20.4995V21.5H4V2Z"
+                                fill="white"
+                            />
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M12.2495 3.5C8.52751 3.5 5.49951 6.557 5.49951 10.313C5.49951 15.092 11.1235 19.748 12.2495 19.996C13.3755 19.747 18.9995 15.091 18.9995 10.313C18.9995 6.557 15.9715 3.5 12.2495 3.5ZM12.2495 21.5C10.4555 21.5 3.99951 15.948 3.99951 10.313C3.99951 5.729 7.70051 2 12.2495 2C16.7985 2 20.4995 5.729 20.4995 10.313C20.4995 15.948 14.0435 21.5 12.2495 21.5Z"
+                                fill="#131313"
+                            />
+                        </g>
+                    </svg>
+                    <input type="text" placeholder="Выберите город" />
+                    <button class="search-btn">
+                        <svg
+                            class="search-icon right-icon"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <mask
+                                id="search-icon1"
+                                mask-type="alpha"
+                                maskUnits="userSpaceOnUse"
+                                x="2"
+                                y="2"
+                                width="20"
+                                height="19"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M2 2H21.2231V20.7987H2V2Z"
+                                    fill="white"
+                                />
+                            </mask>
+                            <g mask="url(#search-icon1)">
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M11.6121 3.44776C7.12832 3.44776 3.48047 7.01407 3.48047 11.3988C3.48047 15.7836 7.12832 19.3509 11.6121 19.3509C16.095 19.3509 19.7428 15.7836 19.7428 11.3988C19.7428 7.01407 16.095 3.44776 11.6121 3.44776ZM11.6121 20.7987C6.31208 20.7987 2 16.5818 2 11.3988C2 6.21587 6.31208 2 11.6121 2C16.9122 2 21.2233 6.21587 21.2233 11.3988C21.2233 16.5818 16.9122 20.7987 11.6121 20.7987Z"
+                                    fill="#131313"
+                                />
+                            </g>
+                            <mask
+                                id="search-icon2"
+                                mask-type="alpha"
+                                maskUnits="userSpaceOnUse"
+                                x="17"
+                                y="17"
+                                width="6"
+                                height="5"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M17.0415 17.1599H22.0001V22H17.0415V17.1599Z"
+                                    fill="white"
+                                />
+                            </mask>
+                            <g mask="url(#search-icon2)">
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M21.2601 22C21.0716 22 20.8821 21.9296 20.737 21.7886L17.2589 18.397C16.9697 18.1142 16.9687 17.6558 17.2579 17.373C17.5461 17.0882 18.0149 17.0902 18.3051 17.371L21.7832 20.7636C22.0723 21.0464 22.0733 21.5039 21.7842 21.7867C21.6401 21.9296 21.4496 22 21.2601 22Z"
+                                    fill="#131313"
+                                />
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+                <div class="date__input def__input">
+                    <svg
+                        class="date-icon left-icon"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M3.09253 9.40426H20.9165"
+                            stroke="#131313"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></path>
+                        <path
+                            d="M16.442 13.3097H16.4512"
+                            stroke="#131313"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></path>
+                        <path
+                            d="M12.0047 13.3097H12.014"
+                            stroke="#131313"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></path>
+                        <path
+                            d="M7.55793 13.3097H7.5672"
+                            stroke="#131313"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></path>
+                        <path
+                            d="M16.442 17.1962H16.4512"
+                            stroke="#131313"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></path>
+                        <path
+                            d="M12.0047 17.1962H12.014"
+                            stroke="#131313"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></path>
+                        <path
+                            d="M7.55793 17.1962H7.5672"
+                            stroke="#131313"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></path>
+                        <path
+                            d="M16.0438 2V5.29078"
+                            stroke="#131313"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></path>
+                        <path
+                            d="M7.9654 2V5.29078"
+                            stroke="#131313"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></path>
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M16.2383 3.57919H7.77096C4.83427 3.57919 3 5.21513 3 8.22222V17.2719C3 20.3262 4.83427 22 7.77096 22H16.229C19.175 22 21 20.3546 21 17.3475V8.22222C21.0092 5.21513 19.1842 3.57919 16.2383 3.57919Z"
+                            stroke="#131313"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></path>
+                    </svg>
+
+                    <select>
+                        <option value="" disabled="" selected="" hidden="">Укажите дату</option>
+                        <option value="">asdasd</option>
+                        <option value="">asdasd</option>
+                        <option value="">asdasd</option>
+                        <option value="">asdasd</option>
+                    </select>
+                </div>
+            </div>
+            <div class="header__top-btns">
+                <div class="header-round__btns round__btns">
+                    <button class="header-round__btn round__btn" id="btn-lang">
+                        <img src="./public/images/svg/lang.svg" alt="" />
+                    </button>
+                    <button class="header-round__btn round__btn" id="btn-login">
+                        <img src="./public/images/svg/login.svg" alt="" />
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="main">
+                <div class="office">
+                    <div class="container">
+                        <div class="office__gallery">
+                            <div class="office__gallery-item">
+                                <img src="./public/images/gallery1.jpg" alt="" />
+                            </div>
+                            <div class="office__gallery-item">
+                                <img src="./public/images/gallery2.jpg" alt="" />
+                            </div>
+                            <div class="office__gallery-item">
+                                <img src="./public/images/gallery3.jpg" alt="" />
+                            </div>
+                            <div class="office__gallery-item">
+                                <img src="./public/images/gallery4.jpg" alt="" />
+                            </div>
+                            <div class="office__gallery-item">
+                                <img src="./public/images/gallery5.jpg" alt="" />
+                            </div>
+                        </div>
+                        <div class="office__main">
+                            <div class="office__about">
+                                <div class="office__about-top">
+                                    <div class="office__about-title">
+                                        Офис на этаже БЦ Васильевский
+                                    </div>
+                                    <div class="office__about-favorite">
+                                        <button class="favorite">
+                                            <svg
+                                                width="20"
+                                                height="18"
+                                                viewBox="0 0 20 18"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M19.6937 9.3491C19.8673 9.15832 19.8673 8.86676 19.6937 8.67599L12.5582 0.836242C12.2506 0.498367 11.6884 0.715926 11.6884 1.1728V4.82889C11.6884 5.10504 11.4645 5.32889 11.1884 5.32889H9.92126C4.44183 5.32889 0 9.77942 0 15.2696V16.9911C0 17.4034 0.507306 17.5998 0.784912 17.295C3.45352 14.3654 7.22946 12.6962 11.1882 12.6962C11.4643 12.6962 11.6884 12.92 11.6884 13.1962V16.8523C11.6884 17.3092 12.2506 17.5267 12.5582 17.1888L19.6937 9.3491Z"
+                                                    fill="#ED4040"
+                                                />
+                                            </svg>
+                                        </button>
+                                        <button class="favorite">
+                                            <svg
+                                                width="18"
+                                                height="17"
+                                                viewBox="0 0 18 17"
+                                                fill="transparent"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M8.53368 3.55539L9 4.76088L9.46632 3.55539C10.0587 2.02416 11.7427 0.875 13.5 0.875C15.7687 0.875 17.5 2.58497 17.5 4.875C17.5 6.44572 16.6613 7.89043 15.0808 9.64833C14.1493 10.6844 13.009 11.7799 11.6943 13.0429C10.863 13.8416 9.96195 14.7073 9 15.6671C8.03805 14.7073 7.13702 13.8416 6.30568 13.0429C4.99104 11.7799 3.85066 10.6844 2.91919 9.64833C1.3387 7.89043 0.5 6.44572 0.5 4.875C0.5 2.58497 2.23131 0.875 4.5 0.875C6.25546 0.875 7.94138 2.02426 8.53368 3.55539Z"
+                                                    stroke="#ED4040"
+                                                />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="office__about-info">
+                                    <div class="office__about-info__left">
+                                        <div class="office__about-rate">
+                                            <div class="office__about-rate__value">
+                                                <div class="rate">4.9</div>
+                                            </div>
+                                            <div class="office__about-rate__count">
+                                                (12 отзывов)
+                                            </div>
+                                        </div>
+                                        <div class="office__about-info__location">
+                                            <div class="location">Россия, Москва</div>
+                                        </div>
+                                        <div class="office__about-schedule">
+                                            <div class="schedule">
+                                                Пн-Пт 9:00 - 21:00, Сб-Вс 10:00 - 18:00
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="office__about-info__right">
+                                        <div class="office__about-price">от 2 500 ₽/сутки</div>
+                                        <div class="office__about-properties">
+                                            <div class="office__about-property">80 мест</div>
+                                            <div class="office__about-property">355 м²</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="office__about-tabs" id="tabs">
+                                    <ul>
+                                        <li><a href="#tab-desc">Описание</a></li>
+                                        <li><a href="#tab-choice">Выбор помещения</a></li>
+                                        <li><a href="#tab-map">Показать на карте</a></li>
+                                        <li><a href="#tab-comments">Отзывы</a></li>
+                                    </ul>
+                                    <div
+                                        class="office__about-tabs__desc tab__content"
+                                        id="tab-desc"
+                                    >
+                                        Квартира класса люкс в историческом центре Владимира, между
+                                        Соборной площадью и Золотыми Воротами. Дизайнерский
+                                        интерьер, современная функциональная кухня со встроенной
+                                        техникой, Wi-Fi, кабельное ТВ; кондиционер, красивая ванная
+                                        комната со стиральной машиной. Шикарная кровать — как
+                                        в дорогом отеле. Спальные места 2+2 (двуспальная кровать
+                                        может быть разделена на 2 отдельные). Зональное освещение,
+                                        звукоизоляция. Всегда горячая вода. Парковка на закрытой
+                                        территории. Квартира располагается на втором этаже жилого
+                                        дома в центре исторического треугольника города Владимира.
+                                        Окна выходят на главный Успенский собор Княгининского
+                                        монастыря, в теплое время года можно посидеть на балконе
+                                        за чашечкой чая, наслаждаясь отличным видом. Все
+                                        предусмотрено для комфортного отдыха на пару дней или
+                                        остановки подольше: есть вся кухонная утварь и техника
+                                        (тостер, электрический чайник, холодильник, СВЧ, варочная
+                                        панель, фильтр для воды), красивая посуда и столовые
+                                        приборы, бокалы, чашки и фужеры.
+                                    </div>
+                                    <div
+                                        class="office__about-tabs__choice tab__content"
+                                        id="tab-choice"
+                                    >
+                                        Квартира класса люкс в историческом центре Владимира, между
+                                        Соборной площадью и Золотыми Воротами. Дизайнерский
+                                        интерьер, современная функциональная кухня со встроенной
+                                        техникой, Wi-Fi, кабельное ТВ; кондиционер, красивая ванная
+                                        комната со стиральной машиной.
+                                    </div>
+                                    <div class="office__about-tabs__map tab__content" id="tab-map">
+                                        Квартира класса люкс в историческом центре Владимира, между
+                                        Соборной площадью и Золотыми Воротами
+                                    </div>
+                                    <div
+                                        class="office__about-tabs__comments tab__content"
+                                        id="tab-comments"
+                                    >
+                                        Квартира класса люкс в историческом центре Владимира, между
+                                        Соборной площадью и Золотыми Воротами. Дизайнерский
+                                        интерьер, современная функциональная кухня со встроенной
+                                        техникой, Wi-Fi, кабельное ТВ; кондиционер, красивая ванная
+                                        комната со стиральной машиной. Спальные места 2+2
+                                        (двуспальная кровать может быть разделена на 2 отдельные).
+                                    </div>
+                                </div>
+                                <div class="office__about-comfort">
+                                    <div class="office__about-subtitle">Общие удобства</div>
+                                    <div class="office__about-tags">
+                                        <div class="office__about-tag__column">
+                                            <div class="office__about-tag">
+                                                <div class="office__about-tag__name">
+                                                    Высокоскоростной WiFi
+                                                </div>
+                                            </div>
+                                            <div class="office__about-tag">
+                                                <div class="office__about-tag__name">
+                                                    Открыто круглосуточно
+                                                </div>
+                                            </div>
+                                            <div class="office__about-tag">
+                                                <div class="office__about-tag__name">
+                                                    Встреча гостей/секретарь
+                                                </div>
+                                            </div>
+                                            <div class="office__about-tag">
+                                                <div class="office__about-tag__name">
+                                                    <span>Кофемашина</span>
+                                                </div>
+                                            </div>
+                                            <div class="office__about-tag">
+                                                <div class="office__about-tag__name">Флипчарт</div>
+                                            </div>
+                                        </div>
+                                        <div class="office__about-tag__column">
+                                            <div class="office__about-tag">
+                                                <div class="office__about-tag__name">
+                                                    Канцелярские принадлежности
+                                                </div>
+                                            </div>
+                                            <div class="office__about-tag">
+                                                <div class="office__about-tag__name">
+                                                    Удобства переговорных комнат
+                                                </div>
+                                            </div>
+                                            <div class="office__about-tag">
+                                                <div class="office__about-tag__name">
+                                                    Оборудование для видеоконференции
+                                                </div>
+                                            </div>
+                                            <div class="office__about-tag">
+                                                <div class="office__about-tag__name">Диваны</div>
+                                            </div>
+                                            <div class="office__about-tag">
+                                                <div class="office__about-tag__name">TV</div>
+                                            </div>
+                                        </div>
+                                        <div class="office__about-tag__column">
+                                            <div class="office__about-tag">
+                                                <div class="office__about-tag__name">Проектор</div>
+                                            </div>
+                                            <div class="office__about-tag">
+                                                <div class="office__about-tag__name">Apple TV</div>
+                                            </div>
+                                            <div class="office__about-tag">
+                                                <div class="office__about-tag__name">
+                                                    Оборудование
+                                                </div>
+                                            </div>
+                                            <div class="office__about-tag">
+                                                <div class="office__about-tag__name">Есть ПК</div>
+                                            </div>
+                                            <div class="office__about-tag">
+                                                <div class="office__about-tag__name">Микрофон</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="office__about-show__more show__more">
+                                        <span>Показать еще</span>
+                                        <svg
+                                            width="16"
+                                            height="10"
+                                            viewBox="0 0 16 10"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M15 1.5L8 8.5L1 1.5"
+                                                stroke="#717171"
+                                                stroke-width="1.5"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            ></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <!-- TABLES -->
+                                <div class="office__about-table">
+                                    <div class="office__about-table__tabs" id="tabs">
+                                        <ul>
+                                            <li><a href="">Рабочие места</a></li>
+                                            <li><a href="">Закрытые кабинеты</a></li>
+                                            <li><a href="">Переговорные комнаты</a></li>
+                                            <li><a href="">Конференц-залы</a></li>
+                                        </ul>
+                                        <div class="office__about-table__item">
+                                            <div class="office__about-table__row">
+                                                <div class="office__about-table__row-items">
+                                                    <div class="office__about-table__row-item">
+                                                        Название
+                                                    </div>
+                                                    <div class="office__about-table__row-item">
+                                                        Вместимость
+                                                    </div>
+                                                    <div class="office__about-table__row-item">
+                                                        Кол-во
+                                                    </div>
+                                                    <div class="office__about-table__row-item">
+                                                        Цена
+                                                    </div>
+                                                    <div class="office__about-table__row-item">
+                                                        Часы доступа
+                                                    </div>
+                                                    <div class="office__about-table__row-item">
+                                                        Минимальный<br />
+                                                        срок аренды
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="office__about-table__row">
+                                                <div class="office__about-table__row-items">
+                                                    <div class="office__about-table__row-item">
+                                                        Офис на этаже<br />
+                                                        БЦ Васильевский
+                                                    </div>
+                                                    <div class="office__about-table__row-item">
+                                                        <span>80 мест</span>
+                                                    </div>
+                                                    <div class="office__about-table__row-item">
+                                                        1
+                                                    </div>
+                                                    <div class="office__about-table__row-item">
+                                                        2 500 ₽
+                                                    </div>
+                                                    <div class="office__about-table__row-item">
+                                                        <div
+                                                            class="
+                                                                office__about-table__row-item__wrapper
+                                                            "
+                                                        >
+                                                            <svg
+                                                                width="20"
+                                                                height="20"
+                                                                viewBox="0 0 20 20"
+                                                                fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                            >
+                                                                <path
+                                                                    fill-rule="evenodd"
+                                                                    clip-rule="evenodd"
+                                                                    d="M5.665 1.5C3.135 1.5 1.5 3.233 1.5 5.916V14.084C1.5 16.767 3.135 18.5 5.665 18.5H14.333C16.864 18.5 18.5 16.767 18.5 14.084V5.916C18.5 3.233 16.865 1.5 14.334 1.5H5.665ZM14.333 20H5.665C2.276 20 0 17.622 0 14.084V5.916C0 2.378 2.276 0 5.665 0H14.334C17.723 0 20 2.378 20 5.916V14.084C20 17.622 17.723 20 14.333 20Z"
+                                                                    fill="#ED4040"
+                                                                />
+                                                                <path
+                                                                    fill-rule="evenodd"
+                                                                    clip-rule="evenodd"
+                                                                    d="M13.39 12.7675C13.259 12.7675 13.127 12.7335 13.006 12.6625L9.61502 10.6395C9.38902 10.5035 9.24902 10.2585 9.24902 9.99554V5.63354C9.24902 5.21954 9.58502 4.88354 9.99902 4.88354C10.413 4.88354 10.749 5.21954 10.749 5.63354V9.56954L13.775 11.3725C14.13 11.5855 14.247 12.0455 14.035 12.4015C13.894 12.6365 13.645 12.7675 13.39 12.7675Z"
+                                                                    fill="#ED4040"
+                                                                />
+                                                            </svg>
+                                                            10:00 - 22:00
+                                                        </div>
+                                                    </div>
+                                                    <div class="office__about-table__row-item">
+                                                        час
+                                                    </div>
+                                                </div>
+                                                <div class="office__about-table__desc">
+                                                    <div class="office__about-table__desc-inner">
+                                                        <div
+                                                            class="office__about-table__desc-slider"
+                                                        >
+                                                            <div class="office__slider">
+    <div class="office__slider-items slider-wrapper">
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item1.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item2.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item3.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item2.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item1.jpg" alt="" />
+        </div>
+    </div>
+    <div class="office__slider-btn__prev"></div>
+    <div class="office__slider-btn__next"></div>
+</div>
+                                                        </div>
+                                                        <div class="office__about-table__desc-text">
+                                                            <div
+                                                                class="
+                                                                    office__about-table__desc-tags
+                                                                "
+                                                            >
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Высокоскоростной WiFi
+                                                                </div>
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Открыто круглосуточно
+                                                                </div>
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Микрофон
+                                                                </div>
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Есть ПК
+                                                                </div>
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Встреча гостей/секретарь
+                                                                </div>
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Кофемашина
+                                                                </div>
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Флипчат
+                                                                </div>
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Проектор
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="
+                                                                    office__about-table__desc-about
+                                                                "
+                                                            >
+                                                                Офис класса люкс в историческом
+                                                                центре Владимира, между Соборной
+                                                                площадью и Золотыми Воротами.
+                                                                Дизайнерский интерьер, современная
+                                                                функциональная кухня со встроенной
+                                                                техникой, Wi-Fi, кабельное ТВ;
+                                                                кондиционер, красивая ванная комната
+                                                                со стиральной машиной. Шикарная
+                                                                кровать - как в дорогом отеле.
+                                                                Спальные места 2+2 (двуспальная
+                                                                кровать может быть разделена на 2
+                                                                отдельные).
+                                                            </div>
+                                                            <div
+                                                                class="
+                                                                    office__about-table__desc-btn
+                                                                "
+                                                            >
+                                                                <button class="def__btn red__btn">
+                                                                    <span>Забронировать</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="office__about-table__row">
+                                                <div class="office__about-table__row-items">
+                                                    <div class="office__about-table__row-item">
+                                                        Офис на Орловской
+                                                    </div>
+                                                    <div class="office__about-table__row-item">
+                                                        <span>45 мест</span>
+                                                    </div>
+                                                    <div class="office__about-table__row-item">
+                                                        2
+                                                    </div>
+                                                    <div class="office__about-table__row-item">
+                                                        800 ₽
+                                                    </div>
+                                                    <div class="office__about-table__row-item">
+                                                        <div
+                                                            class="
+                                                                office__about-table__row-item__wrapper
+                                                            "
+                                                        >
+                                                            <svg
+                                                                width="20"
+                                                                height="20"
+                                                                viewBox="0 0 20 20"
+                                                                fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                            >
+                                                                <path
+                                                                    fill-rule="evenodd"
+                                                                    clip-rule="evenodd"
+                                                                    d="M5.665 1.5C3.135 1.5 1.5 3.233 1.5 5.916V14.084C1.5 16.767 3.135 18.5 5.665 18.5H14.333C16.864 18.5 18.5 16.767 18.5 14.084V5.916C18.5 3.233 16.865 1.5 14.334 1.5H5.665ZM14.333 20H5.665C2.276 20 0 17.622 0 14.084V5.916C0 2.378 2.276 0 5.665 0H14.334C17.723 0 20 2.378 20 5.916V14.084C20 17.622 17.723 20 14.333 20Z"
+                                                                    fill="#ED4040"
+                                                                />
+                                                                <path
+                                                                    fill-rule="evenodd"
+                                                                    clip-rule="evenodd"
+                                                                    d="M13.39 12.7675C13.259 12.7675 13.127 12.7335 13.006 12.6625L9.61502 10.6395C9.38902 10.5035 9.24902 10.2585 9.24902 9.99554V5.63354C9.24902 5.21954 9.58502 4.88354 9.99902 4.88354C10.413 4.88354 10.749 5.21954 10.749 5.63354V9.56954L13.775 11.3725C14.13 11.5855 14.247 12.0455 14.035 12.4015C13.894 12.6365 13.645 12.7675 13.39 12.7675Z"
+                                                                    fill="#ED4040"
+                                                                />
+                                                            </svg>
+                                                            10:00 - 22:00
+                                                        </div>
+                                                    </div>
+                                                    <div class="office__about-table__row-item">
+                                                        день
+                                                    </div>
+                                                </div>
+                                                <div class="office__about-table__desc">
+                                                    <div class="office__about-table__desc-inner">
+                                                        <div
+                                                            class="office__about-table__desc-slider"
+                                                        >
+                                                            <div class="office__slider">
+    <div class="office__slider-items slider-wrapper">
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item1.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item2.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item3.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item2.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item1.jpg" alt="" />
+        </div>
+    </div>
+    <div class="office__slider-btn__prev"></div>
+    <div class="office__slider-btn__next"></div>
+</div>
+                                                        </div>
+                                                        <div class="office__about-table__desc-text">
+                                                            <div
+                                                                class="
+                                                                    office__about-table__desc-tags
+                                                                "
+                                                            >
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Высокоскоростной WiFi
+                                                                </div>
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Открыто круглосуточно
+                                                                </div>
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Микрофон
+                                                                </div>
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Есть ПК
+                                                                </div>
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Встреча гостей/секретарь
+                                                                </div>
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Кофемашина
+                                                                </div>
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Флипчат
+                                                                </div>
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Проектор
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="
+                                                                    office__about-table__desc-about
+                                                                "
+                                                            >
+                                                                Офис класса люкс в историческом
+                                                                центре Владимира, между Соборной
+                                                                площадью и Золотыми Воротами.
+                                                                Дизайнерский интерьер, современная
+                                                                функциональная кухня со встроенной
+                                                                техникой, Wi-Fi, кабельное ТВ;
+                                                                кондиционер, красивая ванная комната
+                                                                со стиральной машиной. Шикарная
+                                                                кровать - как в дорогом отеле.
+                                                                Спальные места 2+2 (двуспальная
+                                                                кровать может быть разделена на 2
+                                                                отдельные).
+                                                            </div>
+                                                            <div
+                                                                class="
+                                                                    office__about-table__desc-btn
+                                                                "
+                                                            >
+                                                                <button class="def__btn red__btn">
+                                                                    <span>Забронировать</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="office__about-table__row">
+                                                <div class="office__about-table__row-items">
+                                                    <div class="office__about-table__row-item">
+                                                        Зал для переговоров
+                                                    </div>
+                                                    <div class="office__about-table__row-item">
+                                                        <span>36 мест</span>
+                                                    </div>
+                                                    <div class="office__about-table__row-item">
+                                                        2
+                                                    </div>
+                                                    <div class="office__about-table__row-item">
+                                                        1 500 ₽
+                                                    </div>
+                                                    <div class="office__about-table__row-item">
+                                                        <div
+                                                            class="
+                                                                office__about-table__row-item__wrapper
+                                                            "
+                                                        >
+                                                            <svg
+                                                                width="20"
+                                                                height="20"
+                                                                viewBox="0 0 20 20"
+                                                                fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                            >
+                                                                <path
+                                                                    fill-rule="evenodd"
+                                                                    clip-rule="evenodd"
+                                                                    d="M5.665 1.5C3.135 1.5 1.5 3.233 1.5 5.916V14.084C1.5 16.767 3.135 18.5 5.665 18.5H14.333C16.864 18.5 18.5 16.767 18.5 14.084V5.916C18.5 3.233 16.865 1.5 14.334 1.5H5.665ZM14.333 20H5.665C2.276 20 0 17.622 0 14.084V5.916C0 2.378 2.276 0 5.665 0H14.334C17.723 0 20 2.378 20 5.916V14.084C20 17.622 17.723 20 14.333 20Z"
+                                                                    fill="#ED4040"
+                                                                />
+                                                                <path
+                                                                    fill-rule="evenodd"
+                                                                    clip-rule="evenodd"
+                                                                    d="M13.39 12.7675C13.259 12.7675 13.127 12.7335 13.006 12.6625L9.61502 10.6395C9.38902 10.5035 9.24902 10.2585 9.24902 9.99554V5.63354C9.24902 5.21954 9.58502 4.88354 9.99902 4.88354C10.413 4.88354 10.749 5.21954 10.749 5.63354V9.56954L13.775 11.3725C14.13 11.5855 14.247 12.0455 14.035 12.4015C13.894 12.6365 13.645 12.7675 13.39 12.7675Z"
+                                                                    fill="#ED4040"
+                                                                />
+                                                            </svg>
+                                                            10:00 - 22:00
+                                                        </div>
+                                                    </div>
+                                                    <div class="office__about-table__row-item">
+                                                        день
+                                                    </div>
+                                                </div>
+                                                <div class="office__about-table__desc">
+                                                    <div class="office__about-table__desc-inner">
+                                                        <div
+                                                            class="office__about-table__desc-slider"
+                                                        >
+                                                            <div class="office__slider">
+    <div class="office__slider-items slider-wrapper">
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item1.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item2.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item3.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item2.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item1.jpg" alt="" />
+        </div>
+    </div>
+    <div class="office__slider-btn__prev"></div>
+    <div class="office__slider-btn__next"></div>
+</div>
+                                                        </div>
+                                                        <div class="office__about-table__desc-text">
+                                                            <div
+                                                                class="
+                                                                    office__about-table__desc-tags
+                                                                "
+                                                            >
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Высокоскоростной WiFi
+                                                                </div>
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Открыто круглосуточно
+                                                                </div>
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Микрофон
+                                                                </div>
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Есть ПК
+                                                                </div>
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Встреча гостей/секретарь
+                                                                </div>
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Кофемашина
+                                                                </div>
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Флипчат
+                                                                </div>
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Проектор
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="
+                                                                    office__about-table__desc-about
+                                                                "
+                                                            >
+                                                                Офис класса люкс в историческом
+                                                                центре Владимира, между Соборной
+                                                                площадью и Золотыми Воротами.
+                                                                Дизайнерский интерьер, современная
+                                                                функциональная кухня со встроенной
+                                                                техникой, Wi-Fi, кабельное ТВ;
+                                                                кондиционер, красивая ванная комната
+                                                                со стиральной машиной. Шикарная
+                                                                кровать - как в дорогом отеле.
+                                                                Спальные места 2+2 (двуспальная
+                                                                кровать может быть разделена на 2
+                                                                отдельные).
+                                                            </div>
+                                                            <div
+                                                                class="
+                                                                    office__about-table__desc-btn
+                                                                "
+                                                            >
+                                                                <button class="def__btn red__btn">
+                                                                    <span>Забронировать</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="office__about-table__row">
+                                                <div class="office__about-table__row-items">
+                                                    <div class="office__about-table__row-item">
+                                                        Офис Бизнес
+                                                    </div>
+                                                    <div class="office__about-table__row-item">
+                                                        <span>45 мест</span>
+                                                    </div>
+                                                    <div class="office__about-table__row-item">
+                                                        2
+                                                    </div>
+                                                    <div class="office__about-table__row-item">
+                                                        800 ₽
+                                                    </div>
+                                                    <div class="office__about-table__row-item">
+                                                        <div
+                                                            class="
+                                                                office__about-table__row-item__wrapper
+                                                            "
+                                                        >
+                                                            <svg
+                                                                width="20"
+                                                                height="20"
+                                                                viewBox="0 0 20 20"
+                                                                fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                            >
+                                                                <path
+                                                                    fill-rule="evenodd"
+                                                                    clip-rule="evenodd"
+                                                                    d="M5.665 1.5C3.135 1.5 1.5 3.233 1.5 5.916V14.084C1.5 16.767 3.135 18.5 5.665 18.5H14.333C16.864 18.5 18.5 16.767 18.5 14.084V5.916C18.5 3.233 16.865 1.5 14.334 1.5H5.665ZM14.333 20H5.665C2.276 20 0 17.622 0 14.084V5.916C0 2.378 2.276 0 5.665 0H14.334C17.723 0 20 2.378 20 5.916V14.084C20 17.622 17.723 20 14.333 20Z"
+                                                                    fill="#ED4040"
+                                                                />
+                                                                <path
+                                                                    fill-rule="evenodd"
+                                                                    clip-rule="evenodd"
+                                                                    d="M13.39 12.7675C13.259 12.7675 13.127 12.7335 13.006 12.6625L9.61502 10.6395C9.38902 10.5035 9.24902 10.2585 9.24902 9.99554V5.63354C9.24902 5.21954 9.58502 4.88354 9.99902 4.88354C10.413 4.88354 10.749 5.21954 10.749 5.63354V9.56954L13.775 11.3725C14.13 11.5855 14.247 12.0455 14.035 12.4015C13.894 12.6365 13.645 12.7675 13.39 12.7675Z"
+                                                                    fill="#ED4040"
+                                                                />
+                                                            </svg>
+                                                            10:00 - 22:00
+                                                        </div>
+                                                    </div>
+                                                    <div class="office__about-table__row-item">
+                                                        день
+                                                    </div>
+                                                </div>
+                                                <div class="office__about-table__desc">
+                                                    <div class="office__about-table__desc-inner">
+                                                        <div
+                                                            class="office__about-table__desc-slider"
+                                                        >
+                                                            <div class="office__slider">
+    <div class="office__slider-items slider-wrapper">
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item1.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item2.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item3.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item2.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item1.jpg" alt="" />
+        </div>
+    </div>
+    <div class="office__slider-btn__prev"></div>
+    <div class="office__slider-btn__next"></div>
+</div>
+                                                        </div>
+                                                        <div class="office__about-table__desc-text">
+                                                            <div
+                                                                class="
+                                                                    office__about-table__desc-tags
+                                                                "
+                                                            >
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Высокоскоростной WiFi
+                                                                </div>
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Открыто круглосуточно
+                                                                </div>
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Микрофон
+                                                                </div>
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Есть ПК
+                                                                </div>
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Встреча гостей/секретарь
+                                                                </div>
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Кофемашина
+                                                                </div>
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Флипчат
+                                                                </div>
+                                                                <div
+                                                                    class="
+                                                                        office__about-table__desc-tag
+                                                                    "
+                                                                >
+                                                                    Проектор
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="
+                                                                    office__about-table__desc-about
+                                                                "
+                                                            >
+                                                                Офис класса люкс в историческом
+                                                                центре Владимира, между Соборной
+                                                                площадью и Золотыми Воротами.
+                                                                Дизайнерский интерьер, современная
+                                                                функциональная кухня со встроенной
+                                                                техникой, Wi-Fi, кабельное ТВ;
+                                                                кондиционер, красивая ванная комната
+                                                                со стиральной машиной. Шикарная
+                                                                кровать - как в дорогом отеле.
+                                                                Спальные места 2+2 (двуспальная
+                                                                кровать может быть разделена на 2
+                                                                отдельные).
+                                                            </div>
+                                                            <div
+                                                                class="
+                                                                    office__about-table__desc-btn
+                                                                "
+                                                            >
+                                                                <button class="def__btn red__btn">
+                                                                    <span>Забронировать</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- TABLES -->
+                                <div class="office__about-location">
+                                    <div class="office__about-subtitle">Офис на карте</div>
+                                    <div class="office__about-map">
+                                        <div style="position: relative; overflow: hidden">
+                                            <a
+                                                href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps"
+                                                style="
+                                                    color: #eee;
+                                                    font-size: 12px;
+                                                    position: absolute;
+                                                    top: 0px;
+                                                "
+                                                >Москва</a
+                                            ><a
+                                                href="https://yandex.ru/maps/geo/moskva/53166393/?ll=37.646930%2C55.725146&utm_medium=mapframe&utm_source=maps&z=10.08"
+                                                style="
+                                                    color: #eee;
+                                                    font-size: 12px;
+                                                    position: absolute;
+                                                    top: 14px;
+                                                "
+                                                >Москва — Яндекс.Карты</a
+                                            ><iframe
+                                                src="https://yandex.ru/map-widget/v1/-/CCUinJDcDB"
+                                                width="100%"
+                                                height="100%"
+                                                frameborder="1"
+                                                allowfullscreen="true"
+                                                style="position: relative"
+                                            ></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="office__booking">
+                                <div class="booking__form">
+    <div class="booking__form-inner">
+        <button class="booking__form-date">
+            <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M1.09277 8.40427H18.9167"
+        stroke="#131313"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+    <path
+        d="M14.442 12.3097H14.4512"
+        stroke="#131313"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+    <path
+        d="M10.0045 12.3097H10.0137"
+        stroke="#131313"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+    <path
+        d="M5.55818 12.3097H5.56744"
+        stroke="#131313"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+    <path
+        d="M14.442 16.1962H14.4512"
+        stroke="#131313"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+    <path
+        d="M10.0045 16.1962H10.0137"
+        stroke="#131313"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+    <path
+        d="M5.55818 16.1962H5.56744"
+        stroke="#131313"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+    <path
+        d="M14.0433 1V4.29078"
+        stroke="#131313"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+    <path
+        d="M5.96515 1V4.29078"
+        stroke="#131313"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+    <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M14.2383 2.57919H5.77096C2.83427 2.57919 1 4.21513 1 7.22222V16.2719C1 19.3262 2.83427 21 5.77096 21H14.229C17.175 21 19 19.3546 19 16.3475V7.22222C19.0092 4.21513 17.1842 2.57919 14.2383 2.57919Z"
+        stroke="#131313"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+</svg>
+            <span>Укажите дату и время</span>
+        </button>
+        <div class="booking__items">
+            <div class="booking__item">
+                <div class="booking__item-row">
+                    <div class="booking__item-title">Место у окна</div>
+                    <div class="booking__item-price">200 ₽/час</div>
+                </div>
+                <div class="booking__item-row">
+                    <div class="booking__item-title">Количество</div>
+                    <div class="booking__item-counter">
+                        <div class="counter">
+    <button class="counter-minus">
+        <span></span>
+    </button>
+    <input type="number" />
+    <button class="counter-plus">
+        <span></span>
+    </button>
+</div>
+                        <div class="booking__item-remove">
+                            <button class="remove">
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M17.75 2.00006L16 0.250061L9 7.25006L2 0.250061L0.25 2.00006L7.25 9.00006L0.25 16.0001L2 17.7501L9 10.7501L16 17.7501L17.75 16.0001L10.75 9.00006L17.75 2.00006Z"
+            fill="#C7C7C7"
+        />
+    </svg>
+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="booking__item-total">
+                    <div class="booking__item-title">Итого</div>
+                    <div class="booking__item-price booking__item-price__total" data-value="1000">
+                        1 000 ₽
+                    </div>
+                </div>
+            </div>
+            <div class="booking__item">
+                <div class="booking__item-row">
+                    <div class="booking__item-title">Кабинеты с креслом</div>
+                    <div class="booking__item-price">500 ₽/час</div>
+                </div>
+                <div class="booking__item-row">
+                    <div class="booking__item-title">Количество</div>
+                    <div class="booking__item-counter">
+                        <div class="counter">
+    <button class="counter-minus">
+        <span></span>
+    </button>
+    <input type="number" />
+    <button class="counter-plus">
+        <span></span>
+    </button>
+</div>
+                        <div class="booking__item-remove">
+                            <button class="remove">
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M17.75 2.00006L16 0.250061L9 7.25006L2 0.250061L0.25 2.00006L7.25 9.00006L0.25 16.0001L2 17.7501L9 10.7501L16 17.7501L17.75 16.0001L10.75 9.00006L17.75 2.00006Z"
+            fill="#C7C7C7"
+        />
+    </svg>
+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="booking__item-total">
+                    <div class="booking__item-title">Итого</div>
+                    <div class="booking__item-price booking__item-price__total" data-value="7500">
+                        7 500 ₽
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="booking__bill">
+            <div class="booking__bill-rows">
+                <div class="booking__bill-row">
+                    <div class="booking__bill-row__left">
+                        <div class="booking__item-title">Место у окна -</div>
+                        <div class="booking__item-number">&nbsp;1</div>
+                    </div>
+                    <div class="booking__bill-price">1 000 ₽</div>
+                </div>
+                <div class="booking__bill-row">
+                    <div class="booking__bill-row__left">
+                        <div class="booking__item-title">Кабинеты с креслом -</div>
+                        <div class="booking__item-number">&nbsp;15</div>
+                    </div>
+                    <div class="booking__bill-price">7 500 ₽</div>
+                </div>
+                <div class="booking__bill-row">
+                    <div class="booking__bill-row__left">
+                        <div class="booking__item-title">Сбор за услуги Getdesk</div>
+                    </div>
+                    <div class="booking__bill-price">400 ₽</div>
+                </div>
+            </div>
+            <div class="booking__item-total">
+                <div class="booking__item-title">Итого</div>
+                <div class="booking__item-price booking__item-price__total" data-value="7500">
+                    7 500 ₽
+                </div>
+            </div>
+        </div>
+        <button class="booking-btn def__btn red__btn">
+            <span>Забронировать</span>
+        </button>
+    </div>
+</div>
+                            </div>
+                        </div>
+                        <div class="office__comments">
+                            <div class="office__comments-top">
+                                <div class="office__comments-title">Отзывы</div>
+                                <div class="office__comments-info">
+                                    <div class="office__comments-rate">
+                                        <div class="office__about-rate">
+                                            <div class="office__about-rate__value">
+                                                <div class="rate">4.9</div>
+                                            </div>
+                                            <div class="office__about-rate__count">
+                                                (12 отзывов)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="office__comments-show__more show__more">
+                                        <span>Показать еще</span>
+                                        <svg
+                                            width="16"
+                                            height="10"
+                                            viewBox="0 0 16 10"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M15 1.5L8 8.5L1 1.5"
+                                                stroke="#717171"
+                                                stroke-width="1.5"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            ></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="office__comments-items">
+                                <div class="office__comments-item">
+                                    <div class="office__comments-item__profile">
+                                        <div class="office__comments-item__avatar">
+                                            <img src="./public/images/avatar1.jpg" alt="" />
+                                        </div>
+                                        <div class="office__comments-item__name">Мариев Антон</div>
+                                    </div>
+                                    <div class="office__comments-item__text">
+                                        Отмечу, что офис соответствует описанию. Находится в центре,
+                                        в пешей доступности до всех главных достопримечательностей
+                                        города. Екатерина учла все наши пожелания: разделили кровать
+                                        на две раздельные. Хочу сказать, что на троих номер тесноват
+                                        тогда, когда раскладывается диван. Это надо учитывать. На
+                                        мой взгляд, минус в колонке, которая трещит и гудит. Горячую
+                                        воду мы не настраивали самостоятельно. Получается маленький
+                                        напор. Это те минусы, которые я бы отметила. Существенно на
+                                        наш отдых они не повлияли.
+                                    </div>
+                                </div>
+                                <div class="office__comments-item">
+                                    <div class="office__comments-item__profile">
+                                        <div class="office__comments-item__avatar">
+                                            <img src="./public/images/avatar2.jpg" alt="" />
+                                        </div>
+                                        <div class="office__comments-item__name">
+                                            Александр Микулашвилли
+                                        </div>
+                                    </div>
+                                    <div class="office__comments-item__text">
+                                        Удобно. Гостеприимно. Без проблем. Лучше ожиданий.
+                                    </div>
+                                </div>
+                                <div class="office__comments-item">
+                                    <div class="office__comments-item__profile">
+                                        <div class="office__comments-item__avatar">
+                                            <img src="./public/images/avatar3.jpg" alt="" />
+                                        </div>
+                                        <div class="office__comments-item__name">Ольга Мурзина</div>
+                                    </div>
+                                    <div class="office__comments-item__text">
+                                        Идеальный вариант! Нет лишней мороки с ключами — доступ в
+                                        офис по коду на двери. Отличное местоположение, все
+                                        туристические достопримечательности под рукой...
+                                        Огромная...кровать с тёплым одеялом и удобными подушками,
+                                        красивый интерьер, чисто и светло.
+                                    </div>
+                                </div>
+                                <div class="office__comments-item">
+                                    <div class="office__comments-item__profile">
+                                        <div class="office__comments-item__avatar">
+                                            <img src="./public/images/avatar1.jpg" alt="" />
+                                        </div>
+                                        <div class="office__comments-item__name">Мариев Антон</div>
+                                    </div>
+                                    <div class="office__comments-item__text">
+                                        Отмечу, что офис соответствует описанию. Находится в центре,
+                                        в пешей доступности до всех главных достопримечательностей
+                                        города. Екатерина учла все наши пожелания: разделили кровать
+                                        на две раздельные. Хочу сказать, что на троих номер тесноват
+                                        тогда, когда раскладывается диван. Это надо учитывать. На
+                                        мой взгляд, минус в колонке, которая трещит и гудит. Горячую
+                                        воду мы не настраивали самостоятельно. Получается маленький
+                                        напор. Это те минусы, которые я бы отметила. Существенно на
+                                        наш отдых они не повлияли.
+                                    </div>
+                                </div>
+                                <div class="office__comments-item">
+                                    <div class="office__comments-item__profile">
+                                        <div class="office__comments-item__avatar">
+                                            <img src="./public/images/avatar5.jpg" alt="" />
+                                        </div>
+                                        <div class="office__comments-item__name">
+                                            Алиев Сулейман
+                                        </div>
+                                    </div>
+                                    <div class="office__comments-item__text">
+                                        Офис в центре, с закрытым двориком,где можно поставить
+                                        машину. Спальное место удобное,приятное бельё. Мойка у окна
+                                        во двор.Все удобства. Нам понравилось,спасибо.
+                                    </div>
+                                </div>
+                                <div class="office__comments-item">
+                                    <div class="office__comments-item__profile">
+                                        <div class="office__comments-item__avatar">
+                                            <img src="./public/images/avatar6.jpg" alt="" />
+                                        </div>
+                                        <div class="office__comments-item__name">
+                                            Манджиева Саманта
+                                        </div>
+                                    </div>
+                                    <div class="office__comments-item__text">
+                                        Офис в центре, с закрытым двориком,где можно поставить
+                                        машину. Рабочее место удобное,приятное бельё. Мойка у окна
+                                        во двор.Все удобства. Нам понравилось,спасибо.
+                                    </div>
+                                </div>
+                                <div class="office__comments-item">
+                                    <div class="office__comments-item__profile">
+                                        <div class="office__comments-item__avatar">
+                                            <img src="./public/images/avatar3.jpg" alt="" />
+                                        </div>
+                                        <div class="office__comments-item__name">Ольга Мурзина</div>
+                                    </div>
+                                    <div class="office__comments-item__text">
+                                        Отмечу, что офис соответствует описанию. Находится в центре,
+                                        в пешей доступности до всех главных достопримечательностей
+                                        города. Екатерина учла все наши пожелания: разделили кровать
+                                        на две раздельные. Хочу сказать, что на троих номер тесноват
+                                        тогда, когда раскладывается диван. Это надо учитывать. На
+                                        мой взгляд, минус в колонке, которая трещит и гудит. Горячую
+                                        воду мы не настраивали самостоятельно. Получается маленький
+                                        напор. Это те минусы, которые я бы отметила. Существенно на
+                                        наш отдых они не повлияли.
+                                    </div>
+                                </div>
+                                <div class="office__comments-item">
+                                    <div class="office__comments-item__profile">
+                                        <div class="office__comments-item__avatar">
+                                            <img src="./public/images/avatar2.jpg" alt="" />
+                                        </div>
+                                        <div class="office__comments-item__name">
+                                            Александр Микулашвилли
+                                        </div>
+                                    </div>
+                                    <div class="office__comments-item__text">
+                                        Отмечу, что офис соответствует описанию. Находится в центре,
+                                        в пешей доступности до всех главных достопримечательностей
+                                        города. Екатерина учла все наши пожелания: разделили кровать
+                                        на две раздельные. Хочу сказать, что на троих номер тесноват
+                                        тогда, когда раскладывается диван. Это надо учитывать. На
+                                        мой взгляд, минус в колонке, которая трещит и гудит. Горячую
+                                        воду мы не настраивали самостоятельно. Получается маленький
+                                        напор. Это те минусы, которые я бы отметила. Существенно на
+                                        наш отдых они не повлияли.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+    <div class="container">
+        <div class="footer__info">
+            <div class="footer__info-item">
+                <div class="footer__info-left">
+                    <div class="footer__logo">
+                        <a class="logo" href="./search.html">
+                            <div class="logo-img">
+                                <img src="./public/images/logo-img.png" alt="" />
+                            </div>
+                            <div class="logo-company">
+                                <img src="./public/images/logo-company.png" alt="" />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="footer__socials">
+                        <div class="socials">
+                            <div class="socials-item" id="telegram">
+                                <div class="socials-item__icon">
+                                    <img src="./public/images/svg/telegram.svg" alt="" />
+                                </div>
+                            </div>
+                            <div class="socials-item" id="facebook">
+                                <div class="socials-item__icon">
+                                    <img src="./public/images/svg/facebook.svg" alt="" />
+                                </div>
+                            </div>
+                            <div class="socials-item" id="vk">
+                                <div class="socials-item__icon">
+                                    <img src="./public/images/svg/vk.svg" alt="" />
+                                </div>
+                            </div>
+                            <div class="socials-item" id="instagram">
+                                <div class="socials-item__icon">
+                                    <img src="./public/images/svg/instagram.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__info-item">
+                <div class="footer__info-nav">
+                    <div class="footer__info-nav__row">
+                        <div class="footer__info-nav__column">
+                            <div class="footer__info-nav__title">Сообщество</div>
+                            <a class="footer__info-nav__link" href="#"> Реферальная программа </a>
+                        </div>
+                        <div class="footer__info-nav__column">
+                            <div class="footer__info-nav__title">Компания</div>
+                            <a class="footer__info-nav__link" href="#"> О сервисе </a>
+                        </div>
+                    </div>
+                    <div class="footer__info-nav__row">
+                        <div class="footer__info-nav__column">
+                            <div class="footer__info-nav__title">Помощь</div>
+                            <a class="footer__info-nav__link" href="#"> Свяжитесь с нами </a>
+                        </div>
+                        <div class="footer__info-nav__column">
+                            <div class="footer__info-nav__title">Аренда</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__policy">
+            <div class="footer__policy-inner">
+                <div class="footer__policy-text">
+                    <div class="footer__policy-name">© 2021 Getdesk.</div>
+                    <div class="footer__policy-links">
+                        <div class="footer__policy-link">
+                            <a href="">Конфиденциальность</a>
+                        </div>
+                        <div class="footer__policy-link">
+                            <a href="">Условия использования</a>
+                        </div>
+                        <div class="footer__policy-link">
+                            <a href="">Реквизиты компании</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__policy-inner__item">
+                    <div class="footer__policy-currency">
+                        <div class="footer-round__btn round__btn" id="lang-btn">
+                            <img src="./public/images/svg/lang.svg" alt="" />
+                        </div>
+                        <div class="footer__policy-currency__select">
+                            <select name="" id="">
+                                <option value="" selected="">RUB</option>
+                                <option value="">EURO</option>
+                                <option value="">EURO</option>
+                                <option value="">EURO</option>
+                                <option value="">EURO</option>
+                            </select>
+                            <svg
+                                width="16"
+                                height="10"
+                                viewBox="0 0 16 10"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M15 1.5L8 8.5L1 1.5"
+                                    stroke="#717171"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script type="module" src="src/js/index.js"></script>
+    </body>
+</html>

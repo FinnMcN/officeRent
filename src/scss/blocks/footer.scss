@@ -1,0 +1,221 @@
+@import "../components/socials";
+
+.footer {
+    background: #fbfafa;
+    &__logo {
+        margin-right: 100px;
+    }
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 60px 0;
+        border-bottom: 1px solid #c4c4c4;
+    }
+    &__info-left {
+        display: flex;
+        align-items: center;
+    }
+    &__info-nav {
+        display: flex;
+        gap: 80px;
+        flex-wrap: wrap;
+    }
+    &__info-nav__row {
+        display: flex;
+        flex-direction: row;
+        gap: 80px;
+    }
+    &__info-nav__column {
+        display: flex;
+        flex-direction: column;
+    }
+    &__info-nav__title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #000000;
+    }
+    &__info-nav__link {
+        font-size: 20px;
+        color: #000000;
+    }
+    &__policy {
+        padding: 26px 0 35px;
+    }
+    &__policy-inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__policy-name {
+        margin-right: 115px;
+    }
+    &__policy-links {
+        display: flex;
+        gap: 75px;
+    }
+    &__policy-link {
+        padding-left: 15px;
+        position: relative;
+    }
+    &__policy-link:after {
+        position: absolute;
+        content: "";
+        width: 5px;
+        height: 5px;
+        background: #717171;
+        border-radius: 50%;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+    }
+    &__policy-link a {
+        color: #717171;
+    }
+    &__policy-text {
+        display: flex;
+        align-items: center;
+    }
+    &__policy-currency {
+        display: flex;
+        align-items: center;
+    }
+    &__policy-currency__select {
+        position: relative;
+        select {
+            padding-right: 20px;
+            background: transparent;
+            font-size: 24px;
+            font-weight: 300;
+            border: none;
+            appearance: none;
+            outline: none;
+            cursor: pointer;
+        }
+        svg {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(0, -50%);
+        }
+    }
+    &-round__btn {
+        background: #717171;
+        margin-right: 20px;
+    }
+}
+//media
+@media screen and (max-width: 1740px) {
+    .footer {
+        &__info-nav {
+            gap: 35px;
+        }
+        &__info-nav__row {
+            gap: 35px;
+        }
+        &__logo {
+            margin-right: 45px;
+        }
+    }
+}
+@media screen and (max-width: 1391px) {
+    .footer {
+        &__info {
+            flex-wrap: nowrap;
+        }
+        &__logo {
+            margin-right: 0;
+        }
+        &__info-left {
+            flex-direction: column;
+            gap: 40px;
+        }
+        &__info-nav {
+            gap: 90px;
+        }
+        &__info-nav__row {
+            flex-direction: column;
+        }
+        &__policy-links {
+            gap: 30px;
+        }
+        &__policy-name {
+            margin-right: 0;
+        }
+    }
+}
+@media screen and (max-width: 1000px) {
+    .footer {
+        &__info {
+            flex-direction: column;
+            padding: 0;
+            border-bottom: none;
+        }
+        &__info-nav {
+            width: 100%;
+            gap: unset;
+            justify-content: space-around;
+        }
+        &__info-item {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 35px 0;
+            border-bottom: 1px solid #c4c4c4;
+        }
+        &__policy {
+            padding: 35px 0 40px;
+        }
+        &__policy-inner {
+            margin-bottom: 30px;
+            align-items: flex-start;
+        }
+        &__policy-links {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .footer {
+        &__info-nav {
+            justify-content: space-between;
+        }
+        &__info-nav__title {
+            margin-bottom: 10px;
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .footer {
+        &__info-nav {
+            gap: 35px;
+        }
+        &__info-nav__title {
+            font-size: 18px;
+        }
+        &__info-nav__link {
+            font-size: 18px;
+        }
+        &__policy-currency {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__policy-link {
+            line-height: 24px;
+        }
+        &-round__btn {
+            align-self: flex-end;
+            order: 2;
+            margin-right: 0;
+        }
+        &__policy-currency__select {
+            order: 1;
+            margin-bottom: 20px;
+        }
+        &__policy-currency__select select {
+            font-size: 18px;
+        }
+    }
+}

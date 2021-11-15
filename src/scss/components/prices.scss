@@ -1,0 +1,121 @@
+.price {
+    background: #fff;
+    border-radius: 8px;
+    height: 41px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -65%;
+        right: 50%;
+        transform: translate(50%, 0);
+        border: 15px solid transparent;
+        border-top: 15px solid #fff;
+        user-select: none;
+    }
+    span {
+        font-size: 22px;
+        font-weight: 700;
+        transition: all ease 0.3s;
+    }
+    &:hover span {
+        color: #ed4040;
+    }
+}
+#price1 {
+    top: 351px;
+    right: 703px;
+}
+#price2 {
+    top: 476px;
+    right: 490px;
+    &:after {
+        bottom: unset;
+        top: -65%;
+        transform: translate(50%, 0) rotate(180deg);
+    }
+}
+#price3 {
+    top: 300px;
+    right: 316px;
+}
+#price4 {
+    top: 198px;
+    right: 178px;
+}
+
+@media screen and (max-width: 1740px) {
+    #price1 {
+        right: 535px;
+    }
+    #price2 {
+        right: 320px;
+    }
+    #price3 {
+        right: 145px;
+    }
+    #price4 {
+        right: 20px;
+    }
+}
+@media screen and (max-width: 1391px) {
+    .price {
+        height: 35px;
+        span {
+            font-size: 18px;
+        }
+    }
+    #price1 {
+        right: 415px;
+        top: 317px;
+    }
+    #price2 {
+        right: 285px;
+        top: 435px;
+    }
+    #price3 {
+        right: 182px;
+        top: 290px;
+    }
+    #price4 {
+        right: 98px;
+        top: 223px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .price {
+        height: 25px;
+        padding: 0 6px;
+        span {
+            font-size: 14px;
+        }
+        &:after {
+            border: 10px solid transparent;
+            border-top: 10px solid #fff;
+        }
+    }
+    #price1 {
+        right: 317px;
+        top: 416px;
+    }
+    #price2 {
+        right: 190px;
+        top: 495px;
+    }
+    #price3 {
+        right: 92px;
+        top: 413px;
+    }
+    #price4 {
+        right: 17px;
+        top: 327px;
+    }
+}
+@media screen and (max-width: 420px) {
+    #price1 {
+        display: none;
+    }
+}

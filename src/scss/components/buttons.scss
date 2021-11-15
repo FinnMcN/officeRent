@@ -1,0 +1,71 @@
+button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+.def__btn {
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+        white-space: nowrap;
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+    }
+}
+.red__btn {
+    background: #ed4040;
+    span {
+        color: #fff;
+    }
+}
+.round__btn {
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search__map-btn {
+    height: 44px;
+    padding: 0 15px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 50px rgba(37, 1, 0, 0.2);
+    border-radius: 5px;
+    svg {
+        margin-right: 10px;
+    }
+    span {
+        white-space: nowrap;
+        font-size: 20px;
+    }
+}
+.search__btn {
+    cursor: pointer;
+}
+.office__btn {
+    background: transparent;
+    a {
+        font-size: 22px;
+        font-weight: 500;
+        transition: all ease 0.3s;
+    }
+    &:hover a {
+        color: #ed4040;
+        text-shadow: 0 0 1px #ed4040, 0 0 1px #ed4040;
+    }
+}
+.remove {
+    background: transparent;
+}
+@media screen and (max-width: 768px) {
+    .def__btn a {
+        font-size: 22px;
+    }
+}

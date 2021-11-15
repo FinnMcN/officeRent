@@ -1,0 +1,85 @@
+<div class="booking__form">
+    <div class="booking__form-inner">
+        <button class="booking__form-date">
+            <%- include("../components/svgDate.ejs") -%>
+            <span>Укажите дату и время</span>
+        </button>
+        <div class="booking__items">
+            <div class="booking__item">
+                <div class="booking__item-row">
+                    <div class="booking__item-title">Место у окна</div>
+                    <div class="booking__item-price">200 ₽/час</div>
+                </div>
+                <div class="booking__item-row">
+                    <div class="booking__item-title">Количество</div>
+                    <div class="booking__item-counter">
+                        <%- include("../components/counter.ejs") -%>
+                        <div class="booking__item-remove">
+                            <%- include("../components/removeBtn.ejs") -%>
+                        </div>
+                    </div>
+                </div>
+                <div class="booking__item-total">
+                    <div class="booking__item-title">Итого</div>
+                    <div class="booking__item-price booking__item-price__total" data-value="1000">
+                        1 000 ₽
+                    </div>
+                </div>
+            </div>
+            <div class="booking__item">
+                <div class="booking__item-row">
+                    <div class="booking__item-title">Кабинеты с креслом</div>
+                    <div class="booking__item-price">500 ₽/час</div>
+                </div>
+                <div class="booking__item-row">
+                    <div class="booking__item-title">Количество</div>
+                    <div class="booking__item-counter">
+                        <%- include("../components/counter.ejs") -%>
+                        <div class="booking__item-remove">
+                            <%- include("../components/removeBtn.ejs") -%>
+                        </div>
+                    </div>
+                </div>
+                <div class="booking__item-total">
+                    <div class="booking__item-title">Итого</div>
+                    <div class="booking__item-price booking__item-price__total" data-value="7500">
+                        7 500 ₽
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="booking__bill">
+            <div class="booking__bill-rows">
+                <div class="booking__bill-row">
+                    <div class="booking__bill-row__left">
+                        <div class="booking__item-title">Место у окна -</div>
+                        <div class="booking__item-number">&nbsp;1</div>
+                    </div>
+                    <div class="booking__bill-price">1 000 ₽</div>
+                </div>
+                <div class="booking__bill-row">
+                    <div class="booking__bill-row__left">
+                        <div class="booking__item-title">Кабинеты с креслом -</div>
+                        <div class="booking__item-number">&nbsp;15</div>
+                    </div>
+                    <div class="booking__bill-price">7 500 ₽</div>
+                </div>
+                <div class="booking__bill-row">
+                    <div class="booking__bill-row__left">
+                        <div class="booking__item-title">Сбор за услуги Getdesk</div>
+                    </div>
+                    <div class="booking__bill-price">400 ₽</div>
+                </div>
+            </div>
+            <div class="booking__item-total">
+                <div class="booking__item-title">Итого</div>
+                <div class="booking__item-price booking__item-price__total" data-value="7500">
+                    7 500 ₽
+                </div>
+            </div>
+        </div>
+        <button class="booking-btn def__btn red__btn">
+            <span>Забронировать</span>
+        </button>
+    </div>
+</div>

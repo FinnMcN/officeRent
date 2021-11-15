@@ -1,0 +1,26 @@
+@keyframes arrowsFade {
+    50% {
+        fill-opacity: 0.3;
+    }
+    60% {
+        fill-opacity: 0.4;
+    }
+    70% {
+        fill-opacity: 0.7;
+    }
+}
+.arrows-anim {
+    display: flex;
+    svg:not(:last-child) {
+        margin-right: 10px;
+    }
+    svg:nth-child(1) path {
+        animation: arrowsFade 0.8s linear 0s infinite;
+    }
+    svg:nth-child(2) path {
+        animation: arrowsFade 0.8s linear 0.1s infinite;
+    }
+    svg:nth-child(3) path {
+        animation: arrowsFade 0.8s linear 0.2s infinite;
+    }
+}

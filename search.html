@@ -1,0 +1,1381 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="public/css/search.min.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="overlay"></div>
+            <div class="header">
+    <div class="container">
+        <div class="header__top">
+            <a class="logo" href="./search.html">
+                <div class="logo-img">
+                    <img src="./public/images/logo-img.png" alt="" />
+                </div>
+                <div class="header__logo-company logo-company">
+                    <img src="./public/images/logo-company.png" alt="" />
+                </div>
+            </a>
+            <div class="header__input-blocks">
+                <div class="city__input def__input">
+                    <svg
+                        class="map-icon left-icon"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M12.2505 8.5C11.2855 8.5 10.5005 9.285 10.5005 10.251C10.5005 11.216 11.2855 12 12.2505 12C13.2155 12 14.0005 11.216 14.0005 10.251C14.0005 9.285 13.2155 8.5 12.2505 8.5ZM12.2505 13.5C10.4585 13.5 9.00049 12.043 9.00049 10.251C9.00049 8.458 10.4585 7 12.2505 7C14.0425 7 15.5005 8.458 15.5005 10.251C15.5005 12.043 14.0425 13.5 12.2505 13.5Z"
+                            fill="#131313"
+                        />
+                        <mask
+                            id="mask0"
+                            mask-type="alpha"
+                            maskUnits="userSpaceOnUse"
+                            x="4"
+                            y="2"
+                            width="17"
+                            height="20"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M4 2H20.4995V21.5H4V2Z"
+                                fill="white"
+                            />
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M12.2495 3.5C8.52751 3.5 5.49951 6.557 5.49951 10.313C5.49951 15.092 11.1235 19.748 12.2495 19.996C13.3755 19.747 18.9995 15.091 18.9995 10.313C18.9995 6.557 15.9715 3.5 12.2495 3.5ZM12.2495 21.5C10.4555 21.5 3.99951 15.948 3.99951 10.313C3.99951 5.729 7.70051 2 12.2495 2C16.7985 2 20.4995 5.729 20.4995 10.313C20.4995 15.948 14.0435 21.5 12.2495 21.5Z"
+                                fill="#131313"
+                            />
+                        </g>
+                    </svg>
+                    <input type="text" placeholder="Выберите город" />
+                    <button class="search-btn">
+                        <svg
+                            class="search-icon right-icon"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <mask
+                                id="search-icon1"
+                                mask-type="alpha"
+                                maskUnits="userSpaceOnUse"
+                                x="2"
+                                y="2"
+                                width="20"
+                                height="19"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M2 2H21.2231V20.7987H2V2Z"
+                                    fill="white"
+                                />
+                            </mask>
+                            <g mask="url(#search-icon1)">
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M11.6121 3.44776C7.12832 3.44776 3.48047 7.01407 3.48047 11.3988C3.48047 15.7836 7.12832 19.3509 11.6121 19.3509C16.095 19.3509 19.7428 15.7836 19.7428 11.3988C19.7428 7.01407 16.095 3.44776 11.6121 3.44776ZM11.6121 20.7987C6.31208 20.7987 2 16.5818 2 11.3988C2 6.21587 6.31208 2 11.6121 2C16.9122 2 21.2233 6.21587 21.2233 11.3988C21.2233 16.5818 16.9122 20.7987 11.6121 20.7987Z"
+                                    fill="#131313"
+                                />
+                            </g>
+                            <mask
+                                id="search-icon2"
+                                mask-type="alpha"
+                                maskUnits="userSpaceOnUse"
+                                x="17"
+                                y="17"
+                                width="6"
+                                height="5"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M17.0415 17.1599H22.0001V22H17.0415V17.1599Z"
+                                    fill="white"
+                                />
+                            </mask>
+                            <g mask="url(#search-icon2)">
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M21.2601 22C21.0716 22 20.8821 21.9296 20.737 21.7886L17.2589 18.397C16.9697 18.1142 16.9687 17.6558 17.2579 17.373C17.5461 17.0882 18.0149 17.0902 18.3051 17.371L21.7832 20.7636C22.0723 21.0464 22.0733 21.5039 21.7842 21.7867C21.6401 21.9296 21.4496 22 21.2601 22Z"
+                                    fill="#131313"
+                                />
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+                <div class="date__input def__input">
+                    <svg
+                        class="date-icon left-icon"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M3.09253 9.40426H20.9165"
+                            stroke="#131313"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></path>
+                        <path
+                            d="M16.442 13.3097H16.4512"
+                            stroke="#131313"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></path>
+                        <path
+                            d="M12.0047 13.3097H12.014"
+                            stroke="#131313"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></path>
+                        <path
+                            d="M7.55793 13.3097H7.5672"
+                            stroke="#131313"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></path>
+                        <path
+                            d="M16.442 17.1962H16.4512"
+                            stroke="#131313"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></path>
+                        <path
+                            d="M12.0047 17.1962H12.014"
+                            stroke="#131313"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></path>
+                        <path
+                            d="M7.55793 17.1962H7.5672"
+                            stroke="#131313"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></path>
+                        <path
+                            d="M16.0438 2V5.29078"
+                            stroke="#131313"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></path>
+                        <path
+                            d="M7.9654 2V5.29078"
+                            stroke="#131313"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></path>
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M16.2383 3.57919H7.77096C4.83427 3.57919 3 5.21513 3 8.22222V17.2719C3 20.3262 4.83427 22 7.77096 22H16.229C19.175 22 21 20.3546 21 17.3475V8.22222C21.0092 5.21513 19.1842 3.57919 16.2383 3.57919Z"
+                            stroke="#131313"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        ></path>
+                    </svg>
+
+                    <select>
+                        <option value="" disabled="" selected="" hidden="">Укажите дату</option>
+                        <option value="">asdasd</option>
+                        <option value="">asdasd</option>
+                        <option value="">asdasd</option>
+                        <option value="">asdasd</option>
+                    </select>
+                </div>
+            </div>
+            <div class="header__top-btns">
+                <div class="header-round__btns round__btns">
+                    <button class="header-round__btn round__btn" id="btn-lang">
+                        <img src="./public/images/svg/lang.svg" alt="" />
+                    </button>
+                    <button class="header-round__btn round__btn" id="btn-login">
+                        <img src="./public/images/svg/login.svg" alt="" />
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="main">
+                <div class="search">
+                    <div class="search__map-block">
+                        <div class="search__map-nav container">
+                            <button class="search__map-btn search__map-list__btn">
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M15.7161 16.9738H8.49609C8.08209 16.9738 7.74609 16.6378 7.74609 16.2238C7.74609 15.8098 8.08209 15.4738 8.49609 15.4738H15.7161C16.1301 15.4738 16.4661 15.8098 16.4661 16.2238C16.4661 16.6378 16.1301 16.9738 15.7161 16.9738Z"
+                                        fill="#ED4040"
+                                    />
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M15.7161 12.7872H8.49609C8.08209 12.7872 7.74609 12.4512 7.74609 12.0372C7.74609 11.6232 8.08209 11.2872 8.49609 11.2872H15.7161C16.1301 11.2872 16.4661 11.6232 16.4661 12.0372C16.4661 12.4512 16.1301 12.7872 15.7161 12.7872Z"
+                                        fill="#ED4040"
+                                    />
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M11.2501 8.61047H8.49512C8.08112 8.61047 7.74512 8.27447 7.74512 7.86047C7.74512 7.44647 8.08112 7.11047 8.49512 7.11047H11.2501C11.6641 7.11047 12.0001 7.44647 12.0001 7.86047C12.0001 8.27447 11.6641 8.61047 11.2501 8.61047Z"
+                                        fill="#ED4040"
+                                    />
+                                    <mask
+                                        id="mask0_2171:2043"
+                                        style="mask-type: alpha"
+                                        maskUnits="userSpaceOnUse"
+                                        x="3"
+                                        y="2"
+                                        width="19"
+                                        height="20"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M3 2.00024H21.1647V21.91H3V2.00024Z"
+                                            fill="white"
+                                        />
+                                    </mask>
+                                    <g mask="url(#mask0_2171:2043)">
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M15.909 3.5L8.22 3.504C5.892 3.518 4.5 4.958 4.5 7.357V16.553C4.5 18.968 5.905 20.41 8.256 20.41L15.945 20.407C18.273 20.393 19.665 18.951 19.665 16.553V7.357C19.665 4.942 18.261 3.5 15.909 3.5ZM8.257 21.91C5.113 21.91 3 19.757 3 16.553V7.357C3 4.124 5.047 2.023 8.215 2.004L15.908 2H15.909C19.053 2 21.165 4.153 21.165 7.357V16.553C21.165 19.785 19.118 21.887 15.95 21.907L8.257 21.91Z"
+                                            fill="#ED4040"
+                                        />
+                                    </g>
+                                </svg>
+
+                                <span>К списку объявлений</span>
+                            </button>
+                            <button class="search__map-btn search__map-filters__btn">
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <mask
+                                        id="mask0_2171:2071"
+                                        style="mask-type: alpha"
+                                        maskUnits="userSpaceOnUse"
+                                        x="2"
+                                        y="2"
+                                        width="20"
+                                        height="20"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M2 2H21.4996V21.5007H2V2Z"
+                                            fill="white"
+                                        />
+                                    </mask>
+                                    <g mask="url(#mask0_2171:2071)">
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M8.773 11.5988C8.791 11.6148 8.808 11.6298 8.825 11.6478C9.904 12.7538 10.499 14.2188 10.499 15.7738V19.7578L12.735 18.5398C12.911 18.4438 13.02 18.2558 13.02 18.0488V15.7618C13.02 14.2128 13.609 12.7528 14.678 11.6528L19.515 6.50776C19.828 6.17476 20 5.73776 20 5.27676V4.34076C20 3.87676 19.634 3.49976 19.186 3.49976H4.315C3.866 3.49976 3.5 3.87676 3.5 4.34076V5.27676C3.5 5.73776 3.672 6.17476 3.985 6.50676L8.773 11.5988ZM10.146 21.5008C9.944 21.5008 9.744 21.4468 9.562 21.3388C9.21 21.1288 8.999 20.7578 8.999 20.3458V15.7738C8.999 14.6388 8.576 13.5698 7.805 12.7508C7.782 12.7318 7.759 12.7108 7.739 12.6888L2.893 7.53576C2.317 6.92376 2 6.12076 2 5.27676V4.34076C2 3.04976 3.039 1.99976 4.315 1.99976H19.186C20.461 1.99976 21.5 3.04976 21.5 4.34076V5.27676C21.5 6.11976 21.183 6.92176 20.609 7.53476L15.762 12.6888C14.959 13.5168 14.52 14.6058 14.52 15.7618V18.0488C14.52 18.8048 14.111 19.4968 13.453 19.8568L10.692 21.3608C10.52 21.4538 10.333 21.5008 10.146 21.5008Z"
+                                            fill="#ED4040"
+                                        />
+                                    </g>
+                                </svg>
+
+                                <span>Фильтры</span>
+                            </button>
+                        </div>
+                        <div class="search__map">
+                            <div style="position: relative; overflow: hidden">
+                                <a
+                                    href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps"
+                                    style="
+                                        color: #eee;
+                                        font-size: 12px;
+                                        position: absolute;
+                                        top: 0px;
+                                    "
+                                    >Москва</a
+                                ><a
+                                    href="https://yandex.ru/maps/geo/moskva/53000094/?ll=37.620837%2C55.752339&utm_medium=mapframe&utm_source=maps&z=16.22"
+                                    style="
+                                        color: #eee;
+                                        font-size: 12px;
+                                        position: absolute;
+                                        top: 14px;
+                                    "
+                                    >Москва — Яндекс.Карты</a
+                                ><iframe
+                                    src="https://yandex.ru/map-widget/v1/-/CCUiR6s38C"
+                                    width="100%"
+                                    height="100%"
+                                    frameborder="0"
+                                    allowfullscreen="true"
+                                    style="position: relative"
+                                ></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="search__content">
+                            <div class="search__left">
+                                <div class="search-title title">Аренда офиса: Москва</div>
+                                <div class="search__filters">
+                                    <div class="search__filters-btns">
+                                        <div class="search__filter">
+                                            <button class="search__filter-button" id="popup__price">
+                                                <span>Цена</span>
+                                            </button>
+                                        </div>
+                                        <div class="search__filter">
+                                            <button class="search__filter-button" id="popup__props">
+                                                <span>Характеристики офиса</span>
+                                            </button>
+                                        </div>
+                                        <div class="search__filter">
+                                            <button
+                                                class="search__filter-button"
+                                                id="popup__booking"
+                                            >
+                                                <span>Мгновенное бронирование</span>
+                                            </button>
+                                        </div>
+                                        <div class="search__filter">
+                                            <button
+                                                class="search__filter-button"
+                                                id="popup__facilities"
+                                            >
+                                                <span>Удобства</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="search__filter-popup__price popup popup__price"
+                                        id="popup__price"
+                                    >
+                                        <div class="popup__price-range">
+                                            <input type="range" />
+                                        </div>
+                                        <div class="popup__price-values">
+                                            <div class="popup__price-value">
+                                                <p>от</p>
+                                                <div class="popup__price-value__start">
+                                                    <span>0 ₽</span>
+                                                </div>
+                                            </div>
+                                            <div class="popup__price-value">
+                                                <p>до</p>
+                                                <div class="popup__price-value__end">
+                                                    <span>1 000 000 ₽</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="popup__price-btns">
+                                            <div class="popup-clear">
+                                                <div class="popup-clear__icon">
+                                                    <svg
+                                                        width="20"
+                                                        height="20"
+                                                        viewBox="0 0 20 20"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                        <path
+                                                            fill-rule="evenodd"
+                                                            clip-rule="evenodd"
+                                                            d="M7.60229 13.1367C7.41029 13.1367 7.21829 13.0637 7.07229 12.9167C6.77929 12.6237 6.77929 12.1497 7.07229 11.8567L11.8643 7.06472C12.1573 6.77172 12.6313 6.77172 12.9243 7.06472C13.2173 7.35772 13.2173 7.83172 12.9243 8.12472L8.13229 12.9167C7.98629 13.0637 7.79429 13.1367 7.60229 13.1367Z"
+                                                            fill="#ED4040"
+                                                        />
+                                                        <path
+                                                            fill-rule="evenodd"
+                                                            clip-rule="evenodd"
+                                                            d="M12.3963 13.1396C12.2043 13.1396 12.0123 13.0666 11.8663 12.9196L7.07034 8.12265C6.77734 7.82965 6.77734 7.35565 7.07034 7.06265C7.36434 6.76965 7.83834 6.76965 8.13034 7.06265L12.9263 11.8596C13.2193 12.1526 13.2193 12.6266 12.9263 12.9196C12.7803 13.0666 12.5873 13.1396 12.3963 13.1396Z"
+                                                            fill="#ED4040"
+                                                        />
+                                                        <path
+                                                            fill-rule="evenodd"
+                                                            clip-rule="evenodd"
+                                                            d="M5.665 1.5C3.135 1.5 1.5 3.233 1.5 5.916V14.084C1.5 16.767 3.135 18.5 5.665 18.5H14.333C16.864 18.5 18.5 16.767 18.5 14.084V5.916C18.5 3.233 16.864 1.5 14.334 1.5H5.665ZM14.333 20H5.665C2.276 20 0 17.622 0 14.084V5.916C0 2.378 2.276 0 5.665 0H14.334C17.723 0 20 2.378 20 5.916V14.084C20 17.622 17.723 20 14.333 20Z"
+                                                            fill="#ED4040"
+                                                        />
+                                                    </svg>
+                                                </div>
+                                                <span>Очистить</span>
+                                            </div>
+                                            <button class="popup-apply def__btn red__btn">
+                                                <span>Применить</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="search__filter-popup__props popup popup__props"
+                                        id="popup__props"
+                                    >
+                                        <div class="popup__props-title">
+                                            Укажите нужные вам характеристики офиса.
+                                        </div>
+                                        <div class="popup__props-subtitle">
+                                            В результатах будут показаны офисы, в которых есть все
+                                            что вы отметили.
+                                        </div>
+                                        <div class="popup__props-items">
+                                            <div class="popup__props-items__row">
+                                                <div class="popup__props-item">
+                                                    <div class="popup__props-item__name">
+                                                        Рабочие места
+                                                    </div>
+                                                    <div class="counter">
+    <button class="counter-minus">
+        <span></span>
+    </button>
+    <input type="number" />
+    <button class="counter-plus">
+        <span></span>
+    </button>
+</div>
+                                                </div>
+                                            </div>
+                                            <div class="popup__props-items__row">
+                                                <div class="popup__props-item">
+                                                    <div class="popup__props-item__name">
+                                                        Закрытые кабинеты
+                                                    </div>
+                                                    <div class="counter">
+    <button class="counter-minus">
+        <span></span>
+    </button>
+    <input type="number" />
+    <button class="counter-plus">
+        <span></span>
+    </button>
+</div>
+                                                </div>
+                                                <div class="popup__props-item">
+                                                    <div class="popup__props-item__name">
+                                                        Сколько нужно мест
+                                                    </div>
+                                                    <div class="counter">
+    <button class="counter-minus">
+        <span></span>
+    </button>
+    <input type="number" />
+    <button class="counter-plus">
+        <span></span>
+    </button>
+</div>
+                                                </div>
+                                            </div>
+                                            <div class="popup__props-items__row">
+                                                <div class="popup__props-item">
+                                                    <div class="popup__props-item__name">
+                                                        Переговорные комнаты
+                                                    </div>
+                                                    <div class="counter">
+    <button class="counter-minus">
+        <span></span>
+    </button>
+    <input type="number" />
+    <button class="counter-plus">
+        <span></span>
+    </button>
+</div>
+                                                </div>
+                                                <div class="popup__props-item">
+                                                    <div class="popup__props-item__name">
+                                                        Сколько нужно мест
+                                                    </div>
+                                                    <div class="counter">
+    <button class="counter-minus">
+        <span></span>
+    </button>
+    <input type="number" />
+    <button class="counter-plus">
+        <span></span>
+    </button>
+</div>
+                                                </div>
+                                            </div>
+                                            <div class="popup__props-items__row">
+                                                <div class="popup__props-item">
+                                                    <div class="popup__props-item__name">
+                                                        Конференц-залы
+                                                    </div>
+                                                    <div class="counter">
+    <button class="counter-minus">
+        <span></span>
+    </button>
+    <input type="number" />
+    <button class="counter-plus">
+        <span></span>
+    </button>
+</div>
+                                                </div>
+                                                <div class="popup__props-item">
+                                                    <div class="popup__props-item__name">
+                                                        Сколько нужно мест
+                                                    </div>
+                                                    <div class="counter">
+    <button class="counter-minus">
+        <span></span>
+    </button>
+    <input type="number" />
+    <button class="counter-plus">
+        <span></span>
+    </button>
+</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="popup__props-btns">
+                                            <div class="popup-clear">
+                                                <div class="popup-clear__icon">
+                                                    <svg
+                                                        width="20"
+                                                        height="20"
+                                                        viewBox="0 0 20 20"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                        <path
+                                                            fill-rule="evenodd"
+                                                            clip-rule="evenodd"
+                                                            d="M7.60229 13.1367C7.41029 13.1367 7.21829 13.0637 7.07229 12.9167C6.77929 12.6237 6.77929 12.1497 7.07229 11.8567L11.8643 7.06472C12.1573 6.77172 12.6313 6.77172 12.9243 7.06472C13.2173 7.35772 13.2173 7.83172 12.9243 8.12472L8.13229 12.9167C7.98629 13.0637 7.79429 13.1367 7.60229 13.1367Z"
+                                                            fill="#ED4040"
+                                                        />
+                                                        <path
+                                                            fill-rule="evenodd"
+                                                            clip-rule="evenodd"
+                                                            d="M12.3963 13.1396C12.2043 13.1396 12.0123 13.0666 11.8663 12.9196L7.07034 8.12265C6.77734 7.82965 6.77734 7.35565 7.07034 7.06265C7.36434 6.76965 7.83834 6.76965 8.13034 7.06265L12.9263 11.8596C13.2193 12.1526 13.2193 12.6266 12.9263 12.9196C12.7803 13.0666 12.5873 13.1396 12.3963 13.1396Z"
+                                                            fill="#ED4040"
+                                                        />
+                                                        <path
+                                                            fill-rule="evenodd"
+                                                            clip-rule="evenodd"
+                                                            d="M5.665 1.5C3.135 1.5 1.5 3.233 1.5 5.916V14.084C1.5 16.767 3.135 18.5 5.665 18.5H14.333C16.864 18.5 18.5 16.767 18.5 14.084V5.916C18.5 3.233 16.864 1.5 14.334 1.5H5.665ZM14.333 20H5.665C2.276 20 0 17.622 0 14.084V5.916C0 2.378 2.276 0 5.665 0H14.334C17.723 0 20 2.378 20 5.916V14.084C20 17.622 17.723 20 14.333 20Z"
+                                                            fill="#ED4040"
+                                                        />
+                                                    </svg>
+                                                </div>
+                                                <span>Очистить</span>
+                                            </div>
+                                            <button class="popup-apply def__btn red__btn">
+                                                <span>Применить</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="search__filter-popup__booking popup popup__booking"
+                                        id="popup__booking"
+                                    >
+                                        <div class="popup__booking-title">
+                                            Мгновенное бронирование
+                                        </div>
+                                        <div class="popup__booking-toggle">
+                                            <div class="popup__booking-subtitle">
+                                                Показать только те пространства, где доступно
+                                                бронирование без подтверждения
+                                            </div>
+                                            <div class="popup__booking-toggle__btn"></div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="
+                                            search__filter-popup__facilities
+                                            popup popup__facilities
+                                        "
+                                        id="popup__facilities"
+                                    >
+                                        <div class="popup__facilities-items">
+                                            <div class="popup__facilities-item">
+                                                <div class="popup__facilities-item__title">
+                                                    Общие удобства
+                                                </div>
+                                                <div
+                                                    class="popup__facilities-tag__items tag__items"
+                                                >
+                                                    <div class="tag__items-left">
+                                                        <div class="tag__item">
+                                                            <input type="checkbox" id="wifi-tag" />
+                                                            <label for="wifi-tag"></label>
+                                                            <span>Высокоскоростной WiFi</span>
+                                                        </div>
+                                                        <div class="tag__item">
+                                                            <input type="checkbox" id="open-tag" />
+                                                            <label for="open-tag"></label>
+                                                            <span>Открыто круглосуточно</span>
+                                                        </div>
+                                                        <div class="tag__item">
+                                                            <input
+                                                                type="checkbox"
+                                                                id="guests-tag"
+                                                            />
+                                                            <label for="guests-tag"></label>
+                                                            <span>Встреча гостей/секретарь</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tag__items-right">
+                                                        <div class="tag__item">
+                                                            <input type="checkbox" id="coffe-tag" />
+                                                            <label for="coffe-tag"></label>
+                                                            <span>Кофемашина</span>
+                                                        </div>
+                                                        <div class="tag__item">
+                                                            <input type="checkbox" id="chart-tag" />
+                                                            <label for="chart-tag"></label>
+                                                            <span>Флипчарт</span>
+                                                        </div>
+                                                        <div class="tag__item">
+                                                            <input
+                                                                type="checkbox"
+                                                                id="office-tag"
+                                                            />
+                                                            <label for="office-tag"></label>
+                                                            <span>Канцелярские принадлежности</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="popup-show__more">
+                                                    <span>Показать еще</span>
+                                                    <svg
+                                                        width="16"
+                                                        height="10"
+                                                        viewBox="0 0 16 10"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                        <path
+                                                            d="M15 1.5L8 8.5L1 1.5"
+                                                            stroke="#717171"
+                                                            stroke-width="1.5"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                        />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="popup__facilities-item">
+                                                <div class="popup__facilities-item__title">
+                                                    Удобства переговорных комнат
+                                                </div>
+                                                <div
+                                                    class="popup__facilities-tag__items tag__items"
+                                                >
+                                                    <div class="tag__items-left">
+                                                        <div class="tag__item">
+                                                            <input type="checkbox" id="equip-tag" />
+                                                            <label for="equip-tag"></label>
+                                                            <span
+                                                                >Оборудование для видеоконференции
+                                                            </span>
+                                                        </div>
+                                                        <div class="tag__item">
+                                                            <input type="checkbox" id="tv-tag" />
+                                                            <label for="tv-tag"></label>
+                                                            <span>TV</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tag__items-right">
+                                                        <div class="tag__item">
+                                                            <input
+                                                                type="checkbox"
+                                                                id="projector-tag"
+                                                            />
+                                                            <label for="projector-tag"></label>
+                                                            <span>Проектор</span>
+                                                        </div>
+                                                        <div class="tag__item">
+                                                            <input type="checkbox" id="apple-tag" />
+                                                            <label for="apple-tag"></label>
+                                                            <span>Apple TV</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="popup__facilities-item">
+                                                <div class="popup__facilities-item__title">
+                                                    Оборудование
+                                                </div>
+                                                <div
+                                                    class="popup__facilities-tag__items tag__items"
+                                                >
+                                                    <div class="tag__items-left">
+                                                        <div class="tag__item">
+                                                            <input type="checkbox" id="pc-tag" />
+                                                            <label for="pc-tag"></label>
+                                                            <span>Есть ПК</span>
+                                                        </div>
+                                                        <div class="tag__item">
+                                                            <input type="checkbox" id="micro-tag" />
+                                                            <label for="micro-tag"></label>
+                                                            <span>Микрофон</span>
+                                                        </div>
+                                                        <div class="tag__item">
+                                                            <input type="checkbox" id="light-tag" />
+                                                            <label for="light-tag"></label>
+                                                            <span>
+                                                                Профессиональное световое
+                                                                оборудование
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tag__items-right">
+                                                        <div class="tag__item">
+                                                            <input
+                                                                type="checkbox"
+                                                                id="printer-tag"
+                                                            />
+                                                            <label for="printer-tag"></label>
+                                                            <span>Принтер </span>
+                                                        </div>
+                                                        <div class="tag__item">
+                                                            <input type="checkbox" id="scan-tag" />
+                                                            <label for="scan-tag"></label>
+                                                            <span>Сканер</span>
+                                                        </div>
+                                                        <div class="tag__item">
+                                                            <input type="checkbox" id="copy-tag" />
+                                                            <label for="copy-tag"></label>
+                                                            <span>Фотокопировальный аппарат</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="popup-show__more">
+                                                    <span>Показать еще</span>
+                                                    <svg
+                                                        width="16"
+                                                        height="10"
+                                                        viewBox="0 0 16 10"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                        <path
+                                                            d="M15 1.5L8 8.5L1 1.5"
+                                                            stroke="#717171"
+                                                            stroke-width="1.5"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                        />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="popup__facilities-btns">
+                                            <div class="popup-clear">
+                                                <div class="popup-clear__icon">
+                                                    <svg
+                                                        width="20"
+                                                        height="20"
+                                                        viewBox="0 0 20 20"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                        <path
+                                                            fill-rule="evenodd"
+                                                            clip-rule="evenodd"
+                                                            d="M7.60229 13.1367C7.41029 13.1367 7.21829 13.0637 7.07229 12.9167C6.77929 12.6237 6.77929 12.1497 7.07229 11.8567L11.8643 7.06472C12.1573 6.77172 12.6313 6.77172 12.9243 7.06472C13.2173 7.35772 13.2173 7.83172 12.9243 8.12472L8.13229 12.9167C7.98629 13.0637 7.79429 13.1367 7.60229 13.1367Z"
+                                                            fill="#ED4040"
+                                                        />
+                                                        <path
+                                                            fill-rule="evenodd"
+                                                            clip-rule="evenodd"
+                                                            d="M12.3963 13.1396C12.2043 13.1396 12.0123 13.0666 11.8663 12.9196L7.07034 8.12265C6.77734 7.82965 6.77734 7.35565 7.07034 7.06265C7.36434 6.76965 7.83834 6.76965 8.13034 7.06265L12.9263 11.8596C13.2193 12.1526 13.2193 12.6266 12.9263 12.9196C12.7803 13.0666 12.5873 13.1396 12.3963 13.1396Z"
+                                                            fill="#ED4040"
+                                                        />
+                                                        <path
+                                                            fill-rule="evenodd"
+                                                            clip-rule="evenodd"
+                                                            d="M5.665 1.5C3.135 1.5 1.5 3.233 1.5 5.916V14.084C1.5 16.767 3.135 18.5 5.665 18.5H14.333C16.864 18.5 18.5 16.767 18.5 14.084V5.916C18.5 3.233 16.864 1.5 14.334 1.5H5.665ZM14.333 20H5.665C2.276 20 0 17.622 0 14.084V5.916C0 2.378 2.276 0 5.665 0H14.334C17.723 0 20 2.378 20 5.916V14.084C20 17.622 17.723 20 14.333 20Z"
+                                                            fill="#ED4040"
+                                                        />
+                                                    </svg>
+                                                </div>
+                                                <span>Очистить</span>
+                                            </div>
+                                            <button class="popup-apply def__btn red__btn">
+                                                <span>Применить</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="search__items">
+                                    <div class="search__item">
+                                        <div class="search__item-slider">
+                                            <div class="office__slider">
+    <div class="office__slider-items slider-wrapper">
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item1.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item2.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item3.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item2.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item1.jpg" alt="" />
+        </div>
+    </div>
+    <div class="office__slider-btn__prev"></div>
+    <div class="office__slider-btn__next"></div>
+</div>
+                                        </div>
+                                        <div class="search__item-info">
+                                            <div class="search__item-header">
+                                                <div class="search__item-header__name">
+                                                    <div class="search__item-title">
+                                                        Офис на Орловской
+                                                    </div>
+                                                    <div class="search__item-type">Офис</div>
+                                                </div>
+                                                <div class="search__item-rate">
+                                                    <div class="search__item-favorite">
+                                                        <button class="favorite">
+                                                            <svg
+                                                                width="18"
+                                                                height="17"
+                                                                viewBox="0 0 18 17"
+                                                                fill="transparent"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                            >
+                                                                <path
+                                                                    d="M8.53368 3.55539L9 4.76088L9.46632 3.55539C10.0587 2.02416 11.7427 0.875 13.5 0.875C15.7687 0.875 17.5 2.58497 17.5 4.875C17.5 6.44572 16.6613 7.89043 15.0808 9.64833C14.1493 10.6844 13.009 11.7799 11.6943 13.0429C10.863 13.8416 9.96195 14.7073 9 15.6671C8.03805 14.7073 7.13702 13.8416 6.30568 13.0429C4.99104 11.7799 3.85066 10.6844 2.91919 9.64833C1.3387 7.89043 0.5 6.44572 0.5 4.875C0.5 2.58497 2.23131 0.875 4.5 0.875C6.25546 0.875 7.94138 2.02426 8.53368 3.55539Z"
+                                                                    stroke="#ED4040"
+                                                                />
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                    <div class="search__item-rate__value">
+                                                        <div class="rate">5.0</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="search__item-tags">
+                                                <div class="search__item-tag">
+                                                    <span>Высокоскоростной WiFi</span>
+                                                </div>
+                                                <div class="search__item-tag">
+                                                    <span>Открыто круглосуточно</span>
+                                                </div>
+                                                <div class="search__item-tag">
+                                                    <span>Встреча гостей/секретарь</span>
+                                                </div>
+                                                <div class="search__item-tag">
+                                                    <span>Кофемашина</span>
+                                                </div>
+                                            </div>
+                                            <div class="search__item-numbers">
+                                                <div class="search__item-properties">
+                                                    <div
+                                                        class="
+                                                            search__item-property
+                                                            search__item-property__places
+                                                        "
+                                                    >
+                                                        80 мест
+                                                    </div>
+                                                    <div
+                                                        class="
+                                                            search__item-property
+                                                            search__item-property__square
+                                                        "
+                                                    >
+                                                        355 м²
+                                                    </div>
+                                                </div>
+                                                <div class="search__item-price">1 300 ₽/сут</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="search__item">
+                                        <div class="search__item-slider">
+                                            <div class="office__slider">
+    <div class="office__slider-items slider-wrapper">
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item1.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item2.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item3.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item2.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item1.jpg" alt="" />
+        </div>
+    </div>
+    <div class="office__slider-btn__prev"></div>
+    <div class="office__slider-btn__next"></div>
+</div>
+                                        </div>
+                                        <div class="search__item-info">
+                                            <div class="search__item-header">
+                                                <div class="search__item-header__name">
+                                                    <div class="search__item-title">
+                                                        Офис на этаже БЦ Васильевский
+                                                    </div>
+                                                    <div class="search__item-type">
+                                                        Переговорная комната
+                                                    </div>
+                                                </div>
+                                                <div class="search__item-rate">
+                                                    <div class="search__item-favorite">
+                                                        <button class="favorite">
+                                                            <svg
+                                                                width="18"
+                                                                height="17"
+                                                                viewBox="0 0 18 17"
+                                                                fill="transparent"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                            >
+                                                                <path
+                                                                    d="M8.53368 3.55539L9 4.76088L9.46632 3.55539C10.0587 2.02416 11.7427 0.875 13.5 0.875C15.7687 0.875 17.5 2.58497 17.5 4.875C17.5 6.44572 16.6613 7.89043 15.0808 9.64833C14.1493 10.6844 13.009 11.7799 11.6943 13.0429C10.863 13.8416 9.96195 14.7073 9 15.6671C8.03805 14.7073 7.13702 13.8416 6.30568 13.0429C4.99104 11.7799 3.85066 10.6844 2.91919 9.64833C1.3387 7.89043 0.5 6.44572 0.5 4.875C0.5 2.58497 2.23131 0.875 4.5 0.875C6.25546 0.875 7.94138 2.02426 8.53368 3.55539Z"
+                                                                    stroke="#ED4040"
+                                                                />
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                    <div class="search__item-rate__value">
+                                                        <div class="rate">4.9</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="search__item-tags">
+                                                <div class="search__item-tag">
+                                                    <span>Высокоскоростной WiFi</span>
+                                                </div>
+                                                <div class="search__item-tag">
+                                                    <span>Открыто круглосуточно</span>
+                                                </div>
+                                                <div class="search__item-tag">
+                                                    <span>Встреча гостей/секретарь</span>
+                                                </div>
+                                                <div class="search__item-tag">
+                                                    <span>Кофемашина</span>
+                                                </div>
+                                            </div>
+                                            <div class="search__item-numbers">
+                                                <div class="search__item-properties">
+                                                    <div
+                                                        class="
+                                                            search__item-property
+                                                            search__item-property__places
+                                                        "
+                                                    >
+                                                        80 мест
+                                                    </div>
+                                                    <div
+                                                        class="
+                                                            search__item-property
+                                                            search__item-property__square
+                                                        "
+                                                    >
+                                                        355 м²
+                                                    </div>
+                                                </div>
+                                                <div class="search__item-price">2 500 ₽/сут</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="search__item">
+                                        <div class="search__item-slider">
+                                            <div class="office__slider">
+    <div class="office__slider-items slider-wrapper">
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item1.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item2.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item3.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item2.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item1.jpg" alt="" />
+        </div>
+    </div>
+    <div class="office__slider-btn__prev"></div>
+    <div class="office__slider-btn__next"></div>
+</div>
+                                        </div>
+                                        <div class="search__item-info">
+                                            <div class="search__item-header">
+                                                <div class="search__item-header__name">
+                                                    <div class="search__item-title">
+                                                        Зал для переговоров
+                                                    </div>
+                                                    <div class="search__item-type">
+                                                        Конференц зал
+                                                    </div>
+                                                </div>
+                                                <div class="search__item-rate">
+                                                    <div class="search__item-favorite">
+                                                        <button class="favorite">
+                                                            <svg
+                                                                width="18"
+                                                                height="17"
+                                                                viewBox="0 0 18 17"
+                                                                fill="transparent"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                            >
+                                                                <path
+                                                                    d="M8.53368 3.55539L9 4.76088L9.46632 3.55539C10.0587 2.02416 11.7427 0.875 13.5 0.875C15.7687 0.875 17.5 2.58497 17.5 4.875C17.5 6.44572 16.6613 7.89043 15.0808 9.64833C14.1493 10.6844 13.009 11.7799 11.6943 13.0429C10.863 13.8416 9.96195 14.7073 9 15.6671C8.03805 14.7073 7.13702 13.8416 6.30568 13.0429C4.99104 11.7799 3.85066 10.6844 2.91919 9.64833C1.3387 7.89043 0.5 6.44572 0.5 4.875C0.5 2.58497 2.23131 0.875 4.5 0.875C6.25546 0.875 7.94138 2.02426 8.53368 3.55539Z"
+                                                                    stroke="#ED4040"
+                                                                />
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                    <div class="search__item-rate__value">
+                                                        <div class="rate">4.3</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="search__item-tags">
+                                                <div class="search__item-tag">
+                                                    <span>Высокоскоростной WiFi</span>
+                                                </div>
+                                                <div class="search__item-tag">
+                                                    <span>Открыто круглосуточно</span>
+                                                </div>
+                                                <div class="search__item-tag">
+                                                    <span>Встреча гостей/секретарь</span>
+                                                </div>
+                                                <div class="search__item-tag">
+                                                    <span>Кофемашина</span>
+                                                </div>
+                                            </div>
+                                            <div class="search__item-numbers">
+                                                <div class="search__item-properties">
+                                                    <div
+                                                        class="
+                                                            search__item-property
+                                                            search__item-property__places
+                                                        "
+                                                    >
+                                                        80 мест
+                                                    </div>
+                                                    <div
+                                                        class="
+                                                            search__item-property
+                                                            search__item-property__square
+                                                        "
+                                                    >
+                                                        355 м²
+                                                    </div>
+                                                </div>
+                                                <div class="search__item-price">5 500 ₽/сут</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="search__item">
+                                        <div class="search__item-slider">
+                                            <div class="office__slider">
+    <div class="office__slider-items slider-wrapper">
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item1.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item2.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item3.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item2.jpg" alt="" />
+        </div>
+        <div class="office__slider-item slider-item">
+            <img src="./public/images/search-item1.jpg" alt="" />
+        </div>
+    </div>
+    <div class="office__slider-btn__prev"></div>
+    <div class="office__slider-btn__next"></div>
+</div>
+                                        </div>
+                                        <div class="search__item-info">
+                                            <div class="search__item-header">
+                                                <div class="search__item-header__name">
+                                                    <div class="search__item-title">
+                                                        Офис на Орловской
+                                                    </div>
+                                                    <div class="search__item-type">Офис</div>
+                                                </div>
+                                                <div class="search__item-rate">
+                                                    <div class="search__item-favorite">
+                                                        <button class="favorite">
+                                                            <svg
+                                                                width="18"
+                                                                height="17"
+                                                                viewBox="0 0 18 17"
+                                                                fill="transparent"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                            >
+                                                                <path
+                                                                    d="M8.53368 3.55539L9 4.76088L9.46632 3.55539C10.0587 2.02416 11.7427 0.875 13.5 0.875C15.7687 0.875 17.5 2.58497 17.5 4.875C17.5 6.44572 16.6613 7.89043 15.0808 9.64833C14.1493 10.6844 13.009 11.7799 11.6943 13.0429C10.863 13.8416 9.96195 14.7073 9 15.6671C8.03805 14.7073 7.13702 13.8416 6.30568 13.0429C4.99104 11.7799 3.85066 10.6844 2.91919 9.64833C1.3387 7.89043 0.5 6.44572 0.5 4.875C0.5 2.58497 2.23131 0.875 4.5 0.875C6.25546 0.875 7.94138 2.02426 8.53368 3.55539Z"
+                                                                    stroke="#ED4040"
+                                                                />
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                    <div class="search__item-rate__value">
+                                                        <div class="rate">5.0</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="search__item-tags">
+                                                <div class="search__item-tag">
+                                                    <span>Высокоскоростной WiFi</span>
+                                                </div>
+                                                <div class="search__item-tag">
+                                                    <span>Открыто круглосуточно</span>
+                                                </div>
+                                                <div class="search__item-tag">
+                                                    <span>Встреча гостей/секретарь</span>
+                                                </div>
+                                                <div class="search__item-tag">
+                                                    <span>Кофемашина</span>
+                                                </div>
+                                            </div>
+                                            <div class="search__item-numbers">
+                                                <div class="search__item-properties">
+                                                    <div
+                                                        class="
+                                                            search__item-property
+                                                            search__item-property__places
+                                                        "
+                                                    >
+                                                        80 мест
+                                                    </div>
+                                                    <div
+                                                        class="
+                                                            search__item-property
+                                                            search__item-property__square
+                                                        "
+                                                    >
+                                                        355 м²
+                                                    </div>
+                                                </div>
+                                                <div class="search__item-price">1 300 ₽/сут</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="def__btn red__btn search__map-show__btn">
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M22.75 13.9549H1.75C1.336 13.9549 1 13.6189 1 13.2049C1 12.7909 1.336 12.4549 1.75 12.4549H22.75C23.164 12.4549 23.5 12.7909 23.5 13.2049C23.5 13.6189 23.164 13.9549 22.75 13.9549Z"
+                                        fill="white"
+                                    />
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M20.8804 9.745C20.4664 9.745 20.1304 9.409 20.1304 8.995V7.481C20.1304 5.838 18.7924 4.5 17.1474 4.5H15.9424C15.5284 4.5 15.1924 4.164 15.1924 3.75C15.1924 3.336 15.5284 3 15.9424 3H17.1474C19.6194 3 21.6304 5.011 21.6304 7.481V8.995C21.6304 9.409 21.2944 9.745 20.8804 9.745Z"
+                                        fill="white"
+                                    />
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M3.62012 9.745C3.20612 9.745 2.87012 9.409 2.87012 8.995V7.481C2.87012 5.011 4.88112 3 7.35312 3H8.58912C9.00312 3 9.33912 3.336 9.33912 3.75C9.33912 4.164 9.00312 4.5 8.58912 4.5H7.35312C5.70812 4.5 4.37012 5.838 4.37012 7.481V8.995C4.37012 9.409 4.03412 9.745 3.62012 9.745Z"
+                                        fill="white"
+                                    />
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M17.1474 21.7606H15.9424C15.5284 21.7606 15.1924 21.4246 15.1924 21.0106C15.1924 20.5966 15.5284 20.2606 15.9424 20.2606H17.1474C18.7924 20.2606 20.1304 18.9226 20.1304 17.2786V13.2036C20.1304 12.7896 20.4664 12.4536 20.8804 12.4536C21.2944 12.4536 21.6304 12.7896 21.6304 13.2036V17.2786C21.6304 19.7496 19.6194 21.7606 17.1474 21.7606Z"
+                                        fill="white"
+                                    />
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M8.58912 21.7606H7.35312C4.88112 21.7606 2.87012 19.7496 2.87012 17.2786V13.2036C2.87012 12.7896 3.20612 12.4536 3.62012 12.4536C4.03412 12.4536 4.37012 12.7896 4.37012 13.2036V17.2786C4.37012 18.9226 5.70812 20.2606 7.35312 20.2606H8.58912C9.00312 20.2606 9.33912 20.5966 9.33912 21.0106C9.33912 21.4246 9.00312 21.7606 8.58912 21.7606Z"
+                                        fill="white"
+                                    />
+                                </svg>
+
+                                <span>Развернуть карту</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+    <div class="container">
+        <div class="footer__info">
+            <div class="footer__info-item">
+                <div class="footer__info-left">
+                    <div class="footer__logo">
+                        <a class="logo" href="./search.html">
+                            <div class="logo-img">
+                                <img src="./public/images/logo-img.png" alt="" />
+                            </div>
+                            <div class="logo-company">
+                                <img src="./public/images/logo-company.png" alt="" />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="footer__socials">
+                        <div class="socials">
+                            <div class="socials-item" id="telegram">
+                                <div class="socials-item__icon">
+                                    <img src="./public/images/svg/telegram.svg" alt="" />
+                                </div>
+                            </div>
+                            <div class="socials-item" id="facebook">
+                                <div class="socials-item__icon">
+                                    <img src="./public/images/svg/facebook.svg" alt="" />
+                                </div>
+                            </div>
+                            <div class="socials-item" id="vk">
+                                <div class="socials-item__icon">
+                                    <img src="./public/images/svg/vk.svg" alt="" />
+                                </div>
+                            </div>
+                            <div class="socials-item" id="instagram">
+                                <div class="socials-item__icon">
+                                    <img src="./public/images/svg/instagram.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__info-item">
+                <div class="footer__info-nav">
+                    <div class="footer__info-nav__row">
+                        <div class="footer__info-nav__column">
+                            <div class="footer__info-nav__title">Сообщество</div>
+                            <a class="footer__info-nav__link" href="#"> Реферальная программа </a>
+                        </div>
+                        <div class="footer__info-nav__column">
+                            <div class="footer__info-nav__title">Компания</div>
+                            <a class="footer__info-nav__link" href="#"> О сервисе </a>
+                        </div>
+                    </div>
+                    <div class="footer__info-nav__row">
+                        <div class="footer__info-nav__column">
+                            <div class="footer__info-nav__title">Помощь</div>
+                            <a class="footer__info-nav__link" href="#"> Свяжитесь с нами </a>
+                        </div>
+                        <div class="footer__info-nav__column">
+                            <div class="footer__info-nav__title">Аренда</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__policy">
+            <div class="footer__policy-inner">
+                <div class="footer__policy-text">
+                    <div class="footer__policy-name">© 2021 Getdesk.</div>
+                    <div class="footer__policy-links">
+                        <div class="footer__policy-link">
+                            <a href="">Конфиденциальность</a>
+                        </div>
+                        <div class="footer__policy-link">
+                            <a href="">Условия использования</a>
+                        </div>
+                        <div class="footer__policy-link">
+                            <a href="">Реквизиты компании</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__policy-inner__item">
+                    <div class="footer__policy-currency">
+                        <div class="footer-round__btn round__btn" id="lang-btn">
+                            <img src="./public/images/svg/lang.svg" alt="" />
+                        </div>
+                        <div class="footer__policy-currency__select">
+                            <select name="" id="">
+                                <option value="" selected="">RUB</option>
+                                <option value="">EURO</option>
+                                <option value="">EURO</option>
+                                <option value="">EURO</option>
+                                <option value="">EURO</option>
+                            </select>
+                            <svg
+                                width="16"
+                                height="10"
+                                viewBox="0 0 16 10"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M15 1.5L8 8.5L1 1.5"
+                                    stroke="#717171"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script type="module" src="src/js/index.js"></script>
+    </body>
+</html>

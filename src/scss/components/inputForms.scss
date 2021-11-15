@@ -1,0 +1,130 @@
+.def__input {
+    position: relative;
+    height: 60px;
+    background: #fff;
+    border: 1px solid #c7c7c7;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all ease 0.3s;
+    input,
+    select {
+        padding: 0 64px;
+        background: transparent;
+        border: none;
+        outline: none;
+        height: 100%;
+        width: 100%;
+        font-size: 20px;
+        z-index: 1;
+        &::placeholder {
+            color: #131313;
+        }
+    }
+    select {
+        appearance: none;
+        cursor: pointer;
+    }
+    &.active {
+        border: 1px solid #ed4040;
+        .map-icon {
+            path {
+                fill: #ed4040;
+            }
+        }
+        .arrow-icon {
+            transform: translate(0, -50%) rotate(-90deg);
+            path {
+                stroke: #ed4040;
+            }
+        }
+        .date-icon {
+            path {
+                stroke: #ed4040;
+            }
+        }
+    }
+    .left-icon,
+    .right-icon {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        content: "";
+        top: 50%;
+        transform: translate(0, -50%);
+        path {
+            transition: all ease 0.3s;
+        }
+    }
+    .map-icon {
+        left: 30px;
+        z-index: 0;
+    }
+    .search-icon {
+        right: 30px;
+        z-index: 2;
+    }
+    .arrow-icon {
+        right: 25px;
+        transition: all ease 0.3s;
+    }
+    .date-icon {
+        left: 34px;
+    }
+}
+.date__input {
+    select {
+        padding: 0 64px 0 68px;
+    }
+}
+.tag {
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    &__item span {
+        margin-left: 10px;
+    }
+}
+input[type="checkbox"] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    align-self: center;
+}
+input[type="checkbox"] + label {
+    user-select: none;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+input[type="checkbox"] + label:before {
+    transition: all ease 0.3s;
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 1px solid #ed4040;
+    border-radius: 5px;
+    background-position: center center;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+input[type="checkbox"]:checked + label:before {
+    background: #ed4040 url("../images/svg/check.svg") no-repeat center center;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

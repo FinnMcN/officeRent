@@ -1,0 +1,97 @@
+.header {
+    box-shadow: 0px 5px 50px rgba(37, 1, 0, 0.2);
+    z-index: 100;
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 0;
+        flex-wrap: wrap;
+    }
+    &__office-btn {
+        margin-right: 70px;
+    }
+    &__input-blocks {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+    }
+    &__top-btns {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-round__btns {
+        display: flex;
+        gap: 20px;
+    }
+    &-round__btn {
+        background: #f74d4a;
+    }
+    &__components {
+        box-shadow: 0px 5px 50px rgba(37, 1, 0, 0.2);
+    }
+    &__menu-mobile {
+        display: none;
+        z-index: 100;
+    }
+    &__menu-icon {
+        display: flex;
+        flex-direction: column;
+        z-index: 50;
+        cursor: pointer;
+    }
+    &__menu-icon span {
+        height: 3px;
+        border-radius: 10px;
+        background: #131313;
+        transition: all ease-in 0.3s;
+        width: 44px;
+    }
+    &__menu-icon span:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    &__menu-icon.active span:nth-child(1) {
+        transform: translate(0, 13px) rotate(45deg);
+    }
+    &__menu-icon.active span:nth-child(2) {
+        transform: scale(0);
+    }
+    &__menu-icon.active span:nth-child(3) {
+        transform: translate(0, -13px) rotate(-45deg);
+    }
+}
+@media screen and (max-width: 1391px) {
+    .header {
+        box-shadow: none;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .header {
+        .def__input {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .header {
+        &__top {
+            padding: 10px 0;
+        }
+        &__menu-mobile {
+            display: initial;
+        }
+        &__office-btn {
+            display: none;
+        }
+        &-round__btns {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 420px) {
+    .header {
+        &__logo-company {
+            display: none;
+        }
+    }
+}

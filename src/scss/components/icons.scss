@@ -1,0 +1,11 @@
+.icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    content: "";
+    top: 50%;
+    transform: translate(0, -50%);
+    path {
+        transition: all ease 0.3s;
+    }
+}

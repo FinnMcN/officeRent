@@ -2,17 +2,17 @@
     <div class="container">
         <div class="header__top">
             <a class="logo" href="./search.html">
-                <div class="logo-img">
+                <div class="logo__img">
                     <img src="./public/images/logo-img.png" alt="" />
                 </div>
-                <div class="header__logo-company logo-company">
+                <div class="header__logo-company logo__company">
                     <img src="./public/images/logo-company.png" alt="" />
                 </div>
             </a>
             <div class="header__input-blocks">
-                <div class="city__input def__input">
+                <div class="def-input city-input">
                     <svg
-                        class="map-icon left-icon"
+                        class="city-input__icon icon"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -50,10 +50,10 @@
                             />
                         </g>
                     </svg>
-                    <input type="text" placeholder="Выберите город" />
+                    <input class="def-input__input" type="text" placeholder="Выберите город" />
                     <button class="search-btn">
                         <svg
-                            class="search-icon right-icon"
+                            class="city-input__icon-search icon"
                             width="24"
                             height="24"
                             viewBox="0 0 24 24"
@@ -111,9 +111,9 @@
                         </svg>
                     </button>
                 </div>
-                <div class="date__input def__input">
+                <div class="def-input date-input">
                     <svg
-                        class="date-icon left-icon"
+                        class="date-input__icon icon"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -193,8 +193,7 @@
                             stroke-linejoin="round"
                         ></path>
                     </svg>
-
-                    <select>
+                    <select class="def-input__select">
                         <option value="" disabled="" selected="" hidden="">Укажите дату</option>
                         <option value="">asdasd</option>
                         <option value="">asdasd</option>
@@ -204,11 +203,11 @@
                 </div>
             </div>
             <div class="header__top-btns">
-                <div class="header-round__btns round__btns">
-                    <button class="header-round__btn round__btn" id="btn-lang">
+                <div class="header__round-btns round-btns">
+                    <button class="header__btn--round btn--round">
                         <img src="./public/images/svg/lang.svg" alt="" />
                     </button>
-                    <button class="header-round__btn round__btn" id="btn-login">
+                    <button class="header__btn--round btn--round">
                         <img src="./public/images/svg/login.svg" alt="" />
                     </button>
                 </div>

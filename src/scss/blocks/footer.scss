@@ -5,61 +5,67 @@
     &__logo {
         margin-right: 100px;
     }
-    &__info {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        padding: 60px 0;
-        border-bottom: 1px solid #c4c4c4;
+    &__btn--round {
+        background: #717171;
+        margin-right: 20px;
     }
-    &__info-left {
+}
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 60px 0;
+    border-bottom: 1px solid #c4c4c4;
+
+    &__left {
         display: flex;
         align-items: center;
     }
-    &__info-nav {
+    &__nav {
         display: flex;
         gap: 80px;
         flex-wrap: wrap;
     }
-    &__info-nav__row {
+    &__nav-row {
         display: flex;
         flex-direction: row;
         gap: 80px;
     }
-    &__info-nav__column {
+    &__nav-column {
         display: flex;
         flex-direction: column;
     }
-    &__info-nav__title {
+    &__nav-title {
         font-size: 20px;
         font-weight: 700;
         margin-bottom: 20px;
         color: #000000;
     }
-    &__info-nav__link {
+    &__nav-link {
         font-size: 20px;
         color: #000000;
     }
-    &__policy {
-        padding: 26px 0 35px;
-    }
-    &__policy-inner {
+}
+.footer-policy {
+    padding: 26px 0 35px;
+
+    &__inner {
         display: flex;
         justify-content: space-between;
     }
-    &__policy-name {
+    &__name {
         margin-right: 115px;
     }
-    &__policy-links {
+    &__links {
         display: flex;
         gap: 75px;
     }
-    &__policy-link {
+    &__link {
         padding-left: 15px;
         position: relative;
     }
-    &__policy-link:after {
+    &__link:after {
         position: absolute;
         content: "";
         width: 5px;
@@ -70,18 +76,18 @@
         left: 0;
         transform: translate(0, -50%);
     }
-    &__policy-link a {
+    &__link a {
         color: #717171;
     }
-    &__policy-text {
+    &__text {
         display: flex;
         align-items: center;
     }
-    &__policy-currency {
+    &__currency {
         display: flex;
         align-items: center;
     }
-    &__policy-currency__select {
+    &__currency-select {
         position: relative;
         select {
             padding-right: 20px;
@@ -100,121 +106,129 @@
             transform: translate(0, -50%);
         }
     }
-    &-round__btn {
-        background: #717171;
-        margin-right: 20px;
-    }
 }
 //media
 @media screen and (max-width: 1740px) {
     .footer {
-        &__info-nav {
-            gap: 35px;
-        }
-        &__info-nav__row {
-            gap: 35px;
-        }
         &__logo {
             margin-right: 45px;
+        }
+    }
+    .footer-info {
+        &__nav {
+            gap: 35px;
+        }
+        &__nav-row {
+            gap: 35px;
         }
     }
 }
 @media screen and (max-width: 1391px) {
     .footer {
-        &__info {
-            flex-wrap: nowrap;
-        }
         &__logo {
             margin-right: 0;
         }
-        &__info-left {
+    }
+    .footer-info {
+        flex-wrap: nowrap;
+
+        &__left {
             flex-direction: column;
             gap: 40px;
         }
-        &__info-nav {
+        &__nav {
             gap: 90px;
         }
-        &__info-nav__row {
+        &__nav-row {
             flex-direction: column;
         }
-        &__policy-links {
+    }
+    .footer-policy {
+        &__links {
             gap: 30px;
         }
-        &__policy-name {
+        &__name {
             margin-right: 0;
+        }
+        &__inner {
+            margin-bottom: 10px;
         }
     }
 }
 @media screen and (max-width: 1000px) {
-    .footer {
-        &__info {
-            flex-direction: column;
-            padding: 0;
-            border-bottom: none;
-        }
-        &__info-nav {
+    .footer-info {
+        flex-direction: column;
+        padding: 0;
+        border-bottom: none;
+
+        &__nav {
             width: 100%;
             gap: unset;
             justify-content: space-around;
         }
-        &__info-item {
+        &__item {
             width: 100%;
             display: flex;
             justify-content: center;
             padding: 35px 0;
             border-bottom: 1px solid #c4c4c4;
         }
-        &__policy {
-            padding: 35px 0 40px;
-        }
-        &__policy-inner {
+    }
+    .footer-policy {
+        padding: 35px 0 40px;
+
+        &__inner {
             margin-bottom: 30px;
             align-items: flex-start;
         }
-        &__policy-links {
+        &__links {
             flex-direction: column;
             gap: 10px;
         }
     }
 }
 @media screen and (max-width: 768px) {
-    .footer {
-        &__info-nav {
+    .footer-info {
+        &__nav {
             justify-content: space-between;
         }
-        &__info-nav__title {
+        &__nav-title {
             margin-bottom: 10px;
         }
     }
 }
 @media screen and (max-width: 480px) {
     .footer {
-        &__info-nav {
-            gap: 35px;
-        }
-        &__info-nav__title {
-            font-size: 18px;
-        }
-        &__info-nav__link {
-            font-size: 18px;
-        }
-        &__policy-currency {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-        &__policy-link {
-            line-height: 24px;
-        }
-        &-round__btn {
+        &__btn--round {
             align-self: flex-end;
             order: 2;
             margin-right: 0;
         }
-        &__policy-currency__select {
-            order: 1;
+    }
+    .footer-info {
+        &__nav {
+            gap: 35px;
+        }
+        &__nav-title {
+            font-size: 18px;
+        }
+        &__nav-link {
+            font-size: 18px;
+        }
+    }
+    .footer-policy {
+        &__currency {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__link {
+            line-height: 24px;
+        }
+
+        &__currency-select {
             margin-bottom: 20px;
         }
-        &__policy-currency__select select {
+        &__currency-select select {
             font-size: 18px;
         }
     }

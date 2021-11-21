@@ -1,6 +1,6 @@
 .socials {
     display: flex;
-    &-item {
+    &__item {
         border-radius: 50%;
         height: 50px;
         width: 50px;
@@ -9,10 +9,10 @@
         justify-content: center;
         align-items: center;
     }
-    &-item:not(:last-child) {
+    &__item:not(:last-child) {
         margin-right: 17px;
     }
-    &-item__icon {
+    &__item-icon {
         width: 30px;
         height: 30px;
         img {

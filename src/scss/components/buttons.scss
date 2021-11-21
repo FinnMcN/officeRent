@@ -3,25 +3,25 @@ button {
     outline: none;
     border: none;
 }
-.def__btn {
+.btn {
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    span {
-        white-space: nowrap;
-        font-size: 24px;
-        font-weight: 700;
-        text-align: center;
-    }
 }
-.red__btn {
+.btn__name {
+    white-space: nowrap;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+.btn--red {
     background: #ed4040;
-    span {
-        color: #fff;
-    }
 }
-.round__btn {
+.btn--red .btn__name {
+    color: #fff;
+}
+.btn--round {
     height: 44px;
     width: 44px;
     border-radius: 50%;
@@ -29,6 +29,7 @@ button {
     align-items: center;
     justify-content: center;
 }
+//?
 .search__map-btn {
     height: 44px;
     padding: 0 15px;
@@ -46,26 +47,27 @@ button {
         font-size: 20px;
     }
 }
-.search__btn {
+.search-btn {
     cursor: pointer;
 }
-.office__btn {
+.office-btn {
     background: transparent;
-    a {
-        font-size: 22px;
-        font-weight: 500;
-        transition: all ease 0.3s;
-    }
-    &:hover a {
-        color: #ed4040;
-        text-shadow: 0 0 1px #ed4040, 0 0 1px #ed4040;
-    }
 }
+.office-btn__name {
+    font-size: 22px;
+    font-weight: 500;
+    transition: all ease 0.3s;
+}
+.office-btn:hover .office-btn__name {
+    color: #ed4040;
+    text-shadow: 0 0 1px #ed4040, 0 0 1px #ed4040;
+}
+//?
 .remove {
     background: transparent;
 }
 @media screen and (max-width: 768px) {
-    .def__btn a {
+    .btn__name {
         font-size: 22px;
     }
 }

@@ -2,7 +2,7 @@ import move from "./adaptive.js";
 import adaptive from "./adaptive.js";
 
 export default function media() {
-    const officeForm = document.querySelectorAll(".office__form");
+    const officeForm = document.querySelectorAll(".office-form");
     const searchItems = document.querySelectorAll(".search__item");
 
     function adaptiveOfficeForm(width) {
@@ -10,10 +10,10 @@ export default function media() {
             if (width <= 1390 && width >= 1001) {
                 officeForm.forEach((item) => {
                     //input wrapper
-                    if (!item.querySelector(".office__form-input__wrapper")) {
+                    if (!item.querySelector(".office-form__input-wrapper")) {
                         const officeFormWrapper = document.createElement("div");
-                        const moveTo = item.querySelector(".office__form-title");
-                        officeFormWrapper.classList.add("office__form-input__wrapper");
+                        const moveTo = item.querySelector(".office-form__title");
+                        officeFormWrapper.classList.add("office-form__input-wrapper");
 
                         moveTo.after(officeFormWrapper);
                     }
@@ -22,35 +22,35 @@ export default function media() {
             
             officeForm.forEach((item) => {
                 const cityInput = {
-                    selector: item.querySelector(".office__form-city__input"),
+                    selector: item.querySelector(".office-form__city-input"),
                     start: {
-                        relativeEl: item.querySelector(".office__form-title"),
+                        relativeEl: item.querySelector(".office-form__title"),
                         method: "after",
                     },
                     replace: {
-                        relativeEl: item.querySelector(".office__form-input__wrapper"),
+                        relativeEl: item.querySelector(".office-form__input-wrapper"),
                         method: "append",
                     },
                 };
                 const dateInput = {
-                    selector: item.querySelector(".office__form-date__input"),
+                    selector: item.querySelector(".office-form__date-input"),
                     start: {
-                        relativeEl: item.querySelector(".office__form-tag__items"),
+                        relativeEl: item.querySelector(".office-form__tags"),
                         method: "after",
                     },
                     replace: {
-                        relativeEl: item.querySelector(".office__form-input__wrapper"),
+                        relativeEl: item.querySelector(".office-form__input-wrapper"),
                         method: "append",
                     },
                 };
                 const defBtn = {
-                    selector: item.querySelector(".office__form-def__btn"),
+                    selector: item.querySelector(".office-form__btn"),
                     start: {
                         relativeEl: item,
                         method: "append",
                     },
                     replace: {
-                        relativeEl: item.querySelector(".office__form-tag__items"),
+                        relativeEl: item.querySelector(".office-form__tags"),
                         method: "append",
                     },
                 };
@@ -60,8 +60,8 @@ export default function media() {
             if (!(width <= 1390 && width >= 1001)) {
                 officeForm.forEach((item) => {
                     //wrapper remove
-                    if (item.querySelector(".office__form-input__wrapper")) {
-                        item.querySelector(".office__form-input__wrapper").remove();
+                    if (item.querySelector(".office-form__input-wrapper")) {
+                        item.querySelector(".office-form__input-wrapper").remove();
                     }
                 });
             }
@@ -152,13 +152,13 @@ export default function media() {
 
     function adaptiveFooter(width) {
         const footerPolicyName = {
-            selector: document.querySelector(".footer__policy-name"),
+            selector: document.querySelector(".footer-policy__name"),
             start: {
-                relativeEl: document.querySelector(".footer__policy-text"),
+                relativeEl: document.querySelector(".footer-policy__text"),
                 method: "prepend",
             },
             replace: {
-                relativeEl: document.querySelector(".footer__policy-inner"),
+                relativeEl: document.querySelector(".footer-policy__inner"),
                 method: "after",
             },
         }; 

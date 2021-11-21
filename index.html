@@ -10,25 +10,25 @@
     <body>
         <div class="wrapper">
             <div class="header">
-                <div class="container">
+                <div class="header__container container">
                     <div class="header__top">
                         <a class="logo" href="./search.html">
-                            <div class="logo-img">
+                            <div class="logo__img">
                                 <img src="./public/images/logo-img.png" alt="" />
                             </div>
-                            <div class="header__logo-company logo-company">
+                            <div class="header__logo-company logo__company">
                                 <img src="./public/images/logo-company.png" alt="" />
                             </div>
                         </a>
                         <div class="header__top-btns">
-                            <button class="header__office-btn office__btn">
-                                <a href="./search.html">Сдайте офис</a>
+                            <button class="header__office-btn office-btn">
+                                <a class="office-btn__name" href="./search.html">Сдайте офис</a>
                             </button>
-                            <div class="header-round__btns">
-                                <button class="header-round__btn round__btn" id="round__btn-lang">
+                            <div class="header__round-btns">
+                                <button class="header__btn--round btn--round">
                                     <img src="./public/images/svg/lang.svg" alt="" />
                                 </button>
-                                <button class="header-round__btn round__btn" id="round__btn-login">
+                                <button class="header__btn--round btn--round">
                                     <img src="./public/images/svg/login.svg" alt="" />
                                 </button>
                             </div>
@@ -42,13 +42,13 @@
                         </div>
                     </div>
                     <div class="header__main">
-                        <div class="header-office__block">
-                            <div class="office__form">
-                                <div class="office__form-title">Подбор офиса</div>
-                                <div class="office__form-city__input">
-                                    <div class="city__input def__input">
+                        <div class="header__office-block">
+                            <div class="office-form">
+                                <div class="office-form__title">Подбор офиса</div>
+                                <div class="office-form__city-input">
+                                    <div class="def-input city-input">
                                         <svg
-                                            class="map-icon left-icon"
+                                            class="city-input__icon icon"
                                             width="24"
                                             height="24"
                                             viewBox="0 0 24 24"
@@ -86,7 +86,7 @@
                                                 />
                                             </g>
                                         </svg>
-                                        <select>
+                                        <select class="def-input__select">
                                             <option value="" disabled="" selected="" hidden="">
                                                 Выберите город
                                             </option>
@@ -96,7 +96,7 @@
                                             <option value="">asdasd</option>
                                         </select>
                                         <svg
-                                            class="arrow-icon right-icon"
+                                            class="def-input__icon-arrow icon"
                                             width="24"
                                             height="24"
                                             viewBox="0 0 24 24"
@@ -113,148 +113,144 @@
                                         </svg>
                                     </div>
                                 </div>
-                                <div class="office__form-tag__items">
-                                    <div class="tag__items">
-                                        <div class="tag__items-left">
-                                            <div class="tag__item">
-                                                <input type="checkbox" id="office1" />
-                                                <label for="office1"></label>
-                                                <span>Переговорная комната</span>
-                                            </div>
-                                            <div class="tag__item">
-                                                <input type="checkbox" id="office2" />
-                                                <label for="office2"></label>
-                                                <span>Конференц-зал</span>
-                                            </div>
+                                <div class="office-form__tags tags">
+                                    <div class="tags__left">
+                                        <div class="tags__item">
+                                            <input type="checkbox" id="office1" />
+                                            <label for="office1"></label>
+                                            <span class="tags__item-name"
+                                                >Переговорная комната</span
+                                            >
                                         </div>
-                                        <div class="tag__items-right">
-                                            <div class="tag__item">
-                                                <input type="checkbox" id="office3" />
-                                                <label for="office3"></label>
-                                                <span>Рабочее место</span>
-                                            </div>
-                                            <div class="tag__item">
-                                                <input type="checkbox" id="office4" />
-                                                <label for="office4"></label>
-                                                <span>Офис</span>
-                                            </div>
+                                        <div class="tags__item">
+                                            <input type="checkbox" id="office2" />
+                                            <label for="office2"></label>
+                                            <span class="tags__item-name">Конференц-зал</span>
+                                        </div>
+                                    </div>
+                                    <div class="tags__right">
+                                        <div class="tags__item">
+                                            <input type="checkbox" id="office3" />
+                                            <label for="office3"></label>
+                                            <span class="tags__item-name">Рабочее место</span>
+                                        </div>
+                                        <div class="tags__item">
+                                            <input type="checkbox" id="office4" />
+                                            <label for="office4"></label>
+                                            <span class="tags__item-name">Офис</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="office__form-date__input">
-                                    <div class="date__input def__input">
-                                        <svg
-                                            class="date-icon left-icon"
-                                            width="24"
-                                            height="24"
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                            <path
-                                                d="M3.09253 9.40426H20.9165"
-                                                stroke="#131313"
-                                                stroke-width="1.5"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                            />
-                                            <path
-                                                d="M16.442 13.3097H16.4512"
-                                                stroke="#131313"
-                                                stroke-width="1.5"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                            />
-                                            <path
-                                                d="M12.0047 13.3097H12.014"
-                                                stroke="#131313"
-                                                stroke-width="1.5"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                            />
-                                            <path
-                                                d="M7.55793 13.3097H7.5672"
-                                                stroke="#131313"
-                                                stroke-width="1.5"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                            />
-                                            <path
-                                                d="M16.442 17.1962H16.4512"
-                                                stroke="#131313"
-                                                stroke-width="1.5"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                            />
-                                            <path
-                                                d="M12.0047 17.1962H12.014"
-                                                stroke="#131313"
-                                                stroke-width="1.5"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                            />
-                                            <path
-                                                d="M7.55793 17.1962H7.5672"
-                                                stroke="#131313"
-                                                stroke-width="1.5"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                            />
-                                            <path
-                                                d="M16.0438 2V5.29078"
-                                                stroke="#131313"
-                                                stroke-width="1.5"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                            />
-                                            <path
-                                                d="M7.9654 2V5.29078"
-                                                stroke="#131313"
-                                                stroke-width="1.5"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                            />
-                                            <path
-                                                fill-rule="evenodd"
-                                                clip-rule="evenodd"
-                                                d="M16.2383 3.57919H7.77096C4.83427 3.57919 3 5.21513 3 8.22222V17.2719C3 20.3262 4.83427 22 7.77096 22H16.229C19.175 22 21 20.3546 21 17.3475V8.22222C21.0092 5.21513 19.1842 3.57919 16.2383 3.57919Z"
-                                                stroke="#131313"
-                                                stroke-width="1.5"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                            />
-                                        </svg>
-
-                                        <select>
-                                            <option value="" disabled="" selected="" hidden="">
-                                                Выберите дату
-                                            </option>
-                                            <option value="">asdasd</option>
-                                            <option value="">asdasd</option>
-                                            <option value="">asdasd</option>
-                                            <option value="">asdasd</option>
-                                        </select>
-                                        <svg
-                                            class="arrow-icon right-icon"
-                                            width="24"
-                                            height="24"
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                            <path
-                                                d="M19 8.5L12 15.5L5 8.5"
-                                                stroke="#131313"
-                                                stroke-width="1.5"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                            />
-                                        </svg>
-                                    </div>
+                                <div class="office-form__date-input def-input date-input">
+                                    <svg
+                                        class="date-input__icon icon"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M3.09253 9.40426H20.9165"
+                                            stroke="#131313"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                        <path
+                                            d="M16.442 13.3097H16.4512"
+                                            stroke="#131313"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                        <path
+                                            d="M12.0047 13.3097H12.014"
+                                            stroke="#131313"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                        <path
+                                            d="M7.55793 13.3097H7.5672"
+                                            stroke="#131313"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                        <path
+                                            d="M16.442 17.1962H16.4512"
+                                            stroke="#131313"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                        <path
+                                            d="M12.0047 17.1962H12.014"
+                                            stroke="#131313"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                        <path
+                                            d="M7.55793 17.1962H7.5672"
+                                            stroke="#131313"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                        <path
+                                            d="M16.0438 2V5.29078"
+                                            stroke="#131313"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                        <path
+                                            d="M7.9654 2V5.29078"
+                                            stroke="#131313"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M16.2383 3.57919H7.77096C4.83427 3.57919 3 5.21513 3 8.22222V17.2719C3 20.3262 4.83427 22 7.77096 22H16.229C19.175 22 21 20.3546 21 17.3475V8.22222C21.0092 5.21513 19.1842 3.57919 16.2383 3.57919Z"
+                                            stroke="#131313"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                    <select class="def-input__select date-input__select">
+                                        <option value="" disabled="" selected="" hidden="">
+                                            Выберите дату
+                                        </option>
+                                        <option value="">asdasd</option>
+                                        <option value="">asdasd</option>
+                                        <option value="">asdasd</option>
+                                        <option value="">asdasd</option>
+                                    </select>
+                                    <svg
+                                        class="def-input__icon-arrow icon"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M19 8.5L12 15.5L5 8.5"
+                                            stroke="#131313"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
                                 </div>
-
-                                <button class="office__form-def__btn def__btn red__btn">
-                                    <span>Найти место</span>
+                                <button class="office-form__btn btn btn--red">
+                                    <span class="btn__name">Найти место</span>
                                 </button>
                             </div>
                         </div>
@@ -303,204 +299,198 @@
                         </div>
                     </div>
                 </div>
-                <div class="most__rented">
+                <div class="most-rented">
                     <div class="container">
-                        <div class="most__rented-title title">Самые арендуемые</div>
-                        <div class="most__rented-slider">
-                            <div class="offices__slider slider">
-                                <div class="offices__slider-items slider-wrapper">
-                                    <div class="offices__slider-item slider-item">
-                                        <div class="offices__slider-item__img">
+                        <div class="most-rented__title title">Самые арендуемые</div>
+                        <div class="most-rented__slider">
+                            <div class="offices-slider slider">
+                                <div class="offices-slider__items slider-wrapper">
+                                    <div class="offices-slider__item slider-item">
+                                        <div class="offices-slider__item-img">
                                             <img src="./public/images/office-item1.jpg" alt="" />
                                         </div>
-                                        <div class="offices__slider-item__type">
+                                        <div class="offices-slider__item-type">
                                             <span>Офис</span>
-                                            <div class="offices__slider-item__rate rate">5.0</div>
+                                            <div class="offices-slider__item-rate rate">5.0</div>
                                         </div>
-                                        <div class="offices__slider-item__desc">
-                                            <div class="offices__slider-item__name">
+                                        <div class="offices-slider__item-desc">
+                                            <div class="offices-slider__item-name">
                                                 Офис на Орловской
                                             </div>
-                                            <div class="offices__slider-item__location">
+                                            <div class="offices-slider__item-location">
                                                 Россия, Москва
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="offices__slider-item slider-item">
-                                        <div class="offices__slider-item__img">
+                                    <div class="offices-slider__item slider-item">
+                                        <div class="offices-slider__item-img">
                                             <img src="./public/images/office-item2.jpg" alt="" />
                                         </div>
-                                        <div class="offices__slider-item__type">
+                                        <div class="offices-slider__item-type">
                                             <span>Переговорная комната</span>
-                                            <div class="offices__slider-item__rate rate">4.9</div>
+                                            <div class="offices-slider__item-rate rate">4.9</div>
                                         </div>
-                                        <div class="offices__slider-item__desc">
-                                            <div class="offices__slider-item__name">
+                                        <div class="offices-slider__item-desc">
+                                            <div class="offices-slider__item-name">
                                                 Переговорная комната в Чертаново
                                             </div>
-                                            <div class="offices__slider-item__location">
+                                            <div class="offices-slider__item-location">
                                                 Россия, Москва
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="offices__slider-item slider-item">
-                                        <div class="offices__slider-item__img">
+                                    <div class="offices-slider__item slider-item">
+                                        <div class="offices-slider__item-img">
                                             <img src="./public/images/office-item3.jpg" alt="" />
                                         </div>
-                                        <div class="offices__slider-item__type">
+                                        <div class="offices-slider__item-type">
                                             <span>Рабочее место</span>
-                                            <div class="offices__slider-item__rate rate">4.9</div>
+                                            <div class="offices-slider__item-rate rate">4.9</div>
                                         </div>
-                                        <div class="offices__slider-item__desc">
-                                            <div class="offices__slider-item__name">
+                                        <div class="offices-slider__item-desc">
+                                            <div class="offices-slider__item-name">
                                                 Стол в коворкинге
                                             </div>
-                                            <div class="offices__slider-item__location">
+                                            <div class="offices-slider__item-location">
                                                 Россия, Санкт-Петербург
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="offices__slider-item slider-item">
-                                        <div class="offices__slider-item__img">
+                                    <div class="offices-slider__item slider-item">
+                                        <div class="offices-slider__item-img">
                                             <img src="./public/images/office-item4.jpg" alt="" />
                                         </div>
-                                        <div class="offices__slider-item__type">
+                                        <div class="offices-slider__item-type">
                                             <span>Конференц зал</span>
-                                            <div class="offices__slider-item__rate rate">3.2</div>
+                                            <div class="offices-slider__item-rate rate">3.2</div>
                                         </div>
-                                        <div class="offices__slider-item__desc">
-                                            <div class="offices__slider-item__name">
-                                                Зал Престиж
-                                            </div>
-                                            <div class="offices__slider-item__location">
+                                        <div class="offices-slider__item-desc">
+                                            <div class="offices-slider__item-name">Зал Престиж</div>
+                                            <div class="offices-slider__item-location">
                                                 Россия, Москва
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="offices__slider-item slider-item">
-                                        <div class="offices__slider-item__img">
+                                    <div class="offices-slider__item slider-item">
+                                        <div class="offices-slider__item-img">
                                             <img src="./public/images/office-item1.jpg" alt="" />
                                         </div>
-                                        <div class="offices__slider-item__type">
+                                        <div class="offices-slider__item-type">
                                             <span>Офис</span>
-                                            <div class="offices__slider-item__rate rate">5.0</div>
+                                            <div class="offices-slider__item-rate rate">5.0</div>
                                         </div>
-                                        <div class="offices__slider-item__desc">
-                                            <div class="offices__slider-item__name">
+                                        <div class="offices-slider__item-desc">
+                                            <div class="offices-slider__item-name">
                                                 Офис на Орловской
                                             </div>
-                                            <div class="offices__slider-item__location">
+                                            <div class="offices-slider__item-location">
                                                 Россия, Москва
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="offices__slider-item slider-item">
-                                        <div class="offices__slider-item__img">
+                                    <div class="offices-slider__item slider-item">
+                                        <div class="offices-slider__item-img">
                                             <img src="./public/images/office-item1.jpg" alt="" />
                                         </div>
-                                        <div class="offices__slider-item__type">
+                                        <div class="offices-slider__item-type">
                                             <span>Офис</span>
-                                            <div class="offices__slider-item__rate rate">5.0</div>
+                                            <div class="offices-slider__item-rate rate">5.0</div>
                                         </div>
-                                        <div class="offices__slider-item__desc">
-                                            <div class="offices__slider-item__name">
+                                        <div class="offices-slider__item-desc">
+                                            <div class="offices-slider__item-name">
                                                 Офис на Орловской
                                             </div>
-                                            <div class="offices__slider-item__location">
+                                            <div class="offices-slider__item-location">
                                                 Россия, Москва
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="offices__slider-item slider-item">
-                                        <div class="offices__slider-item__img">
+                                    <div class="offices-slider__item slider-item">
+                                        <div class="offices-slider__item-img">
                                             <img src="./public/images/office-item1.jpg" alt="" />
                                         </div>
-                                        <div class="offices__slider-item__type">
+                                        <div class="offices-slider__item-type">
                                             <span>Офис</span>
-                                            <div class="offices__slider-item__rate rate">5.0</div>
+                                            <div class="offices-slider__item-rate rate">5.0</div>
                                         </div>
-                                        <div class="offices__slider-item__desc">
-                                            <div class="offices__slider-item__name">
+                                        <div class="offices-slider__item-desc">
+                                            <div class="offices-slider__item-name">
                                                 Офис на Орловской
                                             </div>
-                                            <div class="offices__slider-item__location">
+                                            <div class="offices-slider__item-location">
                                                 Россия, Москва
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="offices__slider-item slider-item">
-                                        <div class="offices__slider-item__img">
+                                    <div class="offices-slider__item slider-item">
+                                        <div class="offices-slider__item-img">
                                             <img src="./public/images/office-item1.jpg" alt="" />
                                         </div>
-                                        <div class="offices__slider-item__type">
+                                        <div class="offices-slider__item-type">
                                             <span>Офис</span>
-                                            <div class="offices__slider-item__rate rate">5.0</div>
+                                            <div class="offices-slider__item-rate rate">5.0</div>
                                         </div>
-                                        <div class="offices__slider-item__desc">
-                                            <div class="offices__slider-item__name">
+                                        <div class="offices-slider__item-desc">
+                                            <div class="offices-slider__item-name">
                                                 Офис на Орловской
                                             </div>
-                                            <div class="offices__slider-item__location">
+                                            <div class="offices-slider__item-location">
                                                 Россия, Москва
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="offices__slider-item slider-item">
-                                        <div class="offices__slider-item__img">
+                                    <div class="offices-slider__item slider-item">
+                                        <div class="offices-slider__item-img">
                                             <img src="./public/images/office-item1.jpg" alt="" />
                                         </div>
-                                        <div class="offices__slider-item__type">
+                                        <div class="offices-slider__item-type">
                                             <span>Офис</span>
-                                            <div class="offices__slider-item__rate rate">5.0</div>
+                                            <div class="offices-slider__item-rate rate">5.0</div>
                                         </div>
-                                        <div class="offices__slider-item__desc">
-                                            <div class="offices__slider-item__name">
+                                        <div class="offices-slider__item-desc">
+                                            <div class="offices-slider__item-name">
                                                 Офис на Орловской
                                             </div>
-                                            <div class="offices__slider-item__location">
+                                            <div class="offices-slider__item-location">
                                                 Россия, Москва
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="offices__slider-btn__prev"></div>
-                            <div class="offices__slider-btn__next"></div>
+                            <div class="offices-slider__btn-prev"></div>
+                            <div class="offices-slider__btn-next"></div>
                         </div>
                     </div>
                 </div>
-                <div class="banner__first">
+                <div class="banner-first">
                     <div class="container">
-                        <div class="banner__first-banner banner">
+                        <div class="banner-first__banner banner">
                             <div class="banner__content">
-                                <div class="banner__first-title">
-                                    <div class="banner-title">
-                                        Сдайте
-                                        <span
-                                            >пустующие<br />
-                                            пространства</span
-                                        >
-                                    </div>
+                                <div class="banner-first__title banner__title">
+                                    Сдайте
+                                    <span
+                                        >пустующие<br />
+                                        пространства</span
+                                    >
                                 </div>
-                                <div class="banner__first-subtitle">
-                                    <div class="banner-subtitle">
-                                        Размещайте свои офисы<br />
-                                        и получайте доход от пустых мест
-                                    </div>
+                                <div class="banner-first__subtitle banner__subtitle">
+                                    Размещайте свои офисы<br />
+                                    и получайте доход от пустых мест
                                 </div>
-                                <div class="banner__first-btn">
-                                    <button class="banner-btn def__btn red__btn">
-                                        <span>Подробнее</span>
+                                <div class="banner-first__btn">
+                                    <button class="banner__btn btn btn--red">
+                                        <span class="btn__name">Подробнее</span>
                                     </button>
-                                    <div class="banner__first-anim">
+                                    <div class="banner-first__anim">
                                         <div class="arrows-anim">
                                             <svg
                                                 width="26"
@@ -547,7 +537,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="banner__first-prices">
+                            <div class="banner-first__prices">
                                 <a class="price" id="price1" href="#"><span>800 ₽</span></a>
                                 <a class="price" id="price2" href="#"><span>950 ₽</span></a>
                                 <a class="price" id="price3" href="#"><span>800 ₽</span></a>
@@ -556,129 +546,123 @@
                         </div>
                     </div>
                 </div>
-                <div class="most__interesting">
+                <div class="most-interesting">
                     <div class="container">
-                        <div class="most__interesting-title title">Вам могут быть интересны</div>
-                        <div class="most__interesting-slider">
-                            <div class="offices__slider slider">
-                                <div class="offices__slider-items slider-wrapper">
-                                    <div class="offices__slider-item slider-item">
-                                        <div class="offices__slider-item__img">
+                        <div class="most-interesting__title title">Вам могут быть интересны</div>
+                        <div class="most-interesting__slider">
+                            <div class="offices-slider slider">
+                                <div class="offices-slider__items slider-wrapper">
+                                    <div class="offices-slider__item slider-item">
+                                        <div class="offices-slider__item-img">
                                             <img src="./public/images/office-item1.jpg" alt="" />
                                         </div>
-                                        <div class="offices__slider-item__type">
+                                        <div class="offices-slider__item-type">
                                             <span>Офис</span>
-                                            <div class="offices__slider-item__rate rate">5.0</div>
+                                            <div class="offices-slider__item-rate rate">5.0</div>
                                         </div>
-                                        <div class="offices__slider-item__desc">
-                                            <div class="offices__slider-item__name">
+                                        <div class="offices-slider__item-desc">
+                                            <div class="offices-slider__item-name">
                                                 Офис на Орловской
                                             </div>
-                                            <div class="offices__slider-item__location">
+                                            <div class="offices-slider__item-location">
                                                 Россия, Москва
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="offices__slider-item slider-item">
-                                        <div class="offices__slider-item__img">
+                                    <div class="offices-slider__item slider-item">
+                                        <div class="offices-slider__item-img">
                                             <img src="./public/images/office-item2.jpg" alt="" />
                                         </div>
-                                        <div class="offices__slider-item__type">
+                                        <div class="offices-slider__item-type">
                                             <span>Переговорная комната</span>
-                                            <div class="offices__slider-item__rate rate">4.9</div>
+                                            <div class="offices-slider__item-rate rate">4.9</div>
                                         </div>
-                                        <div class="offices__slider-item__desc">
-                                            <div class="offices__slider-item__name">
+                                        <div class="offices-slider__item-desc">
+                                            <div class="offices-slider__item-name">
                                                 Переговорная комната в Чертаново
                                             </div>
-                                            <div class="offices__slider-item__location">
+                                            <div class="offices-slider__item-location">
                                                 Россия, Москва
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="offices__slider-item slider-item">
-                                        <div class="offices__slider-item__img">
+                                    <div class="offices-slider__item slider-item">
+                                        <div class="offices-slider__item-img">
                                             <img src="./public/images/office-item3.jpg" alt="" />
                                         </div>
-                                        <div class="offices__slider-item__type">
+                                        <div class="offices-slider__item-type">
                                             <span>Рабочее место</span>
-                                            <div class="offices__slider-item__rate rate">4.9</div>
+                                            <div class="offices-slider__item-rate rate">4.9</div>
                                         </div>
-                                        <div class="offices__slider-item__desc">
-                                            <div class="offices__slider-item__name">
+                                        <div class="offices-slider__item-desc">
+                                            <div class="offices-slider__item-name">
                                                 Стол в коворкинге
                                             </div>
-                                            <div class="offices__slider-item__location">
+                                            <div class="offices-slider__item-location">
                                                 Россия, Санкт-Петербург
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="offices__slider-item slider-item">
-                                        <div class="offices__slider-item__img">
+                                    <div class="offices-slider__item slider-item">
+                                        <div class="offices-slider__item-img">
                                             <img src="./public/images/office-item4.jpg" alt="" />
                                         </div>
-                                        <div class="offices__slider-item__type">
+                                        <div class="offices-slider__item-type">
                                             <span>Конференц зал</span>
-                                            <div class="offices__slider-item__rate rate">3.2</div>
+                                            <div class="offices-slider__item-rate rate">3.2</div>
                                         </div>
-                                        <div class="offices__slider-item__desc">
-                                            <div class="offices__slider-item__name">
-                                                Зал Престиж
-                                            </div>
-                                            <div class="offices__slider-item__location">
+                                        <div class="offices-slider__item-desc">
+                                            <div class="offices-slider__item-name">Зал Престиж</div>
+                                            <div class="offices-slider__item-location">
                                                 Россия, Москва
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="offices__slider-item slider-item">
-                                        <div class="offices__slider-item__img">
+                                    <div class="offices-slider__item slider-item">
+                                        <div class="offices-slider__item-img">
                                             <img src="./public/images/office-item1.jpg" alt="" />
                                         </div>
-                                        <div class="offices__slider-item__type">
+                                        <div class="offices-slider__item-type">
                                             <span>Офис</span>
-                                            <div class="offices__slider-item__rate rate">5.0</div>
+                                            <div class="offices-slider__item-rate rate">5.0</div>
                                         </div>
-                                        <div class="offices__slider-item__desc">
-                                            <div class="offices__slider-item__name">
+                                        <div class="offices-slider__item-desc">
+                                            <div class="offices-slider__item-name">
                                                 Офис на Орловской
                                             </div>
-                                            <div class="offices__slider-item__location">
+                                            <div class="offices-slider__item-location">
                                                 Россия, Москва
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="offices__slider-btn__prev"></div>
-                            <div class="offices__slider-btn__next"></div>
+                            <div class="offices-slider__btn-prev"></div>
+                            <div class="offices-slider__btn-next"></div>
                         </div>
                     </div>
                 </div>
-                <div class="banner__second">
+                <div class="banner-second">
                     <div class="container">
-                        <div class="banner__second-banner banner">
+                        <div class="banner-second__banner banner">
                             <div class="banner__content">
-                                <div class="banner__second-title">
-                                    <div class="banner-title">
-                                        Ищете место для<br />
-                                        работы?
-                                    </div>
+                                <div class="banner-second__title banner__title">
+                                    Ищете место для<br />
+                                    работы?
                                 </div>
-                                <div class="banner__second-subtitle">
-                                    <div class="banner-subtitle">
-                                        Подбирайте офисы и рабочие места<br />
-                                        под ваши потребности и предпочтения.
-                                    </div>
+                                <div class="banner-second__subtitle banner__subtitle">
+                                    Подбирайте офисы и рабочие места<br />
+                                    под ваши потребности и предпочтения.
                                 </div>
-                                <div class="banner__second-btn">
-                                    <button class="banner-btn def__btn red__btn">
-                                        <span>Выбрать место</span>
+                                <div class="banner-second__btn">
+                                    <button class="banner__btn btn btn--red">
+                                        <span class="btn__name">Выбрать место</span>
                                     </button>
-                                    <div class="banner__second-arrow"></div>
+                                    <div class="banner-second__arrow"></div>
                                 </div>
                             </div>
                         </div>
@@ -686,7 +670,7 @@
                 </div>
                 <div class="community">
                     <div class="container">
-                        <div class="community-title title">Наше сообщество</div>
+                        <div class="community__title title">Наше сообщество</div>
                         <div class="community__items">
                             <div class="community__item">
                                 <div class="community__item-img">
@@ -728,44 +712,44 @@
             </div>
             <div class="footer">
                 <div class="container">
-                    <div class="footer__info">
-                        <div class="footer__info-item">
-                            <div class="footer__info-left">
+                    <div class="footer-info">
+                        <div class="footer-info__item">
+                            <div class="footer-info__left">
                                 <div class="footer__logo">
                                     <a class="logo" href="./search.html">
-                                        <div class="logo-img">
+                                        <div class="logo__img">
                                             <img src="./public/images/logo-img.png" alt="" />
                                         </div>
-                                        <div class="logo-company">
+                                        <div class="logo__company">
                                             <img src="./public/images/logo-company.png" alt="" />
                                         </div>
                                     </a>
                                 </div>
                                 <div class="footer__socials">
                                     <div class="socials">
-                                        <div class="socials-item" id="telegram">
-                                            <div class="socials-item__icon">
+                                        <div class="socials__item" id="telegram">
+                                            <div class="socials__item-icon">
                                                 <img
                                                     src="./public/images/svg/telegram.svg"
                                                     alt=""
                                                 />
                                             </div>
                                         </div>
-                                        <div class="socials-item" id="facebook">
-                                            <div class="socials-item__icon">
+                                        <div class="socials__item" id="facebook">
+                                            <div class="socials__item-icon">
                                                 <img
                                                     src="./public/images/svg/facebook.svg"
                                                     alt=""
                                                 />
                                             </div>
                                         </div>
-                                        <div class="socials-item" id="vk">
-                                            <div class="socials-item__icon">
+                                        <div class="socials__item" id="vk">
+                                            <div class="socials__item-icon">
                                                 <img src="./public/images/svg/vk.svg" alt="" />
                                             </div>
                                         </div>
-                                        <div class="socials-item" id="instagram">
-                                            <div class="socials-item__icon">
+                                        <div class="socials__item" id="instagram">
+                                            <div class="socials__item-icon">
                                                 <img
                                                     src="./public/images/svg/instagram.svg"
                                                     alt=""
@@ -776,56 +760,56 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="footer__info-item">
-                            <div class="footer__info-nav">
-                                <div class="footer__info-nav__row">
-                                    <div class="footer__info-nav__column">
-                                        <div class="footer__info-nav__title">Сообщество</div>
-                                        <a class="footer__info-nav__link" href="#">
+                        <div class="footer-info__item">
+                            <div class="footer-info__nav">
+                                <div class="footer-info__nav-row">
+                                    <div class="footer-info__nav-column">
+                                        <div class="footer-info__nav-title">Сообщество</div>
+                                        <a class="footer-info__nav-link" href="#">
                                             Реферальная программа
                                         </a>
                                     </div>
-                                    <div class="footer__info-nav__column">
-                                        <div class="footer__info-nav__title">Компания</div>
-                                        <a class="footer__info-nav__link" href="#"> О сервисе </a>
+                                    <div class="footer-info__nav-column">
+                                        <div class="footer-info__nav-title">Компания</div>
+                                        <a class="footer-info__nav-link" href="#"> О сервисе </a>
                                     </div>
                                 </div>
-                                <div class="footer__info-nav__row">
-                                    <div class="footer__info-nav__column">
-                                        <div class="footer__info-nav__title">Помощь</div>
-                                        <a class="footer__info-nav__link" href="#">
+                                <div class="footer-info__nav-row">
+                                    <div class="footer-info__nav-column">
+                                        <div class="footer-info__nav-title">Помощь</div>
+                                        <a class="footer-info__nav-link" href="#">
                                             Свяжитесь с нами
                                         </a>
                                     </div>
-                                    <div class="footer__info-nav__column">
-                                        <div class="footer__info-nav__title">Аренда</div>
+                                    <div class="footer-info__nav-column">
+                                        <div class="footer-info__nav-title">Аренда</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="footer__policy">
-                        <div class="footer__policy-inner">
-                            <div class="footer__policy-text">
-                                <div class="footer__policy-name">© 2021 Getdesk.</div>
-                                <div class="footer__policy-links">
-                                    <div class="footer__policy-link">
+                    <div class="footer-policy">
+                        <div class="footer-policy__inner">
+                            <div class="footer-policy__text">
+                                <div class="footer-policy__name">© 2021 Getdesk.</div>
+                                <div class="footer-policy__links">
+                                    <div class="footer-policy__link">
                                         <a href="">Конфиденциальность</a>
                                     </div>
-                                    <div class="footer__policy-link">
+                                    <div class="footer-policy__link">
                                         <a href="">Условия использования</a>
                                     </div>
-                                    <div class="footer__policy-link">
+                                    <div class="footer-policy__link">
                                         <a href="">Реквизиты компании</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="footer__policy-inner__item">
-                                <div class="footer__policy-currency">
-                                    <div class="footer-round__btn round__btn" id="lang-btn">
+                            <div class="footer-policy__inner-item">
+                                <div class="footer-policy__currency">
+                                    <div class="footer__btn--round btn--round">
                                         <img src="./public/images/svg/lang.svg" alt="" />
                                     </div>
-                                    <div class="footer__policy-currency__select">
+                                    <div class="footer-policy__currency-select">
                                         <select name="" id="">
                                             <option value="" selected="">RUB</option>
                                             <option value="">EURO</option>

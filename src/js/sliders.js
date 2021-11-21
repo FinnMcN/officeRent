@@ -6,7 +6,7 @@ export default function initSwipers() {
     const swiperItems = document.querySelectorAll(".slider-item");
     const swiperWrappers = document.querySelectorAll(".slider-wrapper");
     
-    const officesSliders = document.querySelectorAll(".offices__slider");
+    const officesSliders = document.querySelectorAll(".offices-slider");
     const officeSliders = document.querySelectorAll(".office__slider");
 
     /* SwiperCore.use([Navigation, Pagination]); */
@@ -24,14 +24,14 @@ export default function initSwipers() {
         const pagination = document.createElement("div");
 
         item.classList.add("swiper");
-        pagination.classList.add("offices__slider-pagination");
+        pagination.classList.add("offices-slider__pagination");
         item.append(pagination);
 
         const swiper = new Swiper(item, {
             slidesPerView: "auto",
             spaceBetween: 20,
             pagination: {
-                el: ".offices__slider-pagination",
+                el: ".offices-slider__pagination",
             },
             navigation: {
                 prevEl: prevBtn,

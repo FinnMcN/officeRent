@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     padding: 0 190px;
-    &-title {
+    &__title {
         font-size: 48px;
         font-weight: 700;
         color: #fff;
@@ -15,11 +15,11 @@
             color: #fff;
         }
     }
-    &-btn {
+    &__btn {
         padding: 0 50px;
         height: 70px;
     }
-    &-subtitle {
+    &__subtitle {
         color: #fff;
         font-size: 20px;
     }
@@ -35,13 +35,13 @@
 @media screen and (max-width: 1391px) {
     .banner {
         padding: 0 60px;
-        &-title {
+        &__title {
             font-size: 36px;
         }
-        &-title span {
+        &__title span {
             font-size: 32px;
         }
-        &-subtitle {
+        &__subtitle {
             font-size: 18px;
         }
     }
@@ -56,17 +56,17 @@
         height: 590px;
         padding: 30px 40px;
         align-items: flex-start;
-        &-title {
+        &__title {
             font-size: 28px;
         }
-        &-title span {
+        &__title span {
             font-size: 24px;
         }
-        &-title br,
-        &-subtitle br {
+        &__title br,
+        &__subtitle br {
             display: none;
         }
-        &-subtitle {
+        &__subtitle {
             font-size: 16px;
             padding-left: 15px;
             position: relative;
@@ -81,7 +81,7 @@
                 left: 0;
             }
         }
-        &-btn {
+        &__btn {
             height: 48px;
             padding: 0 40px;
         }

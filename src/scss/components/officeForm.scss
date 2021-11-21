@@ -1,44 +1,41 @@
-.office__form {
+.office-form {
     max-width: 650px;
     padding: 80px 105px 100px;
     background: #fff;
     box-shadow: 20px 20px 130px rgba(37, 1, 0, 0.2);
     border-radius: 10px;
-    &-title {
+    &__title {
         font-size: 36px;
         font-weight: 500;
         margin-bottom: 60px;
     }
-    &-city__input {
+    &__city-input {
         margin-bottom: 45px;
     }
-    &-input__wrapper {
+    &__input-wrapper {
         display: flex;
         justify-content: space-between;
         margin-bottom: 50px;
     }
-    &-date__input {
+    &__date-input {
         margin-bottom: 45px;
     }
-    &-tag__items {
+    &__tags {
         margin-bottom: 30px;
     }
-    &-def__btn {
+    &__btn {
         padding: 0 50px;
         height: 70px;
     }
 }
 //media
 @media screen and (max-width: 1391px) {
-    .office__form {
-        padding: 45px 80px 75px 60px;
+    .office-form {
         max-width: unset;
-        &-title {
+        &__title {
             margin-bottom: 40px;
         }
-        &-tag__items {
-            display: flex;
-            justify-content: space-between;
+        &__tags {
             align-items: center;
             flex-wrap: wrap;
             margin-bottom: 0;
@@ -46,45 +43,45 @@
     }
 }
 @media screen and (max-width: 1391px) and (min-width: 1001px) {
-    .office__form {
+    .office-form {
         padding: 45px 80px 75px 60px;
-        max-width: unset;
-        &-city__input,
-        &-date__input {
+        &__city-input,
+        &__date-input {
             margin-bottom: 0;
             flex: 0 0 48%;
         }
-        .tag__items {
+        &__tags {
             flex: 0 0 55%;
         }
     }
 }
 @media screen and (max-width: 1000px) {
-    .office__form {
+    .office-form {
         margin: 0 -40px;
         padding: 50px 40px 60px 40px;
-        &-title {
+        &__title {
             margin-bottom: 30px;
         }
-        &-city__input {
+        &__city-input {
             margin-bottom: 30px;
         }
-        &-date__input {
+        &__date-input {
             margin-bottom: 50px;
         }
-        &-tag__items {
+        &__tags {
+            justify-content: flex-start;
             margin-bottom: 15px;
         }
-        .tag__items-left {
+        .tags__left {
             margin-right: 30px;
         }
     }
 }
 @media screen and (max-width: 768px) {
-    .office__form {
+    .office-form {
         margin: 0 -15px;
         padding: 25px 20px;
-        &-title {
+        &__title {
             font-size: 28px;
         }
     }

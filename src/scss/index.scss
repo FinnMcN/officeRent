@@ -65,42 +65,42 @@
         font-size: 20px;
     }
 }
-.most__rented {
+.most-rented {
     padding: 140px 0 0;
-    &-title {
+    &__title {
         margin-bottom: 70px;
     }
-    &-slider {
+    &__slider {
         position: relative;
     }
 }
-.banner__first {
+.banner-first {
     padding: 141px 0;
-    &-banner {
+    &__banner {
         background: url("../images/banner1-gradient.png") no-repeat left top,
             url("../images/svg/banner1-shadow.svg") no-repeat center top / cover,
             url("../images/banner1.jpg") no-repeat center top / cover;
         position: relative;
     }
-    &-title {
+    &__title {
         margin-bottom: 40px;
     }
-    &-subtitle {
+    &__subtitle {
         margin-bottom: 75px;
     }
-    &-btn {
+    &__btn {
         position: relative;
     }
-    &-anim {
+    &__anim {
         position: absolute;
         top: 50%;
         right: 30%;
         transform: translate(100%, -50%);
     }
 }
-.banner__second {
+.banner-second {
     padding: 141px 0;
-    &-banner {
+    &__banner {
         background: linear-gradient(
                 90.58deg,
                 rgba(19, 19, 19, 0.9) 4.69%,
@@ -109,16 +109,16 @@
             ),
             url("../images/banner2.jpg") no-repeat center top / cover;
     }
-    &-title {
+    &__title {
         margin-bottom: 30px;
     }
-    &-subtitle {
+    &__subtitle {
         margin-bottom: 70px;
     }
-    &-btn {
+    &__btn {
         position: relative;
     }
-    &-arrow {
+    &__arrow {
         position: absolute;
         content: "";
         background: url("../images/svg/banner2-arrow.svg");
@@ -129,17 +129,17 @@
         transform: translate(103%, -44%);
     }
 }
-.most__interesting {
-    &-title {
+.most-interesting {
+    &__title {
         margin-bottom: 70px;
     }
-    &-slider {
+    &__slider {
         position: relative;
     }
 }
 .community {
     padding: 0 0 140px;
-    &-title {
+    &__title {
         margin-bottom: 69px;
     }
     &__items {
@@ -218,7 +218,7 @@
 @media screen and (max-width: 1391px) {
     .header {
         height: 100vh;
-        .container {
+        &__container {
             height: 100%;
         }
         &__main {
@@ -226,7 +226,7 @@
             height: calc(100% - 125px);
             position: relative;
         }
-        &-office__block {
+        &__office-block {
             position: absolute;
             width: 100%;
             bottom: -100px;
@@ -248,15 +248,15 @@
             display: none;
         }
     }
-    .most__rented {
+    .most-rented {
         padding: 110px 0 0 0;
-        &-title {
+        &__title {
             margin-bottom: 44px;
         }
     }
-    .banner__first {
+    .banner-first {
         padding: 95px 0;
-        &-banner {
+        &__banner {
             background: linear-gradient(
                     90.58deg,
                     rgba(19, 19, 19, 0.8) 29.44%,
@@ -265,18 +265,18 @@
                 url("../images/svg/banner1-shadow-tablet.svg") no-repeat center top / cover,
                 url("../images/banner1-tablet.jpg") no-repeat center top / cover;
         }
-        &-anim {
+        &__anim {
             right: 15%;
         }
     }
-    .most__interesting {
-        &-title {
+    .most-interesting {
+        &__title {
             margin-bottom: 60px;
         }
     }
-    .banner__second {
+    .banner-second {
         padding: 100px 0;
-        &-banner {
+        &__banner {
             background: linear-gradient(
                     90.58deg,
                     rgba(19, 19, 19, 0.9) 4.69%,
@@ -286,7 +286,7 @@
                 ),
                 url("../images/banner2-tablet.jpg") no-repeat center top / cover;
         }
-        &-arrow {
+        &__arrow {
             width: 239px;
             height: 162px;
             background: url("../images/svg/banner2-arrow-tablet.svg") no-repeat;
@@ -295,7 +295,7 @@
     }
     .community {
         padding: 0 0 100px;
-        &-title {
+        &__title {
             margin-bottom: 59px;
         }
         &__item {
@@ -319,7 +319,7 @@
         &__main {
             height: 100%;
         }
-        &-office__block {
+        &__office-block {
             bottom: -340px;
         }
     }
@@ -358,8 +358,8 @@
             height: 500px;
         }
     }
-    .banner__first {
-        &-prices {
+    .banner-first {
+        &__prices {
             display: none;
         }
     }
@@ -380,31 +380,31 @@
             height: 100%;
         }
     }
-    .banner__first {
-        &-banner {
+    .banner-first {
+        &__banner {
             background: linear-gradient(#131313 15.06%, rgba(19, 19, 19, 0) 70.67%),
                 url(../images/banner1-tablet.jpg) no-repeat right -90px top 100px / cover;
         }
-        &-title {
+        &__title {
             margin-bottom: 15px;
         }
-        &-subtitle {
+        &__subtitle {
             margin-bottom: 30px;
         }
-        &-anim {
+        &__anim {
             right: unset;
             left: 155px;
         }
-        &-anim svg {
+        &__anim svg {
             height: 30px;
             width: 18px;
         }
-        &-prices {
+        &__prices {
             display: initial;
         }
     }
-    .banner__second {
-        &-banner {
+    .banner-second {
+        &__banner {
             background: linear-gradient(
                     90.58deg,
                     rgba(19, 19, 19, 0.9) 4.69%,
@@ -414,13 +414,13 @@
                 ),
                 url(../images/banner2-tablet.jpg) no-repeat right top/cover;
         }
-        &-title {
+        &__title {
             margin-bottom: 15px;
         }
-        &-subtitle {
+        &__subtitle {
             margin-bottom: 30px;
         }
-        &-arrow {
+        &__arrow {
             z-index: 0;
             width: 185px;
             height: 170px;
@@ -446,8 +446,8 @@
             height: 310px;
         }
     }
-    .banner__second {
-        &-arrow {
+    .banner-second {
+        &__arrow {
             left: 60px;
             top: 30px;
             transform: rotate(30deg);
@@ -455,8 +455,8 @@
     }
 }
 @media screen and (max-width: 420px) {
-    .banner__first {
-        &-anim {
+    .banner-first {
+        &__anim {
             display: none;
         }
     }

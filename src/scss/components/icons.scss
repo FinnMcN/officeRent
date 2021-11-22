@@ -1,10 +1,17 @@
 .icon {
-    position: absolute;
-    width: 24px;
+    flex: 0 0 24px;
     height: 24px;
+    path {
+        transition: all ease 0.3s;
+    }
+}
+.icon_absolute {
+    position: absolute;
     content: "";
     top: 50%;
     transform: translate(0, -50%);
+    width: 24px;
+    height: 24px;
     path {
         transition: all ease 0.3s;
     }

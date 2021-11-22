@@ -29,26 +29,53 @@ button {
     align-items: center;
     justify-content: center;
 }
-//?
-.search__map-btn {
-    height: 44px;
-    padding: 0 15px;
-    background: #fff;
+.filter-btn {
+    background: #ffecec;
+    border-radius: 50px;
+    height: 37px;
+    padding: 0 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    box-shadow: 0px 5px 50px rgba(37, 1, 0, 0.2);
-    border-radius: 5px;
-    svg {
-        margin-right: 10px;
-    }
+    border: 1px solid #ffecec;
+    transition: all ease 0.3s;
     span {
         white-space: nowrap;
-        font-size: 20px;
+    }
+    &_active {
+        background: #fff;
+        border: 1px solid #ed4040;
+        span {
+            color: #ed4040;
+        }
     }
 }
 .search-btn {
     cursor: pointer;
+}
+.show-more-btn {
+    color: #717171;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    span {
+        margin-right: 10px;
+    }
+}
+.clear-btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    &__icon {
+        margin-right: 7px;
+    }
+}
+.apply-btn {
+    width: 128px;
+    height: 36px;
+    span {
+        font-weight: 500;
+        font-size: 16px;
+    }
 }
 .office-btn {
     background: transparent;

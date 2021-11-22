@@ -10,7 +10,7 @@
                 </div>
             </a>
             <div class="header__input-blocks">
-                <div class="def-input city-input">
+                <div class="header__city-input def-input city-input">
                     <svg
                         class="city-input__icon icon"
                         width="24"
@@ -51,7 +51,7 @@
                         </g>
                     </svg>
                     <input class="def-input__input" type="text" placeholder="Выберите город" />
-                    <button class="search-btn">
+                    <button class="city-input__search-btn search-btn">
                         <svg
                             class="city-input__icon-search icon"
                             width="24"
@@ -59,6 +59,7 @@
                             viewBox="0 0 24 24"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
+                            stroke-opacity="0"
                         >
                             <mask
                                 id="search-icon1"
@@ -113,7 +114,7 @@
                 </div>
                 <div class="def-input date-input">
                     <svg
-                        class="date-input__icon icon"
+                        class="date-input__icon icon_absolute"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -193,7 +194,7 @@
                             stroke-linejoin="round"
                         ></path>
                     </svg>
-                    <select class="def-input__select">
+                    <select class="header__date-input def-input__select">
                         <option value="" disabled="" selected="" hidden="">Укажите дату</option>
                         <option value="">asdasd</option>
                         <option value="">asdasd</option>

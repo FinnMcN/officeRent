@@ -2,15 +2,15 @@ import adaptive from "./adaptive.js";
 export default function addClickEvents() {
     const inputBlocks = document.querySelectorAll(".def-input");
     const favorites = document.querySelectorAll(".favorite");
-    const filterButtons = document.querySelectorAll(".search__filter-button");
+    const filterButtons = document.querySelectorAll(".filter-btn");
     const popup = document.querySelectorAll(".popup");
     const overlay = document.querySelectorAll(".overlay");
     const tables = document.querySelectorAll(".office__about-table__item");
     const menu = document.querySelector(".header__menu-icon");
 
     const mapBtn = document.querySelector(".search__map-show__btn");
-    const backToListBtn = document.querySelector(".search__map-list__btn");
-    const filtersBtn = document.querySelector(".search__map-filters__btn");
+    const backToListBtn = document.querySelector(".list-btn");
+    const filtersBtn = document.querySelector(".filters-btn");
 
     //menu
     if (menu) {
@@ -22,15 +22,21 @@ export default function addClickEvents() {
     //map btns
     if (mapBtn) {
         mapBtn.addEventListener("click", function () {
-            const searchBlock = document.querySelector(".search");
-            searchBlock.classList.add("show-map");
+            const mapBlock = document.querySelector(".search__map-block");
+            const showBtn = document.querySelector(".search__map-show__btn");
+
+            mapBlock.classList.add("search__map-block_active");
+            showBtn.classList.add("search__map-show__btn_active");
         });
     }
 
     if (backToListBtn) {
         backToListBtn.addEventListener("click", function () {
-            const searchBlock = document.querySelector(".search");
-            searchBlock.classList.remove("show-map");
+            const mapBlock = document.querySelector(".search__map-block");
+            const showBtn = document.querySelector(".search__map-show__btn");
+
+            mapBlock.classList.remove("search__map-block_active");
+            showBtn.classList.remove("search__map-show__btn_active");
         });
     }
 
@@ -39,8 +45,8 @@ export default function addClickEvents() {
         filtersBtn.addEventListener("click", function () {
             const width = window.innerWidth;
             if (width <= 1000) {
-                const searchFilters = document.querySelector(".search__filters");
-                searchFilters.classList.toggle("active"); 
+                const searchFilters = document.querySelector(".search-filters");
+                searchFilters.classList.toggle("search-filters_active"); 
             }
         });
     }
@@ -80,7 +86,7 @@ export default function addClickEvents() {
     //like toggle anim
     if (favorites.length !== 0) {
         favorites.forEach(function (item) {
-            item.addEventListener("click", function () {
+            item.addEventListener("click", function() {
                 this.classList.toggle("active");
             });
         });
@@ -89,22 +95,14 @@ export default function addClickEvents() {
     //filter buttons anim and popup toggle
     if (filterButtons.length !== 0) {
         filterButtons.forEach(function (filterButton) {
-            filterButton.addEventListener("click", function () {
-                filterButtons.forEach(function (item1) {
-                    if (filterButton === item1) {
-                        return;
-                    }
-                    if (item1.classList.contains("active")) {
-                        item1.classList.toggle("active");
-                    }
-                });
+            filterButton.addEventListener("click", function() {
                 popup.forEach(function (popupWindow) {
                     if (filterButton.id === popupWindow.id) {
-                        popupWindow.classList.toggle("active");
-                        overlay[0].classList.toggle("active");
+                        popupWindow.classList.toggle("popup_active");
+                        overlay[0].classList.toggle("overlay_active");
                     }
                 });
-                this.classList.toggle("active");
+                this.classList.toggle("filter-btn_active");
             });
         });
     }
@@ -112,15 +110,15 @@ export default function addClickEvents() {
     //anim when clicking on overlay
     if (overlay.length !== 0) {
         overlay[0].addEventListener("click", function () {
-            filterButtons.forEach(function (item) {
-                if (item.classList.contains("active")) {
-                    item.classList.toggle("active");
+            filterButtons.forEach(item => {
+                if (item.classList.contains("filter-btn_active")) {
+                    item.classList.toggle("filter-btn_active");
                 }
             });
             popup.forEach(function (popupWindow) {
-                popupWindow.classList.remove("active");
+                popupWindow.classList.remove("popup_active");
             });
-            overlay[0].classList.toggle("active");
+            overlay[0].classList.toggle("overlay_active");
         });
     }
 }

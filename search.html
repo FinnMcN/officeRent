@@ -22,7 +22,7 @@
                 </div>
             </a>
             <div class="header__input-blocks">
-                <div class="def-input city-input">
+                <div class="header__city-input def-input city-input">
                     <svg
                         class="city-input__icon icon"
                         width="24"
@@ -63,7 +63,7 @@
                         </g>
                     </svg>
                     <input class="def-input__input" type="text" placeholder="Выберите город" />
-                    <button class="search-btn">
+                    <button class="city-input__search-btn search-btn">
                         <svg
                             class="city-input__icon-search icon"
                             width="24"
@@ -71,6 +71,7 @@
                             viewBox="0 0 24 24"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
+                            stroke-opacity="0"
                         >
                             <mask
                                 id="search-icon1"
@@ -125,7 +126,7 @@
                 </div>
                 <div class="def-input date-input">
                     <svg
-                        class="date-input__icon icon"
+                        class="date-input__icon icon_absolute"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -205,7 +206,7 @@
                             stroke-linejoin="round"
                         ></path>
                     </svg>
-                    <select class="def-input__select">
+                    <select class="header__date-input def-input__select">
                         <option value="" disabled="" selected="" hidden="">Укажите дату</option>
                         <option value="">asdasd</option>
                         <option value="">asdasd</option>
@@ -229,10 +230,11 @@
 </div>
             <div class="main">
                 <div class="search">
-                    <div class="search__map-block">
-                        <div class="search__map-nav container">
-                            <button class="search__map-btn search__map-list__btn">
+                    <div class="search__map-block map-block">
+                        <div class="search__map-nav map-nav container">
+                            <button class="map-btn list-btn">
                                 <svg
+                                    class="map-btn__img"
                                     width="24"
                                     height="24"
                                     viewBox="0 0 24 24"
@@ -282,11 +284,11 @@
                                         />
                                     </g>
                                 </svg>
-
-                                <span>К списку объявлений</span>
+                                <span class="map-btn__name">К списку объявлений</span>
                             </button>
-                            <button class="search__map-btn search__map-filters__btn">
+                            <button class="map-btn filters-btn">
                                 <svg
+                                    class="map-btn__img"
                                     width="24"
                                     height="24"
                                     viewBox="0 0 24 24"
@@ -318,11 +320,10 @@
                                         />
                                     </g>
                                 </svg>
-
-                                <span>Фильтры</span>
+                                <span class="map-btn__name">Фильтры</span>
                             </button>
                         </div>
-                        <div class="search__map">
+                        <div class="map">
                             <div style="position: relative; overflow: hidden">
                                 <a
                                     href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps"
@@ -356,60 +357,54 @@
                     <div class="container">
                         <div class="search__content">
                             <div class="search__left">
-                                <div class="search-title title">Аренда офиса: Москва</div>
-                                <div class="search__filters">
-                                    <div class="search__filters-btns">
-                                        <div class="search__filter">
-                                            <button class="search__filter-button" id="popup__price">
+                                <div class="search__title title">Аренда офиса: Москва</div>
+                                <div class="search-filters">
+                                    <div class="search-filters__btns">
+                                        <div class="search-filters__btn">
+                                            <button class="filter-btn" id="popup-price">
                                                 <span>Цена</span>
                                             </button>
                                         </div>
-                                        <div class="search__filter">
-                                            <button class="search__filter-button" id="popup__props">
+                                        <div class="search-filters__btn">
+                                            <button class="filter-btn" id="popup-props">
                                                 <span>Характеристики офиса</span>
                                             </button>
                                         </div>
-                                        <div class="search__filter">
-                                            <button
-                                                class="search__filter-button"
-                                                id="popup__booking"
-                                            >
+                                        <div class="search-filters__btn">
+                                            <button class="filter-btn" id="popup-booking">
                                                 <span>Мгновенное бронирование</span>
                                             </button>
                                         </div>
-                                        <div class="search__filter">
-                                            <button
-                                                class="search__filter-button"
-                                                id="popup__facilities"
-                                            >
+                                        <div class="search-filters__btn">
+                                            <button class="filter-btn" id="popup-facilities">
                                                 <span>Удобства</span>
                                             </button>
                                         </div>
                                     </div>
                                     <div
-                                        class="search__filter-popup__price popup popup__price"
-                                        id="popup__price"
+                                        class="search-filters__popup-price popup popup-price"
+                                        id="popup-price"
                                     >
-                                        <div class="popup__price-range">
-                                            <input type="range" />
+                                        <div class="popup-price__range">
+                                            <input class="popup-price__range-input" type="range" />
                                         </div>
-                                        <div class="popup__price-values">
-                                            <div class="popup__price-value">
+                                        <div class="popup-price__values">
+                                            <div class="popup-price__value">
                                                 <p>от</p>
-                                                <div class="popup__price-value__start">
+                                                <div class="popup-price__value-start">
                                                     <span>0 ₽</span>
                                                 </div>
                                             </div>
-                                            <div class="popup__price-value">
+                                            <div class="popup-price__value">
                                                 <p>до</p>
-                                                <div class="popup__price-value__end">
+                                                <div class="popup-price__value-end">
                                                     <span>1 000 000 ₽</span>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="popup__price-btns">
-                                            <div class="popup-clear">
-                                                <div class="popup-clear__icon">
+                                        <div class="popup-price__btns">
+                                            <div class="clear-btn">
+                                                <div class="clear-btn__icon">
                                                     <svg
                                                         width="20"
                                                         height="20"
@@ -439,26 +434,26 @@
                                                 </div>
                                                 <span>Очистить</span>
                                             </div>
-                                            <button class="popup-apply btn btn--red">
-                                                <span>Применить</span>
+                                            <button class="btn apply-btn btn--red">
+                                                <span class="btn__name">Применить</span>
                                             </button>
                                         </div>
                                     </div>
                                     <div
-                                        class="search__filter-popup__props popup popup__props"
-                                        id="popup__props"
+                                        class="search-filters__popup-props popup popup-props"
+                                        id="popup-props"
                                     >
-                                        <div class="popup__props-title">
+                                        <div class="popup-props__title">
                                             Укажите нужные вам характеристики офиса.
                                         </div>
-                                        <div class="popup__props-subtitle">
+                                        <div class="popup-props__subtitle">
                                             В результатах будут показаны офисы, в которых есть все
                                             что вы отметили.
                                         </div>
-                                        <div class="popup__props-items">
-                                            <div class="popup__props-items__row">
-                                                <div class="popup__props-item">
-                                                    <div class="popup__props-item__name">
+                                        <div class="popup-props__items">
+                                            <div class="popup-props__items-row">
+                                                <div class="popup-props__item">
+                                                    <div class="popup-props__item-name">
                                                         Рабочие места
                                                     </div>
                                                     <div class="counter">
@@ -472,9 +467,9 @@
 </div>
                                                 </div>
                                             </div>
-                                            <div class="popup__props-items__row">
-                                                <div class="popup__props-item">
-                                                    <div class="popup__props-item__name">
+                                            <div class="popup-props__items-row">
+                                                <div class="popup-props__item">
+                                                    <div class="popup-props__item-name">
                                                         Закрытые кабинеты
                                                     </div>
                                                     <div class="counter">
@@ -487,8 +482,8 @@
     </button>
 </div>
                                                 </div>
-                                                <div class="popup__props-item">
-                                                    <div class="popup__props-item__name">
+                                                <div class="popup-props__item">
+                                                    <div class="popup-props__item-name">
                                                         Сколько нужно мест
                                                     </div>
                                                     <div class="counter">
@@ -502,9 +497,9 @@
 </div>
                                                 </div>
                                             </div>
-                                            <div class="popup__props-items__row">
-                                                <div class="popup__props-item">
-                                                    <div class="popup__props-item__name">
+                                            <div class="popup-props__items-row">
+                                                <div class="popup-props__item">
+                                                    <div class="popup-props__item-name">
                                                         Переговорные комнаты
                                                     </div>
                                                     <div class="counter">
@@ -517,8 +512,8 @@
     </button>
 </div>
                                                 </div>
-                                                <div class="popup__props-item">
-                                                    <div class="popup__props-item__name">
+                                                <div class="popup-props__item">
+                                                    <div class="popup-props__item-name">
                                                         Сколько нужно мест
                                                     </div>
                                                     <div class="counter">
@@ -532,9 +527,9 @@
 </div>
                                                 </div>
                                             </div>
-                                            <div class="popup__props-items__row">
-                                                <div class="popup__props-item">
-                                                    <div class="popup__props-item__name">
+                                            <div class="popup-props__items-row">
+                                                <div class="popup-props__item">
+                                                    <div class="popup-props__item-name">
                                                         Конференц-залы
                                                     </div>
                                                     <div class="counter">
@@ -547,8 +542,8 @@
     </button>
 </div>
                                                 </div>
-                                                <div class="popup__props-item">
-                                                    <div class="popup__props-item__name">
+                                                <div class="popup-props__item">
+                                                    <div class="popup-props__item-name">
                                                         Сколько нужно мест
                                                     </div>
                                                     <div class="counter">
@@ -563,9 +558,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="popup__props-btns">
-                                            <div class="popup-clear">
-                                                <div class="popup-clear__icon">
+                                        <div class="popup-props__btns">
+                                            <div class="clear-btn">
+                                                <div class="clear-btn__icon">
                                                     <svg
                                                         width="20"
                                                         height="20"
@@ -595,83 +590,99 @@
                                                 </div>
                                                 <span>Очистить</span>
                                             </div>
-                                            <button class="popup-apply btn btn--red">
-                                                <span>Применить</span>
+                                            <button
+                                                class="
+                                                    search-filters__apply-btn
+                                                    apply-btn
+                                                    btn btn--red
+                                                "
+                                            >
+                                                <span class="btn__name">Применить</span>
                                             </button>
                                         </div>
                                     </div>
                                     <div
-                                        class="search__filter-popup__booking popup popup__booking"
-                                        id="popup__booking"
+                                        class="search-filters__popup-booking popup popup-booking"
+                                        id="popup-booking"
                                     >
-                                        <div class="popup__booking-title">
+                                        <div class="popup-booking__title">
                                             Мгновенное бронирование
                                         </div>
-                                        <div class="popup__booking-toggle">
-                                            <div class="popup__booking-subtitle">
+                                        <div class="popup-booking__toggle">
+                                            <div class="popup-booking__subtitle">
                                                 Показать только те пространства, где доступно
                                                 бронирование без подтверждения
                                             </div>
-                                            <div class="popup__booking-toggle__btn"></div>
+                                            <div class="popup-booking__toggle-btn"></div>
                                         </div>
                                     </div>
                                     <div
                                         class="
-                                            search__filter-popup__facilities
-                                            popup popup__facilities
+                                            search-filters__popup-facilities
+                                            popup popup-facilities
                                         "
-                                        id="popup__facilities"
+                                        id="popup-facilities"
                                     >
-                                        <div class="popup__facilities-items">
-                                            <div class="popup__facilities-item">
-                                                <div class="popup__facilities-item__title">
+                                        <div class="popup-facilities__items">
+                                            <div class="popup-facilities__item">
+                                                <div class="popup-facilities__item-title">
                                                     Общие удобства
                                                 </div>
-                                                <div
-                                                    class="popup__facilities-tag__items tag__items"
-                                                >
-                                                    <div class="tag__items-left">
-                                                        <div class="tag__item">
+                                                <div class="popup-facilities__tags tags">
+                                                    <div class="tags__left">
+                                                        <div class="tags__item">
                                                             <input type="checkbox" id="wifi-tag" />
                                                             <label for="wifi-tag"></label>
-                                                            <span>Высокоскоростной WiFi</span>
+                                                            <span class="tags__item-name"
+                                                                >Высокоскоростной WiFi</span
+                                                            >
                                                         </div>
-                                                        <div class="tag__item">
+                                                        <div class="tags__item">
                                                             <input type="checkbox" id="open-tag" />
                                                             <label for="open-tag"></label>
-                                                            <span>Открыто круглосуточно</span>
+                                                            <span class="tags__item-name"
+                                                                >Открыто круглосуточно</span
+                                                            >
                                                         </div>
-                                                        <div class="tag__item">
+                                                        <div class="tags__item">
                                                             <input
                                                                 type="checkbox"
                                                                 id="guests-tag"
                                                             />
                                                             <label for="guests-tag"></label>
-                                                            <span>Встреча гостей/секретарь</span>
+                                                            <span class="tags__item-name"
+                                                                >Встреча гостей/секретарь</span
+                                                            >
                                                         </div>
                                                     </div>
-                                                    <div class="tag__items-right">
-                                                        <div class="tag__item">
+                                                    <div class="tags__right">
+                                                        <div class="tags__item">
                                                             <input type="checkbox" id="coffe-tag" />
                                                             <label for="coffe-tag"></label>
-                                                            <span>Кофемашина</span>
+                                                            <span class="tags__item-name"
+                                                                >Кофемашина</span
+                                                            >
                                                         </div>
-                                                        <div class="tag__item">
+                                                        <div class="tags__item">
                                                             <input type="checkbox" id="chart-tag" />
                                                             <label for="chart-tag"></label>
-                                                            <span>Флипчарт</span>
+                                                            <span class="tags__item-name"
+                                                                >Флипчарт</span
+                                                            >
                                                         </div>
-                                                        <div class="tag__item">
+                                                        <div class="tags__item">
                                                             <input
                                                                 type="checkbox"
                                                                 id="office-tag"
                                                             />
                                                             <label for="office-tag"></label>
-                                                            <span>Канцелярские принадлежности</span>
+                                                            <span class="tags__item-name"
+                                                                >Канцелярские принадлежности</span
+                                                            >
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <button class="popup-show__more">
+                                                <button class="show-more-btn">
                                                     <span>Показать еще</span>
                                                     <svg
                                                         width="16"
@@ -690,93 +701,103 @@
                                                     </svg>
                                                 </button>
                                             </div>
-                                            <div class="popup__facilities-item">
-                                                <div class="popup__facilities-item__title">
+                                            <div class="popup-facilities__item">
+                                                <div class="popup-facilities__item-title">
                                                     Удобства переговорных комнат
                                                 </div>
-                                                <div
-                                                    class="popup__facilities-tag__items tag__items"
-                                                >
-                                                    <div class="tag__items-left">
-                                                        <div class="tag__item">
+                                                <div class="popup-facilities__tags tags">
+                                                    <div class="tags__left">
+                                                        <div class="tags__item">
                                                             <input type="checkbox" id="equip-tag" />
                                                             <label for="equip-tag"></label>
-                                                            <span
+                                                            <span class="tags__item-name"
                                                                 >Оборудование для видеоконференции
                                                             </span>
                                                         </div>
-                                                        <div class="tag__item">
+                                                        <div class="tags__item">
                                                             <input type="checkbox" id="tv-tag" />
                                                             <label for="tv-tag"></label>
-                                                            <span>TV</span>
+                                                            <span class="tags__item-name">TV</span>
                                                         </div>
                                                     </div>
-                                                    <div class="tag__items-right">
-                                                        <div class="tag__item">
+                                                    <div class="tags__right">
+                                                        <div class="tags__item">
                                                             <input
                                                                 type="checkbox"
                                                                 id="projector-tag"
                                                             />
                                                             <label for="projector-tag"></label>
-                                                            <span>Проектор</span>
+                                                            <span class="tags__item-name"
+                                                                >Проектор</span
+                                                            >
                                                         </div>
-                                                        <div class="tag__item">
+                                                        <div class="tags__item">
                                                             <input type="checkbox" id="apple-tag" />
                                                             <label for="apple-tag"></label>
-                                                            <span>Apple TV</span>
+                                                            <span class="tags__item-name"
+                                                                >Apple TV</span
+                                                            >
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="popup__facilities-item">
-                                                <div class="popup__facilities-item__title">
+                                            <div class="popup-facilities__item">
+                                                <div class="popup-facilities__item-title">
                                                     Оборудование
                                                 </div>
-                                                <div
-                                                    class="popup__facilities-tag__items tag__items"
-                                                >
-                                                    <div class="tag__items-left">
-                                                        <div class="tag__item">
+                                                <div class="popup-facilities__tags tags">
+                                                    <div class="tags__left">
+                                                        <div class="tags__item">
                                                             <input type="checkbox" id="pc-tag" />
                                                             <label for="pc-tag"></label>
-                                                            <span>Есть ПК</span>
+                                                            <span class="tags__item-name"
+                                                                >Есть ПК</span
+                                                            >
                                                         </div>
-                                                        <div class="tag__item">
+                                                        <div class="tags__item">
                                                             <input type="checkbox" id="micro-tag" />
                                                             <label for="micro-tag"></label>
-                                                            <span>Микрофон</span>
+                                                            <span class="tags__item-name"
+                                                                >Микрофон</span
+                                                            >
                                                         </div>
-                                                        <div class="tag__item">
+                                                        <div class="tags__item">
                                                             <input type="checkbox" id="light-tag" />
                                                             <label for="light-tag"></label>
-                                                            <span>
+                                                            <span class="tags__item-name">
                                                                 Профессиональное световое
                                                                 оборудование
                                                             </span>
                                                         </div>
                                                     </div>
-                                                    <div class="tag__items-right">
-                                                        <div class="tag__item">
+                                                    <div class="tags__right">
+                                                        <div class="tags__item">
                                                             <input
                                                                 type="checkbox"
                                                                 id="printer-tag"
                                                             />
                                                             <label for="printer-tag"></label>
-                                                            <span>Принтер </span>
+                                                            <span class="tags__item-name"
+                                                                >Принтер
+                                                            </span>
                                                         </div>
-                                                        <div class="tag__item">
+                                                        <div class="tags__item">
                                                             <input type="checkbox" id="scan-tag" />
                                                             <label for="scan-tag"></label>
-                                                            <span>Сканер</span>
+                                                            <span class="tags__item-name"
+                                                                >Сканер</span
+                                                            >
                                                         </div>
-                                                        <div class="tag__item">
+                                                        <div class="tags__item">
                                                             <input type="checkbox" id="copy-tag" />
                                                             <label for="copy-tag"></label>
-                                                            <span>Фотокопировальный аппарат</span>
+                                                            <span class="tags__item-name"
+                                                                >Фотокопировальный аппарат</span
+                                                            >
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <button class="popup-show__more">
+                                                <button class="show-more-btn">
                                                     <span>Показать еще</span>
                                                     <svg
                                                         width="16"
@@ -796,9 +817,9 @@
                                                 </button>
                                             </div>
                                         </div>
-                                        <div class="popup__facilities-btns">
-                                            <div class="popup-clear">
-                                                <div class="popup-clear__icon">
+                                        <div class="popup-facilities__btns">
+                                            <div class="clear-btn">
+                                                <div class="clear-btn__icon">
                                                     <svg
                                                         width="20"
                                                         height="20"
@@ -828,15 +849,21 @@
                                                 </div>
                                                 <span>Очистить</span>
                                             </div>
-                                            <button class="popup-apply btn btn--red">
-                                                <span>Применить</span>
+                                            <button
+                                                class="
+                                                    search-filters__apply-btn
+                                                    apply-btn
+                                                    btn btn--red
+                                                "
+                                            >
+                                                <span class="btn__name">Применить</span>
                                             </button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="search__items">
-                                    <div class="search__item">
-                                        <div class="search__item-slider">
+                                    <div class="search-item">
+                                        <div class="search-item__slider">
                                             <div class="office__slider">
     <div class="office__slider-items slider-wrapper">
         <div class="office__slider-item slider-item">
@@ -859,16 +886,16 @@
     <div class="office__slider-btn__next"></div>
 </div>
                                         </div>
-                                        <div class="search__item-info">
-                                            <div class="search__item-header">
-                                                <div class="search__item-header__name">
-                                                    <div class="search__item-title">
+                                        <div class="search-item__info">
+                                            <div class="search-item__header">
+                                                <div class="search-item__header-name">
+                                                    <div class="search-item__title">
                                                         Офис на Орловской
                                                     </div>
-                                                    <div class="search__item-type">Офис</div>
+                                                    <div class="search-item__type">Офис</div>
                                                 </div>
-                                                <div class="search__item-rate">
-                                                    <div class="search__item-favorite">
+                                                <div class="search-item__rate">
+                                                    <div class="search-item__favorite">
                                                         <button class="favorite">
                                                             <svg
                                                                 width="18"
@@ -884,51 +911,51 @@
                                                             </svg>
                                                         </button>
                                                     </div>
-                                                    <div class="search__item-rate__value">
+                                                    <div class="search-item__rate-value">
                                                         <div class="rate">5.0</div>
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            <div class="search__item-tags">
-                                                <div class="search__item-tag">
+                                            <div class="search-item__tags">
+                                                <div class="search-item__tag">
                                                     <span>Высокоскоростной WiFi</span>
                                                 </div>
-                                                <div class="search__item-tag">
+                                                <div class="search-item__tag">
                                                     <span>Открыто круглосуточно</span>
                                                 </div>
-                                                <div class="search__item-tag">
+                                                <div class="search-item__tag">
                                                     <span>Встреча гостей/секретарь</span>
                                                 </div>
-                                                <div class="search__item-tag">
+                                                <div class="search-item__tag">
                                                     <span>Кофемашина</span>
                                                 </div>
                                             </div>
-                                            <div class="search__item-numbers">
-                                                <div class="search__item-properties">
+                                            <div class="search-item__numbers">
+                                                <div class="search-item__properties">
                                                     <div
                                                         class="
-                                                            search__item-property
-                                                            search__item-property__places
+                                                            search-item__property
+                                                            search-item__property-places
                                                         "
                                                     >
                                                         80 мест
                                                     </div>
                                                     <div
                                                         class="
-                                                            search__item-property
-                                                            search__item-property__square
+                                                            search-item__property
+                                                            search-item__property-square
                                                         "
                                                     >
                                                         355 м²
                                                     </div>
                                                 </div>
-                                                <div class="search__item-price">1 300 ₽/сут</div>
+                                                <div class="search-item__price">1 300 ₽/сут</div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="search__item">
-                                        <div class="search__item-slider">
+                                    <div class="search-item">
+                                        <div class="search-item__slider">
                                             <div class="office__slider">
     <div class="office__slider-items slider-wrapper">
         <div class="office__slider-item slider-item">
@@ -951,18 +978,18 @@
     <div class="office__slider-btn__next"></div>
 </div>
                                         </div>
-                                        <div class="search__item-info">
-                                            <div class="search__item-header">
-                                                <div class="search__item-header__name">
-                                                    <div class="search__item-title">
+                                        <div class="search-item__info">
+                                            <div class="search-item__header">
+                                                <div class="search-item__header-name">
+                                                    <div class="search-item__title">
                                                         Офис на этаже БЦ Васильевский
                                                     </div>
-                                                    <div class="search__item-type">
+                                                    <div class="search-item__type">
                                                         Переговорная комната
                                                     </div>
                                                 </div>
-                                                <div class="search__item-rate">
-                                                    <div class="search__item-favorite">
+                                                <div class="search-item__rate">
+                                                    <div class="search-item__favorite">
                                                         <button class="favorite">
                                                             <svg
                                                                 width="18"
@@ -978,51 +1005,51 @@
                                                             </svg>
                                                         </button>
                                                     </div>
-                                                    <div class="search__item-rate__value">
+                                                    <div class="search-item__rate-value">
                                                         <div class="rate">4.9</div>
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            <div class="search__item-tags">
-                                                <div class="search__item-tag">
+                                            <div class="search-item__tags">
+                                                <div class="search-item__tag">
                                                     <span>Высокоскоростной WiFi</span>
                                                 </div>
-                                                <div class="search__item-tag">
+                                                <div class="search-item__tag">
                                                     <span>Открыто круглосуточно</span>
                                                 </div>
-                                                <div class="search__item-tag">
+                                                <div class="search-item__tag">
                                                     <span>Встреча гостей/секретарь</span>
                                                 </div>
-                                                <div class="search__item-tag">
+                                                <div class="search-item__tag">
                                                     <span>Кофемашина</span>
                                                 </div>
                                             </div>
-                                            <div class="search__item-numbers">
-                                                <div class="search__item-properties">
+                                            <div class="search-item__numbers">
+                                                <div class="search-item__properties">
                                                     <div
                                                         class="
-                                                            search__item-property
-                                                            search__item-property__places
+                                                            search-item__property
+                                                            search-item__property-places
                                                         "
                                                     >
                                                         80 мест
                                                     </div>
                                                     <div
                                                         class="
-                                                            search__item-property
-                                                            search__item-property__square
+                                                            search-item__property
+                                                            search-item__property-square
                                                         "
                                                     >
                                                         355 м²
                                                     </div>
                                                 </div>
-                                                <div class="search__item-price">2 500 ₽/сут</div>
+                                                <div class="search-item__price">2 500 ₽/сут</div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="search__item">
-                                        <div class="search__item-slider">
+                                    <div class="search-item">
+                                        <div class="search-item__slider">
                                             <div class="office__slider">
     <div class="office__slider-items slider-wrapper">
         <div class="office__slider-item slider-item">
@@ -1045,18 +1072,18 @@
     <div class="office__slider-btn__next"></div>
 </div>
                                         </div>
-                                        <div class="search__item-info">
-                                            <div class="search__item-header">
-                                                <div class="search__item-header__name">
-                                                    <div class="search__item-title">
+                                        <div class="search-item__info">
+                                            <div class="search-item__header">
+                                                <div class="search-item__header-name">
+                                                    <div class="search-item__title">
                                                         Зал для переговоров
                                                     </div>
-                                                    <div class="search__item-type">
+                                                    <div class="search-item__type">
                                                         Конференц зал
                                                     </div>
                                                 </div>
-                                                <div class="search__item-rate">
-                                                    <div class="search__item-favorite">
+                                                <div class="search-item__rate">
+                                                    <div class="search-item__favorite">
                                                         <button class="favorite">
                                                             <svg
                                                                 width="18"
@@ -1072,51 +1099,51 @@
                                                             </svg>
                                                         </button>
                                                     </div>
-                                                    <div class="search__item-rate__value">
+                                                    <div class="search-item__rate-value">
                                                         <div class="rate">4.3</div>
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            <div class="search__item-tags">
-                                                <div class="search__item-tag">
+                                            <div class="search-item__tags">
+                                                <div class="search-item__tag">
                                                     <span>Высокоскоростной WiFi</span>
                                                 </div>
-                                                <div class="search__item-tag">
+                                                <div class="search-item__tag">
                                                     <span>Открыто круглосуточно</span>
                                                 </div>
-                                                <div class="search__item-tag">
+                                                <div class="search-item__tag">
                                                     <span>Встреча гостей/секретарь</span>
                                                 </div>
-                                                <div class="search__item-tag">
+                                                <div class="search-item__tag">
                                                     <span>Кофемашина</span>
                                                 </div>
                                             </div>
-                                            <div class="search__item-numbers">
-                                                <div class="search__item-properties">
+                                            <div class="search-item__numbers">
+                                                <div class="search-item__properties">
                                                     <div
                                                         class="
-                                                            search__item-property
-                                                            search__item-property__places
+                                                            search-item__property
+                                                            search-item__property-places
                                                         "
                                                     >
                                                         80 мест
                                                     </div>
                                                     <div
                                                         class="
-                                                            search__item-property
-                                                            search__item-property__square
+                                                            search-item__property
+                                                            search-item__property-square
                                                         "
                                                     >
                                                         355 м²
                                                     </div>
                                                 </div>
-                                                <div class="search__item-price">5 500 ₽/сут</div>
+                                                <div class="search-item__price">5 500 ₽/сут</div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="search__item">
-                                        <div class="search__item-slider">
+                                    <div class="search-item">
+                                        <div class="search-item__slider">
                                             <div class="office__slider">
     <div class="office__slider-items slider-wrapper">
         <div class="office__slider-item slider-item">
@@ -1139,16 +1166,16 @@
     <div class="office__slider-btn__next"></div>
 </div>
                                         </div>
-                                        <div class="search__item-info">
-                                            <div class="search__item-header">
-                                                <div class="search__item-header__name">
-                                                    <div class="search__item-title">
+                                        <div class="search-item__info">
+                                            <div class="search-item__header">
+                                                <div class="search-item__header-name">
+                                                    <div class="search-item__title">
                                                         Офис на Орловской
                                                     </div>
-                                                    <div class="search__item-type">Офис</div>
+                                                    <div class="search-item__type">Офис</div>
                                                 </div>
-                                                <div class="search__item-rate">
-                                                    <div class="search__item-favorite">
+                                                <div class="search-item__rate">
+                                                    <div class="search-item__favorite">
                                                         <button class="favorite">
                                                             <svg
                                                                 width="18"
@@ -1164,46 +1191,46 @@
                                                             </svg>
                                                         </button>
                                                     </div>
-                                                    <div class="search__item-rate__value">
+                                                    <div class="search-item__rate-value">
                                                         <div class="rate">5.0</div>
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            <div class="search__item-tags">
-                                                <div class="search__item-tag">
+                                            <div class="search-item__tags">
+                                                <div class="search-item__tag">
                                                     <span>Высокоскоростной WiFi</span>
                                                 </div>
-                                                <div class="search__item-tag">
+                                                <div class="search-item__tag">
                                                     <span>Открыто круглосуточно</span>
                                                 </div>
-                                                <div class="search__item-tag">
+                                                <div class="search-item__tag">
                                                     <span>Встреча гостей/секретарь</span>
                                                 </div>
-                                                <div class="search__item-tag">
+                                                <div class="search-item__tag">
                                                     <span>Кофемашина</span>
                                                 </div>
                                             </div>
-                                            <div class="search__item-numbers">
-                                                <div class="search__item-properties">
+                                            <div class="search-item__numbers">
+                                                <div class="search-item__properties">
                                                     <div
                                                         class="
-                                                            search__item-property
-                                                            search__item-property__places
+                                                            search-item__property
+                                                            search-item__property-places
                                                         "
                                                     >
                                                         80 мест
                                                     </div>
                                                     <div
                                                         class="
-                                                            search__item-property
-                                                            search__item-property__square
+                                                            search-item__property
+                                                            search-item__property-square
                                                         "
                                                     >
                                                         355 м²
                                                     </div>
                                                 </div>
-                                                <div class="search__item-price">1 300 ₽/сут</div>
+                                                <div class="search-item__price">1 300 ₽/сут</div>
                                             </div>
                                         </div>
                                     </div>
@@ -1248,8 +1275,7 @@
                                         fill="white"
                                     />
                                 </svg>
-
-                                <span>Развернуть карту</span>
+                                <span class="btn__name">Развернуть карту</span>
                             </button>
                         </div>
                     </div>

@@ -9,6 +9,7 @@
 @import "components/rate";
 @import "components/popups";
 @import "components/overlay";
+@import "components/mapBlock";
 @import "blocks/footer";
 
 .search {
@@ -21,72 +22,10 @@
         padding-top: 60px;
         width: 50%;
     }
-    &-title {
+    &__title {
         margin-bottom: 20px;
     }
-    &__filters {
-        margin-bottom: 50px;
-        position: relative;
-    }
-    &__filters-btns {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    &__filter-button {
-        background: #ffecec;
-        border-radius: 50px;
-        height: 37px;
-        padding: 0 20px;
-        display: flex;
-        align-items: center;
-        border: 1px solid #ffecec;
-        transition: all ease 0.3s;
-        span {
-            white-space: nowrap;
-        }
-    }
-    &__filter-button.active {
-        background: #fff;
-        border: 1px solid #ed4040;
-        span {
-            color: #ed4040;
-        }
-    }
-    &__filter:not(:last-child) &__filter-button {
-        margin-right: 20px;
-    }
-    &__filter-popup__price {
-        bottom: -35px;
-        left: 0;
-        transform: translate(0, 80%);
-        &.active {
-            transform: translate(0, 100%);
-        }
-    }
-    &__filter-popup__props {
-        bottom: -35px;
-        left: 0;
-        transform: translate(0, 80%);
-        &.active {
-            transform: translate(0, 100%);
-        }
-    }
-    &__filter-popup__booking {
-        bottom: -35px;
-        right: 0;
-        transform: translate(-35%, 80%);
-        &.active {
-            transform: translate(-35%, 100%);
-        }
-    }
-    &__filter-popup__facilities {
-        bottom: -35px;
-        left: 0;
-        transform: translate(0, 80%);
-        &.active {
-            transform: translate(0, 100%);
-        }
-    }
+
     &__items {
         height: 900px;
         overflow-y: scroll;
@@ -96,101 +35,7 @@
     &__items::-webkit-scrollbar {
         width: 0px; /* For Chrome, Safari, and Opera */
     }
-    &__item {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-    }
-    &__item:not(:last-child) {
-        margin-bottom: 40px;
-    }
-    &__item-info {
-        margin-left: 20px;
-        align-self: center;
-    }
-    &__item-slider {
-        height: 250px;
-        width: 46.5%;
-    }
-    &__item-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 20px;
-    }
-    &__item-title {
-        font-size: 28px;
-        margin-bottom: 5px;
-    }
-    &__item-header__name {
-        display: flex;
-        flex-direction: column;
-    }
-    &__item-rate {
-        display: flex;
-        align-items: center;
-    }
-    &__item-favorite {
-        margin-right: 20px;
-    }
-    &__item-type {
-        color: #ed4040;
-        font-size: 18px;
-        font-weight: 500;
-    }
-    &__item-tags {
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 10px;
-    }
-    &__item-tag {
-        height: 29px;
-        border-radius: 50px;
-        background: #ffffff;
-        border: 0.5px solid #dadada;
-        display: flex;
-        align-items: center;
-        padding: 0 12px;
-        margin: 0 5px 10px 0;
-        span {
-            color: #717171;
-            font-size: 14px;
-            text-align: center;
-        }
-    }
-    &__item-numbers {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    &__item-properties {
-        display: flex;
-        align-items: center;
-    }
-    &__item-property {
-        position: relative;
-        padding: 10px;
-        color: #000000;
-        font-size: 18px;
-        &:before {
-            position: absolute;
-            content: "";
-            top: 50%;
-            left: 0;
-            width: 5px;
-            height: 5px;
-            background: #f74d4a;
-            border-radius: 50%;
-            transform: translate(0, -50%);
-        }
-    }
-    &__item-property:not(:last-child) {
-        margin-right: 20px;
-    }
-    &__item-price {
-        font-size: 28px;
-        font-weight: 700;
-    }
+
     &__map-block {
         width: 48%;
         border: none;
@@ -199,19 +44,6 @@
         right: 0;
         height: 100%;
         z-index: 15;
-    }
-    &__map {
-        width: 100%;
-    }
-    &__map-nav {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        display: flex;
-        z-index: 20;
-        transform: translate(-50%, 0);
-        gap: 20px;
-        margin-top: 30px;
     }
     &__map-show__btn {
         display: none;
@@ -228,6 +60,132 @@
             font-size: 20px;
             margin-left: 10px;
         }
+    }
+}
+.search-filters {
+    margin-bottom: 50px;
+    position: relative;
+    &__apply-btn {
+        margin-left: 45px;
+    }
+    &__btns {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__btn:not(:last-child) {
+        margin-right: 20px;
+    }
+    &__popup-price {
+        bottom: -35px;
+        left: 0;
+    }
+    &__popup-props {
+        bottom: -35px;
+        left: 0;
+    }
+    &__popup-booking {
+        bottom: -35px;
+        right: 20%;
+    }
+    &__popup-facilities {
+        bottom: -35px;
+        left: 0;
+    }
+}
+.search-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    &:not(:last-child) {
+        margin-bottom: 40px;
+    }
+    &__info {
+        margin-left: 20px;
+        align-self: center;
+    }
+    &__slider {
+        height: 250px;
+        width: 46.5%;
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+    &__title {
+        font-size: 28px;
+        margin-bottom: 5px;
+    }
+    &__header-name {
+        display: flex;
+        flex-direction: column;
+    }
+    &__rate {
+        display: flex;
+        align-items: center;
+    }
+    &__favorite {
+        margin-right: 20px;
+    }
+    &__type {
+        color: #ed4040;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    &__tag {
+        height: 29px;
+        border-radius: 50px;
+        background: #ffffff;
+        border: 0.5px solid #dadada;
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        margin: 0 5px 10px 0;
+        span {
+            color: #717171;
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+    &__numbers {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__properties {
+        display: flex;
+        align-items: center;
+    }
+    &__property {
+        position: relative;
+        padding: 10px;
+        color: #000000;
+        font-size: 18px;
+        &:before {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: 0;
+            width: 5px;
+            height: 5px;
+            background: #f74d4a;
+            border-radius: 50%;
+            transform: translate(0, -50%);
+        }
+    }
+    &__property:not(:last-child) {
+        margin-right: 20px;
+    }
+    &__price {
+        font-size: 28px;
+        font-weight: 700;
     }
 }
 @media screen and (max-width: 1740px) {
@@ -257,11 +215,11 @@
         &__map-show__btn {
             display: flex;
         }
-        &.show-map &__map-block {
+        &__map-block_active {
             opacity: 1;
             transform: translate(0, 0);
         }
-        &.show-map &__map-show__btn {
+        &__map-show__btn_active {
             display: none;
         }
     }
@@ -269,25 +227,26 @@
 @media screen and (max-width: 1000px) {
     .search {
         &__items {
-            height: calc(100vh - 120px);
+            height: calc(100vh - 130px);
         }
         &__left {
             padding-top: 10px;
         }
-        &-title {
+        &__title {
             display: none;
         }
-        &__filters {
-            position: absolute;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            top: -100%;
-            left: 0;
-            transform: translate(0, -100%);
-            transition: all ease 0.5s;
-        }
-        &__filters.active {
+    }
+    .search-filters {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        top: -100%;
+        left: 0;
+        transform: translate(0, -100%);
+        transition: all ease 0.5s;
+
+        &_active {
             background: #fff;
             padding: 0 40px;
             top: 0;
@@ -298,94 +257,98 @@
             scrollbar-width: none; /* For Firefox */
             -ms-overflow-style: none; /* For Internet Explorer and Edge */
         }
-        &__filters::-webkit-scrollbar.active {
+        &_active::-webkit-scrollbar {
             width: 0px; /* For Chrome, Safari, and Opera */
         }
-        &__filter-popup__price,
-        &__filter-popup__props,
-        &__filter-popup__booking,
-        &__filter-popup__facilities {
+        &__popup-price,
+        &__popup-props,
+        &__popup-booking,
+        &__popup-facilities {
             transform: unset;
         }
-        &__filters-btns {
+        &__btns {
             display: none;
         }
-        &__item {
-            flex-direction: column;
-        }
-        &__item-title {
+    }
+
+    .search-item {
+        flex-direction: column;
+
+        &__title {
             margin-bottom: 0;
         }
-        &__item-slider {
+        &__slider {
             width: 100%;
             height: unset;
             position: relative;
         }
-        &__item-slider img {
+        &__slider img {
             min-height: 250px;
             object-fit: cover;
             object-position: center;
         }
-        &__item-info {
+        &__info {
             align-self: flex-start;
             margin-left: 0;
             width: 100%;
         }
-        &__item-tags {
+        &__tags {
             margin-top: 10px;
         }
-        &__item-type {
+        &__type {
             display: flex;
             align-items: center;
         }
-        &__item-rate {
+        &__rate {
             margin-left: 10px;
         }
-        &__item-favorite {
+        &__favorite {
             margin-right: 0;
             position: absolute;
             top: 8px;
             right: 8px;
             z-index: 2;
         }
-        &__item-header {
+        &__header {
             align-items: unset;
         }
-        &__item-header__name {
+        &__header-name {
             justify-content: space-between;
             flex: 0 0 60%;
         }
-        &__item-numbers {
+        &__numbers {
             flex-direction: column-reverse;
             justify-content: space-between;
             flex: 0 0 35%;
             align-items: flex-end;
         }
-        &__item-price {
+        &__price {
             color: #ed4040;
         }
-        &__item-property {
+        &__property {
             padding: 0 0 0 10px;
         }
     }
 }
 @media screen and (max-width: 540px) {
-    .search {
-        &__item-title {
+    .search-item {
+        &__title {
             font-size: 20px;
         }
-        &__item-price {
+        &__price {
             font-size: 20px;
         }
-        &__item-type {
+        &__type {
             font-size: 16px;
         }
-        &__item-property {
+        &__property {
             font-size: 16px;
         }
-        &__item-property:not(:last-child) {
+        &__property:not(:last-child) {
             margin-right: 10px;
         }
+    }
+    .search {
         &__map-show__btn {
             display: flex;
             height: 32px;
@@ -401,15 +364,15 @@
     }
 }
 @media screen and (max-width: 420px) {
-    .search {
-        &__item-header {
+    .search-item {
+        &__header {
             flex-direction: column;
         }
-        &__item-header__name {
+        &__header-name {
             flex: 0 0 100%;
             margin-bottom: 20px;
         }
-        &__item-numbers {
+        &__numbers {
             flex: 0 0 100%;
             align-items: flex-start;
         }

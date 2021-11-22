@@ -7,11 +7,9 @@
     border-radius: 5px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     transition: all ease 0.3s;
     &__select,
     &__input {
-        padding: 0 64px;
         background: transparent;
         border: none;
         outline: none;
@@ -49,34 +47,32 @@
 }
 .city-input {
     &__icon {
-        left: 30px;
-        z-index: 0;
+        margin-right: 10px;
     }
     &__icon-search {
-        right: 30px;
-        z-index: 2;
+        background: #fff;
+    }
+    &__search-btn {
+        margin-left: 7px;
     }
 }
 .date-input {
-    &__select {
-        padding: 0 64px 0 68px;
-    }
     &__icon {
-        left: 34px;
+        left: 37px;
     }
 }
 .tags {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
-.tags__item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-.tags__item-name {
-    margin-left: 10px;
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    &__item-name {
+        margin-left: 10px;
+    }
 }
 input[type="checkbox"] {
     position: absolute;

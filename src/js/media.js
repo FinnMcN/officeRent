@@ -3,7 +3,7 @@ import adaptive from "./adaptive.js";
 
 export default function media() {
     const officeForm = document.querySelectorAll(".office-form");
-    const searchItems = document.querySelectorAll(".search__item");
+    const searchItems = document.querySelectorAll(".search-item");
 
     function adaptiveOfficeForm(width) {
         if (officeForm.length !== 0) {
@@ -71,57 +71,57 @@ export default function media() {
     function adaptiveSearchItem(width) {    
         searchItems.forEach(item => {
             const tags = {
-                selector: item.querySelector(".search__item-tags"),
+                selector: item.querySelector(".search-item__tags"),
                 start: {
-                    relativeEl: item.querySelector(".search__item-header"),
+                    relativeEl: item.querySelector(".search-item__header"),
                     method: "after",
                 },
                 replace: {
-                    relativeEl: item.querySelector(".search__item-slider"),
+                    relativeEl: item.querySelector(".search-item__slider"),
                     method: "after",
                 },
             };
             const itemInfo = {
-                selector: item.querySelector(".search__item-info"),
+                selector: item.querySelector(".search-item__info"),
                 start: {
-                    relativeEl: item.querySelector(".search__item-slider"),
+                    relativeEl: item.querySelector(".search-item__slider"),
                     method: "after",
                 },
                 replace: {
-                    relativeEl: item.querySelector(".search__item-slider"),
+                    relativeEl: item.querySelector(".search-item__slider"),
                     method: "before",
                 },
             };
             const itemFavorite = {
-                selector: item.querySelector(".search__item-favorite"),
+                selector: item.querySelector(".search-item__favorite"),
                 start: {
-                    relativeEl: item.querySelector(".search__item-rate"),
+                    relativeEl: item.querySelector(".search-item__rate"),
                     method: "prepend",
                 },
                 replace: {
-                    relativeEl: item.querySelector(".search__item-slider"),
+                    relativeEl: item.querySelector(".search-item__slider"),
                     method: "prepend",
                 },
             };
             const rateValue = {
-                selector: item.querySelector(".search__item-rate"),
+                selector: item.querySelector(".search-item__rate"),
                 start: {
-                    relativeEl: item.querySelector(".search__item-header"),
+                    relativeEl: item.querySelector(".search-item__header"),
                     method: "append",
                 },
                 replace: {
-                    relativeEl: item.querySelector(".search__item-type"),
+                    relativeEl: item.querySelector(".search-item__type"),
                     method: "append",
                 },
             };
             const itemNumbers = {
-                selector: item.querySelector(".search__item-numbers"),
+                selector: item.querySelector(".search-item__numbers"),
                 start: {
-                    relativeEl: item.querySelector(".search__item-info"),
+                    relativeEl: item.querySelector(".search-item__info"),
                     method: "append",
                 },
                 replace: {
-                    relativeEl: item.querySelector(".search__item-header"),
+                    relativeEl: item.querySelector(".search-item__header"),
                     method: "append",
                 },
             };
@@ -132,11 +132,11 @@ export default function media() {
     }
 
     function adaptiveMapFilters(width) {
-        if (document.querySelector(".search__filters")) {
+        if (document.querySelector(".search-filters")) {
             const searchFilters = {
-                selector: document.querySelector(".search__filters"),
+                selector: document.querySelector(".search-filters"),
                 start: {
-                    relativeEl: document.querySelector(".search-title"),
+                    relativeEl: document.querySelector(".search__title"),
                     method: "after",
                 },
                 replace: {

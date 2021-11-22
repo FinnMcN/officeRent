@@ -12,6 +12,15 @@
     &__city-input {
         margin-bottom: 45px;
     }
+    &__city-input__icon {
+        left: 30px;
+    }
+    &__date-input__select {
+        padding: 0 0 0 68px;
+    }
+    &__city-select {
+        padding: 0 38px 0 64px;
+    }
     &__input-wrapper {
         display: flex;
         justify-content: space-between;

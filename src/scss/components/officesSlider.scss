@@ -110,10 +110,6 @@
     }
 }
 @media screen and (max-width: 768px) {
-    .most-rented__slider,
-    .most-interesting__slider {
-        margin: 0 -15px 0 0;
-    }
     .offices-slider {
         &__item {
             transition: opacity ease 0.3s;
@@ -149,10 +145,6 @@
     }
 }
 @media screen and (max-width: 480px) {
-    .most-rented__slider,
-    .most-interesting__slider {
-        margin: 0;
-    }
     .offices-slider {
         &__item {
             flex: 0 0 100%;

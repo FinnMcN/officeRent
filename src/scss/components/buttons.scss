@@ -1,3 +1,4 @@
+//general button styles
 button {
     cursor: pointer;
     outline: none;
@@ -29,6 +30,8 @@ button {
     align-items: center;
     justify-content: center;
 }
+
+//custom button styles
 .filter-btn {
     background: #ffecec;
     border-radius: 50px;
@@ -53,11 +56,11 @@ button {
     cursor: pointer;
 }
 .show-more-btn {
-    color: #717171;
     background: transparent;
     display: flex;
     align-items: center;
     span {
+        color: #717171;
         margin-right: 10px;
     }
 }
@@ -89,10 +92,35 @@ button {
     color: #ed4040;
     text-shadow: 0 0 1px #ed4040, 0 0 1px #ed4040;
 }
-//?
-.remove {
+.remove-btn {
     background: transparent;
 }
+.btn--shadow {
+    background: #ffffff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all ease 0.3s;
+    &:hover {
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+}
+.favorite-btn {
+    svg {
+        transition: fill ease 0.3s;
+    }
+    &_active svg {
+        fill: #ed4040;
+        animation: favoriteSvgScale 0.2s ease 0s;
+    }
+}
+@keyframes favoriteSvgScale {
+    0% {
+        transform: scale(1);
+    }
+    1% {
+        transform: scale(1.2);
+    }
+}
+//media
 @media screen and (max-width: 768px) {
     .btn__name {
         font-size: 22px;

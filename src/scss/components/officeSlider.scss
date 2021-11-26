@@ -1,12 +1,12 @@
-.office__slider {
+.office-slider {
     position: relative;
 
-    &:hover &-btn__prev,
-    &:hover &-btn__next {
+    &:hover &__btn-prev,
+    &:hover &__btn-next {
         opacity: 1;
     }
-    &-btn__prev,
-    &-btn__next {
+    &__btn-prev,
+    &__btn-next {
         opacity: 0;
         position: absolute;
         content: "";
@@ -31,22 +31,22 @@
             background: url("data:image/svg+xml,%3Csvg width='10' height='16' viewBox='0 0 10 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.95659 2.55939L8.96865 2.54542L8.97965 2.53059C9.31687 2.07611 9.2799 1.43189 8.86776 1.01975C8.41476 0.566741 7.68028 0.566741 7.22728 1.01975L1.06728 7.17975L1.05432 7.1927L1.04235 7.20657L0.978448 7.28059L0.966384 7.29457L0.955385 7.30939C0.618163 7.76388 0.655137 8.4081 1.06728 8.82024L7.22728 14.9802L7.24023 14.9932L7.25409 15.0052L7.32812 15.0691L7.34209 15.0811L7.35692 15.0921C7.8114 15.4293 8.45562 15.3924 8.86776 14.9802L8.88072 14.9673L8.89269 14.9534L8.95659 14.8794L8.96865 14.8654L8.97965 14.8506C9.31687 14.3961 9.2799 13.7519 8.86777 13.3398C8.86777 13.3398 8.86777 13.3398 8.86776 13.3398L3.52829 7.99999L8.86777 2.66023L8.88072 2.64728L8.89269 2.63342L8.95659 2.55939Z' fill='%23ED4040' stroke='%23ED4040'/%3E%3C/svg%3E%0A");
         }
     }
-    &-btn__next {
+    &__btn-next {
         right: 0;
         &:after {
             transform: translate(-50%, -50%) rotate(-180deg);
         }
     }
-    &-btn__prev {
+    &__btn-prev {
         left: 0;
         &:after {
             transform: translate(-50%, -50%);
         }
     }
-    &-items {
+    &__items {
         display: flex;
     }
-    &-item {
+    &__item {
         width: 100%;
         height: 100%;
         border-radius: 5px;

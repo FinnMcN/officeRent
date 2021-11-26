@@ -4,9 +4,9 @@ export default function inputNumber() {
     // доделать mousedown mouseup events -> need optimization
     if (counter.length !== 0) {
         counter.forEach(function (item) {
-            const input = item.getElementsByTagName("input")[0];
-            const minus = item.getElementsByClassName("counter-minus")[0];
-            const plus = item.getElementsByClassName("counter-plus")[0];
+            const input = item.querySelector(".counter__input");
+            const minus = item.querySelector(".counter__btn-minus");
+            const plus = item.querySelector(".counter__btn-plus");
             if (input.getAttribute("type") === "number") {
                 let mouseDownFlag = true;
 

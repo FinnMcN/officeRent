@@ -1,11 +1,11 @@
 import adaptive from "./adaptive.js";
 export default function addClickEvents() {
     const inputBlocks = document.querySelectorAll(".def-input");
-    const favorites = document.querySelectorAll(".favorite");
+    const favorites = document.querySelectorAll(".favorite-btn");
     const filterButtons = document.querySelectorAll(".filter-btn");
     const popup = document.querySelectorAll(".popup");
-    const overlay = document.querySelectorAll(".overlay");
-    const tables = document.querySelectorAll(".office__about-table__item");
+    const overlay = document.querySelector(".overlay");
+    const tables = document.querySelectorAll(".table__item");
     const menu = document.querySelector(".header__menu-icon");
 
     const mapBtn = document.querySelector(".search__map-show__btn");
@@ -53,21 +53,18 @@ export default function addClickEvents() {
 
     //table info toggle
     if (tables.length !== 0) {
-        const rows = [];
-        let lastRow;
-        tables.forEach((table) => {
-            rows.push(table.children);
-        });
-        for (let i = 1; i < rows[0].length; i++) {
-            const row = rows[0][i].children[0];
-            row.addEventListener("click", function(e) {
-                if (lastRow !== undefined) {
-                    lastRow.classList.remove("active");
+        let activeRow;
+
+        tables.forEach(table => {
+            const tableRow = table.children[0];
+            tableRow.addEventListener("click", function (e) {
+                if (activeRow !== undefined) {
+                    activeRow.classList.remove("table__item_active");
                 }
-                this.nextElementSibling.classList.toggle("active");
-                lastRow = this.nextElementSibling;
+                table.classList.add("table__item_active");
+                activeRow = table;
             });
-        }
+        });
     }
 
     //input focus anim
@@ -87,7 +84,7 @@ export default function addClickEvents() {
     if (favorites.length !== 0) {
         favorites.forEach(function (item) {
             item.addEventListener("click", function() {
-                this.classList.toggle("active");
+                this.classList.toggle("favorite-btn_active");
             });
         });
     }
@@ -99,7 +96,7 @@ export default function addClickEvents() {
                 popup.forEach(function (popupWindow) {
                     if (filterButton.id === popupWindow.id) {
                         popupWindow.classList.toggle("popup_active");
-                        overlay[0].classList.toggle("overlay_active");
+                        overlay.classList.toggle("overlay_active");
                     }
                 });
                 this.classList.toggle("filter-btn_active");
@@ -108,8 +105,8 @@ export default function addClickEvents() {
     }
 
     //anim when clicking on overlay
-    if (overlay.length !== 0) {
-        overlay[0].addEventListener("click", function () {
+    if (overlay && overlay.length !== 0) {
+        overlay.addEventListener("click", function () {
             filterButtons.forEach(item => {
                 if (item.classList.contains("filter-btn_active")) {
                     item.classList.toggle("filter-btn_active");
@@ -118,7 +115,7 @@ export default function addClickEvents() {
             popup.forEach(function (popupWindow) {
                 popupWindow.classList.remove("popup_active");
             });
-            overlay[0].classList.toggle("overlay_active");
+            overlay.classList.toggle("overlay_active");
         });
     }
 }

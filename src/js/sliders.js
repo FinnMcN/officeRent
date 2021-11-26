@@ -7,7 +7,7 @@ export default function initSwipers() {
     const swiperWrappers = document.querySelectorAll(".slider-wrapper");
     
     const officesSliders = document.querySelectorAll(".offices-slider");
-    const officeSliders = document.querySelectorAll(".office__slider");
+    const officeSliders = document.querySelectorAll(".office-slider");
 
     /* SwiperCore.use([Navigation, Pagination]); */
 
@@ -64,11 +64,11 @@ export default function initSwipers() {
                 prevEl: prevBtn,
                 nextEl: nextBtn,
             },
-            breakpoints: {
+            /* breakpoints: {
                 1000: {
                     autoHeight: false,
                 },
-            },
+            }, */
         });
     });
 }

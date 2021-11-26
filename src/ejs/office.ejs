@@ -14,31 +14,31 @@
             <div class="main">
                 <div class="office">
                     <div class="container">
-                        <div class="office__gallery">
-                            <div class="office__gallery-item">
+                        <div class="office-gallery">
+                            <div class="office-gallery__item">
                                 <img src="./public/images/gallery1.jpg" alt="" />
                             </div>
-                            <div class="office__gallery-item">
+                            <div class="office-gallery__item">
                                 <img src="./public/images/gallery2.jpg" alt="" />
                             </div>
-                            <div class="office__gallery-item">
+                            <div class="office-gallery__item">
                                 <img src="./public/images/gallery3.jpg" alt="" />
                             </div>
-                            <div class="office__gallery-item">
+                            <div class="office-gallery__item">
                                 <img src="./public/images/gallery4.jpg" alt="" />
                             </div>
-                            <div class="office__gallery-item">
+                            <div class="office-gallery__item">
                                 <img src="./public/images/gallery5.jpg" alt="" />
                             </div>
                         </div>
                         <div class="office__main">
-                            <div class="office__about">
-                                <div class="office__about-top">
-                                    <div class="office__about-title">
+                            <div class="office-about">
+                                <div class="office-about__top">
+                                    <div class="office-about__title">
                                         Офис на этаже БЦ Васильевский
                                     </div>
-                                    <div class="office__about-favorite">
-                                        <button class="favorite">
+                                    <div class="office-about__top-btns">
+                                        <button class="btn--round btn--shadow">
                                             <svg
                                                 width="20"
                                                 height="18"
@@ -52,7 +52,7 @@
                                                 />
                                             </svg>
                                         </button>
-                                        <button class="favorite">
+                                        <button class="btn--round btn--shadow favorite-btn">
                                             <svg
                                                 width="18"
                                                 height="17"
@@ -68,44 +68,51 @@
                                         </button>
                                     </div>
                                 </div>
-                                <div class="office__about-info">
-                                    <div class="office__about-info__left">
-                                        <div class="office__about-rate">
-                                            <div class="office__about-rate__value">
-                                                <div class="rate">4.9</div>
-                                            </div>
-                                            <div class="office__about-rate__count">
-                                                (12 отзывов)
-                                            </div>
+                                <div class="office-info">
+                                    <div class="office-info__left">
+                                        <div class="office-info__rate">
+                                            <div class="office-info__rate-value rate">4.9</div>
+                                            <div class="office-info__rate-count">(12 отзывов)</div>
                                         </div>
-                                        <div class="office__about-info__location">
-                                            <div class="location">Россия, Москва</div>
+                                        <div class="office-info__location location">
+                                            Россия, Москва
                                         </div>
-                                        <div class="office__about-schedule">
-                                            <div class="schedule">
-                                                Пн-Пт 9:00 - 21:00, Сб-Вс 10:00 - 18:00
-                                            </div>
+                                        <div class="office-info__schedule schedule">
+                                            Пн-Пт 9:00 - 21:00, Сб-Вс 10:00 - 18:00
                                         </div>
                                     </div>
-                                    <div class="office__about-info__right">
-                                        <div class="office__about-price">от 2 500 ₽/сутки</div>
-                                        <div class="office__about-properties">
-                                            <div class="office__about-property">80 мест</div>
-                                            <div class="office__about-property">355 м²</div>
+                                    <div class="office-info__right">
+                                        <div class="office-info__price">от 2 500 ₽/сутки</div>
+                                        <div class="office-info__properties">
+                                            <div class="office-info__property">80 мест</div>
+                                            <div class="office-info__property">355 м²</div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="office__about-tabs" id="tabs">
-                                    <ul>
-                                        <li><a href="#tab-desc">Описание</a></li>
-                                        <li><a href="#tab-choice">Выбор помещения</a></li>
-                                        <li><a href="#tab-map">Показать на карте</a></li>
-                                        <li><a href="#tab-comments">Отзывы</a></li>
+                                <div class="office-tabs" id="tabs">
+                                    <ul class="office-tabs__items">
+                                        <li class="office-tabs__name">
+                                            <a class="office-tabs__link" href="#tab-desc"
+                                                >Описание</a
+                                            >
+                                        </li>
+                                        <li class="office-tabs__name">
+                                            <a class="office-tabs__link" href="#tab-choice"
+                                                >Выбор помещения</a
+                                            >
+                                        </li>
+                                        <li class="office-tabs__name">
+                                            <a class="office-tabs__link" href="#tab-map"
+                                                >Показать на карте</a
+                                            >
+                                        </li>
+                                        <li class="office-tabs__name">
+                                            <a class="office-tabs__link" href="#tab-comments"
+                                                >Отзывы</a
+                                            >
+                                        </li>
                                     </ul>
-                                    <div
-                                        class="office__about-tabs__desc tab__content"
-                                        id="tab-desc"
-                                    >
+                                    <div class="office-tabs__content" id="tab-desc">
                                         Квартира класса люкс в историческом центре Владимира, между
                                         Соборной площадью и Золотыми Воротами. Дизайнерский
                                         интерьер, современная функциональная кухня со встроенной
@@ -125,24 +132,18 @@
                                         панель, фильтр для воды), красивая посуда и столовые
                                         приборы, бокалы, чашки и фужеры.
                                     </div>
-                                    <div
-                                        class="office__about-tabs__choice tab__content"
-                                        id="tab-choice"
-                                    >
+                                    <div class="office-tabs__content" id="tab-choice">
                                         Квартира класса люкс в историческом центре Владимира, между
                                         Соборной площадью и Золотыми Воротами. Дизайнерский
                                         интерьер, современная функциональная кухня со встроенной
                                         техникой, Wi-Fi, кабельное ТВ; кондиционер, красивая ванная
                                         комната со стиральной машиной.
                                     </div>
-                                    <div class="office__about-tabs__map tab__content" id="tab-map">
+                                    <div class="office-tabs__content" id="tab-map">
                                         Квартира класса люкс в историческом центре Владимира, между
                                         Соборной площадью и Золотыми Воротами
                                     </div>
-                                    <div
-                                        class="office__about-tabs__comments tab__content"
-                                        id="tab-comments"
-                                    >
+                                    <div class="office-tabs__content" id="tab-comments">
                                         Квартира класса люкс в историческом центре Владимира, между
                                         Соборной площадью и Золотыми Воротами. Дизайнерский
                                         интерьер, современная функциональная кухня со встроенной
@@ -150,152 +151,115 @@
                                         комната со стиральной машиной. Спальные места 2+2
                                         (двуспальная кровать может быть разделена на 2 отдельные).
                                     </div>
+                                    <%- include("./components/buttons/showMore.ejs") -%>
                                 </div>
-                                <div class="office__about-comfort">
-                                    <div class="office__about-subtitle">Общие удобства</div>
-                                    <div class="office__about-tags">
-                                        <div class="office__about-tag__column">
-                                            <div class="office__about-tag">
-                                                <div class="office__about-tag__name">
+                                <div class="office-comfort">
+                                    <div class="office-comfort__title">Общие удобства</div>
+                                    <div class="office-comfort__tags">
+                                        <div class="office-comfort__tag-column">
+                                            <div class="office-comfort__tag">
+                                                <div class="office-comfort__tag-name">
                                                     Высокоскоростной WiFi
                                                 </div>
                                             </div>
-                                            <div class="office__about-tag">
-                                                <div class="office__about-tag__name">
+                                            <div class="office-comfort__tag">
+                                                <div class="office-comfort__tag-name">
                                                     Открыто круглосуточно
                                                 </div>
                                             </div>
-                                            <div class="office__about-tag">
-                                                <div class="office__about-tag__name">
+                                            <div class="office-comfort__tag">
+                                                <div class="office-comfort__tag-name">
                                                     Встреча гостей/секретарь
                                                 </div>
                                             </div>
-                                            <div class="office__about-tag">
-                                                <div class="office__about-tag__name">
+                                            <div class="office-comfort__tag">
+                                                <div class="office-comfort__tag-name">
                                                     <span>Кофемашина</span>
                                                 </div>
                                             </div>
-                                            <div class="office__about-tag">
-                                                <div class="office__about-tag__name">Флипчарт</div>
+                                            <div class="office-comfort__tag">
+                                                <div class="office-comfort__tag-name">Флипчарт</div>
                                             </div>
                                         </div>
-                                        <div class="office__about-tag__column">
-                                            <div class="office__about-tag">
-                                                <div class="office__about-tag__name">
+                                        <div class="office-comfort__tag-column">
+                                            <div class="office-comfort__tag">
+                                                <div class="office-comfort__tag-name">
                                                     Канцелярские принадлежности
                                                 </div>
                                             </div>
-                                            <div class="office__about-tag">
-                                                <div class="office__about-tag__name">
+                                            <div class="office-comfort__tag">
+                                                <div class="office-comfort__tag-name">
                                                     Удобства переговорных комнат
                                                 </div>
                                             </div>
-                                            <div class="office__about-tag">
-                                                <div class="office__about-tag__name">
+                                            <div class="office-comfort__tag">
+                                                <div class="office-comfort__tag-name">
                                                     Оборудование для видеоконференции
                                                 </div>
                                             </div>
-                                            <div class="office__about-tag">
-                                                <div class="office__about-tag__name">Диваны</div>
+                                            <div class="office-comfort__tag">
+                                                <div class="office-comfort__tag-name">Диваны</div>
                                             </div>
-                                            <div class="office__about-tag">
-                                                <div class="office__about-tag__name">TV</div>
+                                            <div class="office-comfort__tag">
+                                                <div class="office-comfort__tag-name">TV</div>
                                             </div>
                                         </div>
-                                        <div class="office__about-tag__column">
-                                            <div class="office__about-tag">
-                                                <div class="office__about-tag__name">Проектор</div>
+                                        <div class="office-comfort__tag-column">
+                                            <div class="office-comfort__tag">
+                                                <div class="office-comfort__tag-name">Проектор</div>
                                             </div>
-                                            <div class="office__about-tag">
-                                                <div class="office__about-tag__name">Apple TV</div>
+                                            <div class="office-comfort__tag">
+                                                <div class="office-comfort__tag-name">Apple TV</div>
                                             </div>
-                                            <div class="office__about-tag">
-                                                <div class="office__about-tag__name">
+                                            <div class="office-comfort__tag">
+                                                <div class="office-comfort__tag-name">
                                                     Оборудование
                                                 </div>
                                             </div>
-                                            <div class="office__about-tag">
-                                                <div class="office__about-tag__name">Есть ПК</div>
+                                            <div class="office-comfort__tag">
+                                                <div class="office-comfort__tag-name">Есть ПК</div>
                                             </div>
-                                            <div class="office__about-tag">
-                                                <div class="office__about-tag__name">Микрофон</div>
+                                            <div class="office-comfort__tag">
+                                                <div class="office-comfort__tag-name">Микрофон</div>
                                             </div>
                                         </div>
                                     </div>
-                                    <button class="office__about-show__more show__more">
-                                        <span>Показать еще</span>
-                                        <svg
-                                            width="16"
-                                            height="10"
-                                            viewBox="0 0 16 10"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                            <path
-                                                d="M15 1.5L8 8.5L1 1.5"
-                                                stroke="#717171"
-                                                stroke-width="1.5"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                            ></path>
-                                        </svg>
-                                    </button>
+                                    <%- include("components/buttons/showMore.ejs") -%>
                                 </div>
                                 <!-- TABLES -->
-                                <div class="office__about-table">
-                                    <div class="office__about-table__tabs" id="tabs">
+                                <div class="office-tables">
+                                    <div class="office-tables__tabs" id="tabs">
                                         <ul>
                                             <li><a href="">Рабочие места</a></li>
                                             <li><a href="">Закрытые кабинеты</a></li>
                                             <li><a href="">Переговорные комнаты</a></li>
                                             <li><a href="">Конференц-залы</a></li>
                                         </ul>
-                                        <div class="office__about-table__item">
-                                            <div class="office__about-table__row">
-                                                <div class="office__about-table__row-items">
-                                                    <div class="office__about-table__row-item">
-                                                        Название
-                                                    </div>
-                                                    <div class="office__about-table__row-item">
-                                                        Вместимость
-                                                    </div>
-                                                    <div class="office__about-table__row-item">
-                                                        Кол-во
-                                                    </div>
-                                                    <div class="office__about-table__row-item">
-                                                        Цена
-                                                    </div>
-                                                    <div class="office__about-table__row-item">
-                                                        Часы доступа
-                                                    </div>
-                                                    <div class="office__about-table__row-item">
-                                                        Минимальный<br />
-                                                        срок аренды
-                                                    </div>
+                                        <div class="table">
+                                            <div class="table__row">
+                                                <div class="table__row-item">Название</div>
+                                                <div class="table__row-item">Вместимость</div>
+                                                <div class="table__row-item">Кол-во</div>
+                                                <div class="table__row-item">Цена</div>
+                                                <div class="table__row-item">Часы доступа</div>
+                                                <div class="table__row-item">
+                                                    Минимальный<br />
+                                                    срок аренды
                                                 </div>
                                             </div>
-
-                                            <div class="office__about-table__row">
-                                                <div class="office__about-table__row-items">
-                                                    <div class="office__about-table__row-item">
+                                            <div class="table__item">
+                                                <div class="table__row">
+                                                    <div class="table__row-item">
                                                         Офис на этаже<br />
                                                         БЦ Васильевский
                                                     </div>
-                                                    <div class="office__about-table__row-item">
+                                                    <div class="table__row-item">
                                                         <span>80 мест</span>
                                                     </div>
-                                                    <div class="office__about-table__row-item">
-                                                        1
-                                                    </div>
-                                                    <div class="office__about-table__row-item">
-                                                        2 500 ₽
-                                                    </div>
-                                                    <div class="office__about-table__row-item">
-                                                        <div
-                                                            class="
-                                                                office__about-table__row-item__wrapper
-                                                            "
-                                                        >
+                                                    <div class="table__row-item">1</div>
+                                                    <div class="table__row-item">2 500 ₽</div>
+                                                    <div class="table__row-item">
+                                                        <div class="table__row-item__wrapper">
                                                             <svg
                                                                 width="20"
                                                                 height="20"
@@ -319,87 +283,43 @@
                                                             10:00 - 22:00
                                                         </div>
                                                     </div>
-                                                    <div class="office__about-table__row-item">
-                                                        час
-                                                    </div>
+                                                    <div class="table__row-item">час</div>
                                                 </div>
-                                                <div class="office__about-table__desc">
-                                                    <div class="office__about-table__desc-inner">
-                                                        <div
-                                                            class="office__about-table__desc-slider"
-                                                        >
+                                                <div class="table__desc">
+                                                    <div class="table__desc-inner">
+                                                        <div class="table__desc-slider">
                                                             <%-
                                                             include("./components/officeSlider.ejs")
                                                             -%>
                                                         </div>
-                                                        <div class="office__about-table__desc-text">
-                                                            <div
-                                                                class="
-                                                                    office__about-table__desc-tags
-                                                                "
-                                                            >
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                        <div class="table__desc-text">
+                                                            <div class="table__desc-tags">
+                                                                <div class="table__desc-tag">
                                                                     Высокоскоростной WiFi
                                                                 </div>
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                                <div class="table__desc-tag">
                                                                     Открыто круглосуточно
                                                                 </div>
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                                <div class="table__desc-tag">
                                                                     Микрофон
                                                                 </div>
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                                <div class="table__desc-tag">
                                                                     Есть ПК
                                                                 </div>
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                                <div class="table__desc-tag">
                                                                     Встреча гостей/секретарь
                                                                 </div>
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                                <div class="table__desc-tag">
                                                                     Кофемашина
                                                                 </div>
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                                <div class="table__desc-tag">
                                                                     Флипчат
                                                                 </div>
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                                <div class="table__desc-tag">
                                                                     Проектор
                                                                 </div>
                                                             </div>
-                                                            <div
-                                                                class="
-                                                                    office__about-table__desc-about
-                                                                "
-                                                            >
+                                                            <div class="table__desc-about">
                                                                 Офис класса люкс в историческом
                                                                 центре Владимира, между Соборной
                                                                 площадью и Золотыми Воротами.
@@ -413,40 +333,29 @@
                                                                 кровать может быть разделена на 2
                                                                 отдельные).
                                                             </div>
-                                                            <div
-                                                                class="
-                                                                    office__about-table__desc-btn
-                                                                "
+                                                            <button
+                                                                class="table__desc-btn btn btn--red"
                                                             >
-                                                                <button class="btn btn--red">
-                                                                    <span>Забронировать</span>
-                                                                </button>
-                                                            </div>
+                                                                <span class="btn__name"
+                                                                    >Забронировать</span
+                                                                >
+                                                            </button>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            <div class="office__about-table__row">
-                                                <div class="office__about-table__row-items">
-                                                    <div class="office__about-table__row-item">
+                                            <div class="table__item">
+                                                <div class="table__row">
+                                                    <div class="table__row-item">
                                                         Офис на Орловской
                                                     </div>
-                                                    <div class="office__about-table__row-item">
+                                                    <div class="table__row-item">
                                                         <span>45 мест</span>
                                                     </div>
-                                                    <div class="office__about-table__row-item">
-                                                        2
-                                                    </div>
-                                                    <div class="office__about-table__row-item">
-                                                        800 ₽
-                                                    </div>
-                                                    <div class="office__about-table__row-item">
-                                                        <div
-                                                            class="
-                                                                office__about-table__row-item__wrapper
-                                                            "
-                                                        >
+                                                    <div class="table__row-item">2</div>
+                                                    <div class="table__row-item">800 ₽</div>
+                                                    <div class="table__row-item">
+                                                        <div class="table__row-item__wrapper">
                                                             <svg
                                                                 width="20"
                                                                 height="20"
@@ -470,87 +379,43 @@
                                                             10:00 - 22:00
                                                         </div>
                                                     </div>
-                                                    <div class="office__about-table__row-item">
-                                                        день
-                                                    </div>
+                                                    <div class="table__row-item">день</div>
                                                 </div>
-                                                <div class="office__about-table__desc">
-                                                    <div class="office__about-table__desc-inner">
-                                                        <div
-                                                            class="office__about-table__desc-slider"
-                                                        >
+                                                <div class="table__desc">
+                                                    <div class="table__desc-inner">
+                                                        <div class="table__desc-slider">
                                                             <%-
                                                             include("./components/officeSlider.ejs")
                                                             -%>
                                                         </div>
-                                                        <div class="office__about-table__desc-text">
-                                                            <div
-                                                                class="
-                                                                    office__about-table__desc-tags
-                                                                "
-                                                            >
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                        <div class="table__desc-text">
+                                                            <div class="table__desc-tags">
+                                                                <div class="table__desc-tag">
                                                                     Высокоскоростной WiFi
                                                                 </div>
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                                <div class="table__desc-tag">
                                                                     Открыто круглосуточно
                                                                 </div>
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                                <div class="table__desc-tag">
                                                                     Микрофон
                                                                 </div>
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                                <div class="table__desc-tag">
                                                                     Есть ПК
                                                                 </div>
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                                <div class="table__desc-tag">
                                                                     Встреча гостей/секретарь
                                                                 </div>
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                                <div class="table__desc-tag">
                                                                     Кофемашина
                                                                 </div>
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                                <div class="table__desc-tag">
                                                                     Флипчат
                                                                 </div>
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                                <div class="table__desc-tag">
                                                                     Проектор
                                                                 </div>
                                                             </div>
-                                                            <div
-                                                                class="
-                                                                    office__about-table__desc-about
-                                                                "
-                                                            >
+                                                            <div class="table__desc-about">
                                                                 Офис класса люкс в историческом
                                                                 центре Владимира, между Соборной
                                                                 площадью и Золотыми Воротами.
@@ -564,39 +429,29 @@
                                                                 кровать может быть разделена на 2
                                                                 отдельные).
                                                             </div>
-                                                            <div
-                                                                class="
-                                                                    office__about-table__desc-btn
-                                                                "
+                                                            <button
+                                                                class="table__desc-btn btn btn--red"
                                                             >
-                                                                <button class="btn btn--red">
-                                                                    <span>Забронировать</span>
-                                                                </button>
-                                                            </div>
+                                                                <span class="btn__name"
+                                                                    >Забронировать</span
+                                                                >
+                                                            </button>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="office__about-table__row">
-                                                <div class="office__about-table__row-items">
-                                                    <div class="office__about-table__row-item">
+                                            <div class="table__item">
+                                                <div class="table__row">
+                                                    <div class="table__row-item">
                                                         Зал для переговоров
                                                     </div>
-                                                    <div class="office__about-table__row-item">
+                                                    <div class="table__row-item">
                                                         <span>36 мест</span>
                                                     </div>
-                                                    <div class="office__about-table__row-item">
-                                                        2
-                                                    </div>
-                                                    <div class="office__about-table__row-item">
-                                                        1 500 ₽
-                                                    </div>
-                                                    <div class="office__about-table__row-item">
-                                                        <div
-                                                            class="
-                                                                office__about-table__row-item__wrapper
-                                                            "
-                                                        >
+                                                    <div class="table__row-item">2</div>
+                                                    <div class="table__row-item">1 500 ₽</div>
+                                                    <div class="table__row-item">
+                                                        <div class="table__row-item__wrapper">
                                                             <svg
                                                                 width="20"
                                                                 height="20"
@@ -620,87 +475,43 @@
                                                             10:00 - 22:00
                                                         </div>
                                                     </div>
-                                                    <div class="office__about-table__row-item">
-                                                        день
-                                                    </div>
+                                                    <div class="table__row-item">день</div>
                                                 </div>
-                                                <div class="office__about-table__desc">
-                                                    <div class="office__about-table__desc-inner">
-                                                        <div
-                                                            class="office__about-table__desc-slider"
-                                                        >
+                                                <div class="table__desc">
+                                                    <div class="table__desc-inner">
+                                                        <div class="table__desc-slider">
                                                             <%-
                                                             include("./components/officeSlider.ejs")
                                                             -%>
                                                         </div>
-                                                        <div class="office__about-table__desc-text">
-                                                            <div
-                                                                class="
-                                                                    office__about-table__desc-tags
-                                                                "
-                                                            >
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                        <div class="table__desc-text">
+                                                            <div class="table__desc-tags">
+                                                                <div class="table__desc-tag">
                                                                     Высокоскоростной WiFi
                                                                 </div>
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                                <div class="table__desc-tag">
                                                                     Открыто круглосуточно
                                                                 </div>
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                                <div class="table__desc-tag">
                                                                     Микрофон
                                                                 </div>
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                                <div class="table__desc-tag">
                                                                     Есть ПК
                                                                 </div>
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                                <div class="table__desc-tag">
                                                                     Встреча гостей/секретарь
                                                                 </div>
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                                <div class="table__desc-tag">
                                                                     Кофемашина
                                                                 </div>
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                                <div class="table__desc-tag">
                                                                     Флипчат
                                                                 </div>
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                                <div class="table__desc-tag">
                                                                     Проектор
                                                                 </div>
                                                             </div>
-                                                            <div
-                                                                class="
-                                                                    office__about-table__desc-about
-                                                                "
-                                                            >
+                                                            <div class="table__desc-about">
                                                                 Офис класса люкс в историческом
                                                                 центре Владимира, между Соборной
                                                                 площадью и Золотыми Воротами.
@@ -714,39 +525,27 @@
                                                                 кровать может быть разделена на 2
                                                                 отдельные).
                                                             </div>
-                                                            <div
-                                                                class="
-                                                                    office__about-table__desc-btn
-                                                                "
+                                                            <button
+                                                                class="table__desc-btn btn btn--red"
                                                             >
-                                                                <button class="btn btn--red">
-                                                                    <span>Забронировать</span>
-                                                                </button>
-                                                            </div>
+                                                                <span class="btn__name"
+                                                                    >Забронировать</span
+                                                                >
+                                                            </button>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="office__about-table__row">
-                                                <div class="office__about-table__row-items">
-                                                    <div class="office__about-table__row-item">
-                                                        Офис Бизнес
-                                                    </div>
-                                                    <div class="office__about-table__row-item">
+                                            <div class="table__item">
+                                                <div class="table__row">
+                                                    <div class="table__row-item">Офис Бизнес</div>
+                                                    <div class="table__row-item">
                                                         <span>45 мест</span>
                                                     </div>
-                                                    <div class="office__about-table__row-item">
-                                                        2
-                                                    </div>
-                                                    <div class="office__about-table__row-item">
-                                                        800 ₽
-                                                    </div>
-                                                    <div class="office__about-table__row-item">
-                                                        <div
-                                                            class="
-                                                                office__about-table__row-item__wrapper
-                                                            "
-                                                        >
+                                                    <div class="table__row-item">2</div>
+                                                    <div class="table__row-item">800 ₽</div>
+                                                    <div class="table__row-item">
+                                                        <div class="table__row-item__wrapper">
                                                             <svg
                                                                 width="20"
                                                                 height="20"
@@ -770,87 +569,43 @@
                                                             10:00 - 22:00
                                                         </div>
                                                     </div>
-                                                    <div class="office__about-table__row-item">
-                                                        день
-                                                    </div>
+                                                    <div class="table__row-item">день</div>
                                                 </div>
-                                                <div class="office__about-table__desc">
-                                                    <div class="office__about-table__desc-inner">
-                                                        <div
-                                                            class="office__about-table__desc-slider"
-                                                        >
+                                                <div class="table__desc">
+                                                    <div class="table__desc-inner">
+                                                        <div class="table__desc-slider">
                                                             <%-
                                                             include("./components/officeSlider.ejs")
                                                             -%>
                                                         </div>
-                                                        <div class="office__about-table__desc-text">
-                                                            <div
-                                                                class="
-                                                                    office__about-table__desc-tags
-                                                                "
-                                                            >
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                        <div class="table__desc-text">
+                                                            <div class="table__desc-tags">
+                                                                <div class="table__desc-tag">
                                                                     Высокоскоростной WiFi
                                                                 </div>
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                                <div class="table__desc-tag">
                                                                     Открыто круглосуточно
                                                                 </div>
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                                <div class="table__desc-tag">
                                                                     Микрофон
                                                                 </div>
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                                <div class="table__desc-tag">
                                                                     Есть ПК
                                                                 </div>
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                                <div class="table__desc-tag">
                                                                     Встреча гостей/секретарь
                                                                 </div>
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                                <div class="table__desc-tag">
                                                                     Кофемашина
                                                                 </div>
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                                <div class="table__desc-tag">
                                                                     Флипчат
                                                                 </div>
-                                                                <div
-                                                                    class="
-                                                                        office__about-table__desc-tag
-                                                                    "
-                                                                >
+                                                                <div class="table__desc-tag">
                                                                     Проектор
                                                                 </div>
                                                             </div>
-                                                            <div
-                                                                class="
-                                                                    office__about-table__desc-about
-                                                                "
-                                                            >
+                                                            <div class="table__desc-about">
                                                                 Офис класса люкс в историческом
                                                                 центре Владимира, между Соборной
                                                                 площадью и Золотыми Воротами.
@@ -864,15 +619,13 @@
                                                                 кровать может быть разделена на 2
                                                                 отдельные).
                                                             </div>
-                                                            <div
-                                                                class="
-                                                                    office__about-table__desc-btn
-                                                                "
+                                                            <button
+                                                                class="table__desc-btn btn btn--red"
                                                             >
-                                                                <button class="btn btn--red">
-                                                                    <span>Забронировать</span>
-                                                                </button>
-                                                            </div>
+                                                                <span class="btn__name"
+                                                                    >Забронировать</span
+                                                                >
+                                                            </button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -881,9 +634,9 @@
                                     </div>
                                 </div>
                                 <!-- TABLES -->
-                                <div class="office__about-location">
-                                    <div class="office__about-subtitle">Офис на карте</div>
-                                    <div class="office__about-map">
+                                <div class="office-location">
+                                    <div class="office-location__title">Офис на карте</div>
+                                    <div class="office-location__map">
                                         <div style="position: relative; overflow: hidden">
                                             <a
                                                 href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps"
@@ -919,21 +672,17 @@
                                 <%- include("blocks/bookingForm.ejs") -%>
                             </div>
                         </div>
-                        <div class="office__comments">
-                            <div class="office__comments-top">
-                                <div class="office__comments-title">Отзывы</div>
-                                <div class="office__comments-info">
-                                    <div class="office__comments-rate">
-                                        <div class="office__about-rate">
-                                            <div class="office__about-rate__value">
-                                                <div class="rate">4.9</div>
-                                            </div>
-                                            <div class="office__about-rate__count">
-                                                (12 отзывов)
-                                            </div>
+                        <div class="office-comments">
+                            <div class="office-comments__top">
+                                <div class="office-comments__title">Отзывы</div>
+                                <div class="office-comments__info">
+                                    <div class="office-comments__rate rate">
+                                        <div class="office-comments__rate-value rate__value">
+                                            4.9
                                         </div>
+                                        <div class="rate__count">(12 отзывов)</div>
                                     </div>
-                                    <button class="office__comments-show__more show__more">
+                                    <button class="office-comments__show-more show-more-btn">
                                         <span>Показать еще</span>
                                         <svg
                                             width="16"
@@ -953,15 +702,15 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="office__comments-items">
-                                <div class="office__comments-item">
-                                    <div class="office__comments-item__profile">
-                                        <div class="office__comments-item__avatar">
+                            <div class="office-comments__items">
+                                <div class="office-comments__item">
+                                    <div class="office-comments__item-profile">
+                                        <div class="office-comments__item-avatar">
                                             <img src="./public/images/avatar1.jpg" alt="" />
                                         </div>
-                                        <div class="office__comments-item__name">Мариев Антон</div>
+                                        <div class="office-comments__item-name">Мариев Антон</div>
                                     </div>
-                                    <div class="office__comments-item__text">
+                                    <div class="office-comments__item-text">
                                         Отмечу, что офис соответствует описанию. Находится в центре,
                                         в пешей доступности до всех главных достопримечательностей
                                         города. Екатерина учла все наши пожелания: разделили кровать
@@ -973,27 +722,27 @@
                                         наш отдых они не повлияли.
                                     </div>
                                 </div>
-                                <div class="office__comments-item">
-                                    <div class="office__comments-item__profile">
-                                        <div class="office__comments-item__avatar">
+                                <div class="office-comments__item">
+                                    <div class="office-comments__item-profile">
+                                        <div class="office-comments__item-avatar">
                                             <img src="./public/images/avatar2.jpg" alt="" />
                                         </div>
-                                        <div class="office__comments-item__name">
+                                        <div class="office-comments__item-name">
                                             Александр Микулашвилли
                                         </div>
                                     </div>
-                                    <div class="office__comments-item__text">
+                                    <div class="office-comments__item-text">
                                         Удобно. Гостеприимно. Без проблем. Лучше ожиданий.
                                     </div>
                                 </div>
-                                <div class="office__comments-item">
-                                    <div class="office__comments-item__profile">
-                                        <div class="office__comments-item__avatar">
+                                <div class="office-comments__item">
+                                    <div class="office-comments__item-profile">
+                                        <div class="office-comments__item-avatar">
                                             <img src="./public/images/avatar3.jpg" alt="" />
                                         </div>
-                                        <div class="office__comments-item__name">Ольга Мурзина</div>
+                                        <div class="office-comments__item-name">Ольга Мурзина</div>
                                     </div>
-                                    <div class="office__comments-item__text">
+                                    <div class="office-comments__item-text">
                                         Идеальный вариант! Нет лишней мороки с ключами — доступ в
                                         офис по коду на двери. Отличное местоположение, все
                                         туристические достопримечательности под рукой...
@@ -1001,14 +750,14 @@
                                         красивый интерьер, чисто и светло.
                                     </div>
                                 </div>
-                                <div class="office__comments-item">
-                                    <div class="office__comments-item__profile">
-                                        <div class="office__comments-item__avatar">
+                                <div class="office-comments__item">
+                                    <div class="office-comments__item-profile">
+                                        <div class="office-comments__item-avatar">
                                             <img src="./public/images/avatar1.jpg" alt="" />
                                         </div>
-                                        <div class="office__comments-item__name">Мариев Антон</div>
+                                        <div class="office-comments__item-name">Мариев Антон</div>
                                     </div>
-                                    <div class="office__comments-item__text">
+                                    <div class="office-comments__item-text">
                                         Отмечу, что офис соответствует описанию. Находится в центре,
                                         в пешей доступности до всех главных достопримечательностей
                                         города. Екатерина учла все наши пожелания: разделили кровать
@@ -1020,44 +769,42 @@
                                         наш отдых они не повлияли.
                                     </div>
                                 </div>
-                                <div class="office__comments-item">
-                                    <div class="office__comments-item__profile">
-                                        <div class="office__comments-item__avatar">
+                                <div class="office-comments__item">
+                                    <div class="office-comments__item-profile">
+                                        <div class="office-comments__item-avatar">
                                             <img src="./public/images/avatar5.jpg" alt="" />
                                         </div>
-                                        <div class="office__comments-item__name">
-                                            Алиев Сулейман
-                                        </div>
+                                        <div class="office-comments__item-name">Алиев Сулейман</div>
                                     </div>
-                                    <div class="office__comments-item__text">
+                                    <div class="office-comments__item-text">
                                         Офис в центре, с закрытым двориком,где можно поставить
                                         машину. Спальное место удобное,приятное бельё. Мойка у окна
                                         во двор.Все удобства. Нам понравилось,спасибо.
                                     </div>
                                 </div>
-                                <div class="office__comments-item">
-                                    <div class="office__comments-item__profile">
-                                        <div class="office__comments-item__avatar">
+                                <div class="office-comments__item">
+                                    <div class="office-comments__item-profile">
+                                        <div class="office-comments__item-avatar">
                                             <img src="./public/images/avatar6.jpg" alt="" />
                                         </div>
-                                        <div class="office__comments-item__name">
+                                        <div class="office-comments__item-name">
                                             Манджиева Саманта
                                         </div>
                                     </div>
-                                    <div class="office__comments-item__text">
+                                    <div class="office-comments__item-text">
                                         Офис в центре, с закрытым двориком,где можно поставить
                                         машину. Рабочее место удобное,приятное бельё. Мойка у окна
                                         во двор.Все удобства. Нам понравилось,спасибо.
                                     </div>
                                 </div>
-                                <div class="office__comments-item">
-                                    <div class="office__comments-item__profile">
-                                        <div class="office__comments-item__avatar">
+                                <div class="office-comments__item">
+                                    <div class="office-comments__item-profile">
+                                        <div class="office-comments__item-avatar">
                                             <img src="./public/images/avatar3.jpg" alt="" />
                                         </div>
-                                        <div class="office__comments-item__name">Ольга Мурзина</div>
+                                        <div class="office-comments__item-name">Ольга Мурзина</div>
                                     </div>
-                                    <div class="office__comments-item__text">
+                                    <div class="office-comments__item-text">
                                         Отмечу, что офис соответствует описанию. Находится в центре,
                                         в пешей доступности до всех главных достопримечательностей
                                         города. Екатерина учла все наши пожелания: разделили кровать
@@ -1069,16 +816,16 @@
                                         наш отдых они не повлияли.
                                     </div>
                                 </div>
-                                <div class="office__comments-item">
-                                    <div class="office__comments-item__profile">
-                                        <div class="office__comments-item__avatar">
+                                <div class="office-comments__item">
+                                    <div class="office-comments__item-profile">
+                                        <div class="office-comments__item-avatar">
                                             <img src="./public/images/avatar2.jpg" alt="" />
                                         </div>
-                                        <div class="office__comments-item__name">
+                                        <div class="office-comments__item-name">
                                             Александр Микулашвилли
                                         </div>
                                     </div>
-                                    <div class="office__comments-item__text">
+                                    <div class="office-comments__item-text">
                                         Отмечу, что офис соответствует описанию. Находится в центре,
                                         в пешей доступности до всех главных достопримечательностей
                                         города. Екатерина учла все наши пожелания: разделили кровать

@@ -1,7 +1,7 @@
 @import "components/fonts";
 @import "components/main";
 @import "blocks/header";
-@import "components/favorite";
+
 @import "components/buttons";
 @import "components/logo";
 @import "components/inputForms";
@@ -128,6 +128,10 @@
     }
     &__favorite {
         margin-right: 20px;
+    }
+    &__favorite > .btn--round {
+        width: 38px;
+        height: 38px;
     }
     &__type {
         color: #ed4040;

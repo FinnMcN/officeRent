@@ -431,6 +431,12 @@
             background: url(../images/svg/banner2-arrow-mobile.svg) no-repeat center center / cover;
         }
     }
+    .most-rented,
+    .most-interesting {
+        &__slider {
+            margin: 0 -15px 0 0;
+        }
+    }
 }
 @media screen and (max-width: 480px) {
     .community {
@@ -451,6 +457,12 @@
             left: 60px;
             top: 30px;
             transform: rotate(30deg);
+        }
+    }
+    .most-rented,
+    .most-interesting {
+        &__slider {
+            margin: 0;
         }
     }
 }

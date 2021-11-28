@@ -1,6 +1,7 @@
+@import "blocks/indexPageHeader";
+@import "blocks/footer";
 @import "components/main";
 @import "components/fonts";
-@import "blocks/header";
 @import "components/inputForms";
 @import "components/buttons";
 @import "components/logo";
@@ -9,7 +10,6 @@
 @import "components/banner";
 @import "components/arrowsAnim";
 @import "components/rate";
-@import "blocks/footer";
 
 .header {
     background: linear-gradient(

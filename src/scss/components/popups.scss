@@ -17,14 +17,25 @@
 .popup-price {
     padding: 30px 50px 40px;
     width: 373px;
+    &__title {
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 30px;
+        display: none;
+    }
     &__range {
         width: 100%;
         height: 35px;
         margin-bottom: 20px;
+        position: relative;
     }
     &__range-input {
         width: 100%;
-        height: 100%;
+        height: 5px;
+        margin-bottom: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
     &__values {
         display: flex;
@@ -62,7 +73,8 @@
     width: 720px;
     padding: 40px 70px 80px 50px;
     &__title {
-        font-size: 20px;
+        font-size: 22px;
+        font-weight: 500;
         margin-bottom: 5px;
     }
     &__subtitle {
@@ -97,7 +109,8 @@
     width: 446px;
     &__title {
         margin-bottom: 15px;
-        font-size: 20px;
+        font-weight: 500;
+        font-size: 22px;
     }
     &__subtitle {
         font-size: 16px;
@@ -172,6 +185,28 @@
     .popup-facilities {
         &__item {
             border-bottom: unset;
+        }
+    }
+}
+//media
+@media screen and (max-width: 768px) {
+    .popup-props {
+        &__title {
+            margin-bottom: 15px;
+        }
+        &__items-row {
+            flex-direction: column;
+            align-items: unset;
+            padding: 25px 0;
+            gap: 10px;
+        }
+        &__item {
+            justify-content: space-between;
+        }
+    }
+    .popup-price {
+        &__title {
+            display: flex;
         }
     }
 }

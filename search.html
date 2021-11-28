@@ -13,14 +13,16 @@
             <div class="header">
     <div class="container">
         <div class="header__top">
-            <a class="logo" href="./search.html">
-                <div class="logo__img">
-                    <img src="./public/images/logo-img.png" alt="" />
-                </div>
-                <div class="header__logo-company logo__company">
-                    <img src="./public/images/logo-company.png" alt="" />
-                </div>
-            </a>
+            <div class="header__logo">
+                <a class="logo" href="./search.html">
+                    <div class="logo__img">
+                        <img src="./public/images/logo-img.png" alt="" />
+                    </div>
+                    <div class="header__logo-company logo__company">
+                        <img src="./public/images/logo-company.png" alt="" />
+                    </div>
+                </a>
+            </div>
             <div class="header__input-blocks">
                 <div class="header__city-input def-input city-input">
                     <svg
@@ -124,95 +126,97 @@
                         </svg>
                     </button>
                 </div>
-                <div class="def-input date-input">
-                    <svg
-                        class="date-input__icon icon_absolute"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M3.09253 9.40426H20.9165"
-                            stroke="#131313"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        ></path>
-                        <path
-                            d="M16.442 13.3097H16.4512"
-                            stroke="#131313"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        ></path>
-                        <path
-                            d="M12.0047 13.3097H12.014"
-                            stroke="#131313"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        ></path>
-                        <path
-                            d="M7.55793 13.3097H7.5672"
-                            stroke="#131313"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        ></path>
-                        <path
-                            d="M16.442 17.1962H16.4512"
-                            stroke="#131313"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        ></path>
-                        <path
-                            d="M12.0047 17.1962H12.014"
-                            stroke="#131313"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        ></path>
-                        <path
-                            d="M7.55793 17.1962H7.5672"
-                            stroke="#131313"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        ></path>
-                        <path
-                            d="M16.0438 2V5.29078"
-                            stroke="#131313"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        ></path>
-                        <path
-                            d="M7.9654 2V5.29078"
-                            stroke="#131313"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        ></path>
-                        <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M16.2383 3.57919H7.77096C4.83427 3.57919 3 5.21513 3 8.22222V17.2719C3 20.3262 4.83427 22 7.77096 22H16.229C19.175 22 21 20.3546 21 17.3475V8.22222C21.0092 5.21513 19.1842 3.57919 16.2383 3.57919Z"
-                            stroke="#131313"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        ></path>
-                    </svg>
-                    <select class="header__date-input def-input__select">
-                        <option value="" disabled="" selected="" hidden="">Укажите дату</option>
-                        <option value="">asdasd</option>
-                        <option value="">asdasd</option>
-                        <option value="">asdasd</option>
-                        <option value="">asdasd</option>
-                    </select>
+                <div class="header__date-input-block">
+                    <div class="def-input date-input">
+                        <svg
+                            class="date-input__icon icon_absolute"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M3.09253 9.40426H20.9165"
+                                stroke="#131313"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            ></path>
+                            <path
+                                d="M16.442 13.3097H16.4512"
+                                stroke="#131313"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            ></path>
+                            <path
+                                d="M12.0047 13.3097H12.014"
+                                stroke="#131313"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            ></path>
+                            <path
+                                d="M7.55793 13.3097H7.5672"
+                                stroke="#131313"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            ></path>
+                            <path
+                                d="M16.442 17.1962H16.4512"
+                                stroke="#131313"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            ></path>
+                            <path
+                                d="M12.0047 17.1962H12.014"
+                                stroke="#131313"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            ></path>
+                            <path
+                                d="M7.55793 17.1962H7.5672"
+                                stroke="#131313"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            ></path>
+                            <path
+                                d="M16.0438 2V5.29078"
+                                stroke="#131313"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            ></path>
+                            <path
+                                d="M7.9654 2V5.29078"
+                                stroke="#131313"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            ></path>
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M16.2383 3.57919H7.77096C4.83427 3.57919 3 5.21513 3 8.22222V17.2719C3 20.3262 4.83427 22 7.77096 22H16.229C19.175 22 21 20.3546 21 17.3475V8.22222C21.0092 5.21513 19.1842 3.57919 16.2383 3.57919Z"
+                                stroke="#131313"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            ></path>
+                        </svg>
+                        <select class="header__date-input def-input__select">
+                            <option value="" disabled="" selected="" hidden="">Укажите дату</option>
+                            <option value="">asdasd</option>
+                            <option value="">asdasd</option>
+                            <option value="">asdasd</option>
+                            <option value="">asdasd</option>
+                        </select>
+                    </div>
                 </div>
             </div>
             <div class="header__top-btns">
@@ -385,8 +389,23 @@
                                         class="search-filters__popup-price popup popup-price"
                                         id="popup-price"
                                     >
+                                        <div class="popup-price__title">Цена</div>
+
                                         <div class="popup-price__range">
-                                            <input class="popup-price__range-input" type="range" />
+                                            <input
+                                                class="popup-price__range-input range-input"
+                                                type="range"
+                                                min="0"
+                                                max="2000000"
+                                                value="0"
+                                            />
+                                            <input
+                                                class="popup-price__range-input range-input"
+                                                type="range"
+                                                min="0"
+                                                max="2000000"
+                                                value="1000000"
+                                            />
                                         </div>
                                         <div class="popup-price__values">
                                             <div class="popup-price__value">
@@ -404,34 +423,33 @@
                                         </div>
                                         <div class="popup-price__btns">
                                             <div class="clear-btn">
-                                                <div class="clear-btn__icon">
-                                                    <svg
-                                                        width="20"
-                                                        height="20"
-                                                        viewBox="0 0 20 20"
-                                                        fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                    >
-                                                        <path
-                                                            fill-rule="evenodd"
-                                                            clip-rule="evenodd"
-                                                            d="M7.60229 13.1367C7.41029 13.1367 7.21829 13.0637 7.07229 12.9167C6.77929 12.6237 6.77929 12.1497 7.07229 11.8567L11.8643 7.06472C12.1573 6.77172 12.6313 6.77172 12.9243 7.06472C13.2173 7.35772 13.2173 7.83172 12.9243 8.12472L8.13229 12.9167C7.98629 13.0637 7.79429 13.1367 7.60229 13.1367Z"
-                                                            fill="#ED4040"
-                                                        />
-                                                        <path
-                                                            fill-rule="evenodd"
-                                                            clip-rule="evenodd"
-                                                            d="M12.3963 13.1396C12.2043 13.1396 12.0123 13.0666 11.8663 12.9196L7.07034 8.12265C6.77734 7.82965 6.77734 7.35565 7.07034 7.06265C7.36434 6.76965 7.83834 6.76965 8.13034 7.06265L12.9263 11.8596C13.2193 12.1526 13.2193 12.6266 12.9263 12.9196C12.7803 13.0666 12.5873 13.1396 12.3963 13.1396Z"
-                                                            fill="#ED4040"
-                                                        />
-                                                        <path
-                                                            fill-rule="evenodd"
-                                                            clip-rule="evenodd"
-                                                            d="M5.665 1.5C3.135 1.5 1.5 3.233 1.5 5.916V14.084C1.5 16.767 3.135 18.5 5.665 18.5H14.333C16.864 18.5 18.5 16.767 18.5 14.084V5.916C18.5 3.233 16.864 1.5 14.334 1.5H5.665ZM14.333 20H5.665C2.276 20 0 17.622 0 14.084V5.916C0 2.378 2.276 0 5.665 0H14.334C17.723 0 20 2.378 20 5.916V14.084C20 17.622 17.723 20 14.333 20Z"
-                                                            fill="#ED4040"
-                                                        />
-                                                    </svg>
-                                                </div>
+                                                <svg
+                                                    class="clear-btn__icon"
+                                                    width="20"
+                                                    height="20"
+                                                    viewBox="0 0 20 20"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        clip-rule="evenodd"
+                                                        d="M7.60229 13.1367C7.41029 13.1367 7.21829 13.0637 7.07229 12.9167C6.77929 12.6237 6.77929 12.1497 7.07229 11.8567L11.8643 7.06472C12.1573 6.77172 12.6313 6.77172 12.9243 7.06472C13.2173 7.35772 13.2173 7.83172 12.9243 8.12472L8.13229 12.9167C7.98629 13.0637 7.79429 13.1367 7.60229 13.1367Z"
+                                                        fill="#ED4040"
+                                                    />
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        clip-rule="evenodd"
+                                                        d="M12.3963 13.1396C12.2043 13.1396 12.0123 13.0666 11.8663 12.9196L7.07034 8.12265C6.77734 7.82965 6.77734 7.35565 7.07034 7.06265C7.36434 6.76965 7.83834 6.76965 8.13034 7.06265L12.9263 11.8596C13.2193 12.1526 13.2193 12.6266 12.9263 12.9196C12.7803 13.0666 12.5873 13.1396 12.3963 13.1396Z"
+                                                        fill="#ED4040"
+                                                    />
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        clip-rule="evenodd"
+                                                        d="M5.665 1.5C3.135 1.5 1.5 3.233 1.5 5.916V14.084C1.5 16.767 3.135 18.5 5.665 18.5H14.333C16.864 18.5 18.5 16.767 18.5 14.084V5.916C18.5 3.233 16.864 1.5 14.334 1.5H5.665ZM14.333 20H5.665C2.276 20 0 17.622 0 14.084V5.916C0 2.378 2.276 0 5.665 0H14.334C17.723 0 20 2.378 20 5.916V14.084C20 17.622 17.723 20 14.333 20Z"
+                                                        fill="#ED4040"
+                                                    />
+                                                </svg>
                                                 <span>Очистить</span>
                                             </div>
                                             <button class="btn apply-btn btn--red">

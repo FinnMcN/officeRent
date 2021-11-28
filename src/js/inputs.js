@@ -1,4 +1,15 @@
-export default function inputNumber() {
+export default function initInputs() {
+    inputNumbers();
+    rangeSliders();
+}
+
+function changeBgInput() {
+    this.style.background = `linear-gradient(90deg, ${this.inputColor} ${
+        (this.value / this.max) * 100
+    }%, ${this.defaultColor} ${(this.value / this.max) * 100}%)`;
+}
+
+function inputNumbers() {
     const counter = document.querySelectorAll(".counter");
 
     // доделать mousedown mouseup events -> need optimization
@@ -66,5 +77,20 @@ export default function inputNumber() {
                 });
             }
         });
+    }
+}
+
+function rangeSliders() {
+    const rangeSlider = document.querySelectorAll(".range-input");
+
+    if (rangeSlider.length !== 0) {
+        rangeSlider.forEach((slider) => {
+            slider.inputColor = "#ED4040";
+            slider.defaultColor = "#f6f6f6";
+            changeBgInput.call(slider);
+            slider.addEventListener("input", changeBgInput);
+        });
+
+        const valueDisplay = document;
     }
 }

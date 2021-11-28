@@ -140,13 +140,41 @@ export default function media() {
                     method: "after",
                 },
                 replace: {
-                    relativeEl: document.querySelector(".search__map-block"),
+                    relativeEl: document.querySelector(".search"),
+                    method: "append",
+                },
+            };
+            
+            adaptive([searchFilters], width <= 1000);
+        }
+
+        if (document.querySelector(".filters-btn")) {
+            const btn = document.querySelector(".filters-btn");
+            const filtersBtnText = btn.querySelector(".map-btn__name");
+
+            const filtersBtn = {
+                selector: document.querySelector(".filters-btn"),
+                start: {
+                    relativeEl: document.querySelector(".search__map-nav"),
+                    method: "append",
+                },
+                replace: {
+                    relativeEl: document.querySelector(".header__top"),
                     method: "append",
                 },
             };
 
             
-            adaptive([searchFilters], width <= 1000);
+            if (width <= 768) {
+                btn.classList.add("header__filters-btn");
+                btn.classList.remove("map-btn");
+                filtersBtnText.classList.add("map-btn__name_hide");
+            } else {
+                btn.classList.remove("header__filters-btn");
+                btn.classList.add("map-btn");
+                filtersBtnText.classList.remove("map-btn__name_hide");
+            }
+            adaptive([filtersBtn], width <= 768);
         }
     }
 

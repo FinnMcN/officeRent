@@ -1,7 +1,6 @@
 @import "components/fonts";
 @import "components/main";
 @import "blocks/header";
-
 @import "components/buttons";
 @import "components/logo";
 @import "components/inputForms";
@@ -241,6 +240,8 @@
         }
     }
     .search-filters {
+        padding: 0 40px;
+        background: #fff;
         position: absolute;
         width: 100%;
         display: flex;
@@ -248,11 +249,9 @@
         top: -100%;
         left: 0;
         transform: translate(0, -100%);
-        transition: all ease 0.5s;
-
+        transition: transform ease 0.5s;
+        z-index: 100;
         &_active {
-            background: #fff;
-            padding: 0 40px;
             top: 0;
             height: 100%;
             z-index: 100;
@@ -332,6 +331,11 @@
         &__property {
             padding: 0 0 0 10px;
         }
+    }
+}
+@media screen and (max-width: 768px) {
+    .search-filters {
+        padding: 20px 15px 40px 15px;
     }
 }
 @media screen and (max-width: 540px) {

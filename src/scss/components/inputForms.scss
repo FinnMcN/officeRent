@@ -1,13 +1,12 @@
 @import "components/icons";
 .def-input {
     position: relative;
-    height: 60px;
     background: #fff;
     border: 1px solid #c7c7c7;
     border-radius: 5px;
     display: flex;
     align-items: center;
-    transition: all ease 0.3s;
+    transition: border ease 0.3s;
     &__select,
     &__input {
         background: transparent;
@@ -74,6 +73,25 @@
         margin-left: 10px;
     }
 }
+.range-input {
+    height: 5px;
+    background: #d8d8d8;
+    border-radius: 4px;
+    border: none;
+    -webkit-appearance: none;
+}
+.range-input::-webkit-slider-thumb {
+    cursor: pointer;
+    position: relative;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #fff;
+    height: 35px;
+    width: 35px;
+    border: 1px solid #ed4040;
+    border-radius: 50%;
+    z-index: 10;
+}
 input[type="checkbox"] {
     position: absolute;
     z-index: -1;
@@ -108,4 +126,27 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+//media
+@media screen and (max-width: 1391px) {
+    .city-input {
+        &__search-btn {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .date-input {
+        &__icon {
+            left: 25px;
+        }
+    }
+}
+@media screen and (max-width: 580px) {
+    .def-input {
+        &__select,
+        &__input {
+            font-size: 16px;
+        }
+    }
 }

@@ -10,10 +10,15 @@
         margin-bottom: 60px;
     }
     &__city-input {
+        height: 60px;
         margin-bottom: 45px;
     }
     &__city-input__icon {
         left: 30px;
+    }
+    &__date-input {
+        height: 60px;
+        margin-bottom: 45px;
     }
     &__date-input__select {
         padding: 0 0 0 68px;
@@ -25,9 +30,6 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 50px;
-    }
-    &__date-input {
-        margin-bottom: 45px;
     }
     &__tags {
         margin-bottom: 30px;

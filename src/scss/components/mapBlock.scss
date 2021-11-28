@@ -10,12 +10,16 @@
     justify-content: center;
     box-shadow: 0px 5px 50px rgba(37, 1, 0, 0.2);
     border-radius: 5px;
-    &__img {
+    gap: 10px;
+    /* &__img {
         margin-right: 10px;
-    }
+    } */
     &__name {
         white-space: nowrap;
         font-size: 20px;
+    }
+    &__name_hide {
+        display: none;
     }
 }
 .map-nav {

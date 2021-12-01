@@ -390,71 +390,74 @@
                                         id="popup-price"
                                     >
                                         <div class="popup-price__title">Цена</div>
-
-                                        <div class="popup-price__range">
-                                            <input
-                                                class="popup-price__range-input range-input"
-                                                type="range"
-                                                min="0"
-                                                max="2000000"
-                                                value="0"
-                                            />
-                                            <input
-                                                class="popup-price__range-input range-input"
-                                                type="range"
-                                                min="0"
-                                                max="2000000"
-                                                value="1000000"
-                                            />
-                                        </div>
-                                        <div class="popup-price__values">
-                                            <div class="popup-price__value">
-                                                <p>от</p>
-                                                <div class="popup-price__value-start">
-                                                    <span>0 ₽</span>
+                                        <div class="range-block">
+                                            <div class="popup-price__range double-range">
+                                                <input
+                                                    class="popup-price__range-input range-input"
+                                                    type="range"
+                                                    min="0"
+                                                    max="2000000"
+                                                    value="0"
+                                                    step="500"
+                                                />
+                                                <input
+                                                    class="popup-price__range-input range-input"
+                                                    type="range"
+                                                    min="0"
+                                                    max="2000000"
+                                                    value="1000000"
+                                                    step="500"
+                                                />
+                                            </div>
+                                            <div class="popup-price__values">
+                                                <div class="popup-price__value">
+                                                    <p>от</p>
+                                                    <div class="popup-price__value-start">
+                                                        <span>0 ₽</span>
+                                                    </div>
+                                                </div>
+                                                <div class="popup-price__value">
+                                                    <p>до</p>
+                                                    <div class="popup-price__value-end">
+                                                        <span>1 000 000 ₽</span>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="popup-price__value">
-                                                <p>до</p>
-                                                <div class="popup-price__value-end">
-                                                    <span>1 000 000 ₽</span>
+                                            <div class="popup-price__btns">
+                                                <div class="clear-btn">
+                                                    <svg
+                                                        class="clear-btn__icon"
+                                                        width="20"
+                                                        height="20"
+                                                        viewBox="0 0 20 20"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                        <path
+                                                            fill-rule="evenodd"
+                                                            clip-rule="evenodd"
+                                                            d="M7.60229 13.1367C7.41029 13.1367 7.21829 13.0637 7.07229 12.9167C6.77929 12.6237 6.77929 12.1497 7.07229 11.8567L11.8643 7.06472C12.1573 6.77172 12.6313 6.77172 12.9243 7.06472C13.2173 7.35772 13.2173 7.83172 12.9243 8.12472L8.13229 12.9167C7.98629 13.0637 7.79429 13.1367 7.60229 13.1367Z"
+                                                            fill="#ED4040"
+                                                        />
+                                                        <path
+                                                            fill-rule="evenodd"
+                                                            clip-rule="evenodd"
+                                                            d="M12.3963 13.1396C12.2043 13.1396 12.0123 13.0666 11.8663 12.9196L7.07034 8.12265C6.77734 7.82965 6.77734 7.35565 7.07034 7.06265C7.36434 6.76965 7.83834 6.76965 8.13034 7.06265L12.9263 11.8596C13.2193 12.1526 13.2193 12.6266 12.9263 12.9196C12.7803 13.0666 12.5873 13.1396 12.3963 13.1396Z"
+                                                            fill="#ED4040"
+                                                        />
+                                                        <path
+                                                            fill-rule="evenodd"
+                                                            clip-rule="evenodd"
+                                                            d="M5.665 1.5C3.135 1.5 1.5 3.233 1.5 5.916V14.084C1.5 16.767 3.135 18.5 5.665 18.5H14.333C16.864 18.5 18.5 16.767 18.5 14.084V5.916C18.5 3.233 16.864 1.5 14.334 1.5H5.665ZM14.333 20H5.665C2.276 20 0 17.622 0 14.084V5.916C0 2.378 2.276 0 5.665 0H14.334C17.723 0 20 2.378 20 5.916V14.084C20 17.622 17.723 20 14.333 20Z"
+                                                            fill="#ED4040"
+                                                        />
+                                                    </svg>
+                                                    <span>Очистить</span>
                                                 </div>
+                                                <button class="btn apply-btn btn--red">
+                                                    <span class="btn__name">Применить</span>
+                                                </button>
                                             </div>
-                                        </div>
-                                        <div class="popup-price__btns">
-                                            <div class="clear-btn">
-                                                <svg
-                                                    class="clear-btn__icon"
-                                                    width="20"
-                                                    height="20"
-                                                    viewBox="0 0 20 20"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <path
-                                                        fill-rule="evenodd"
-                                                        clip-rule="evenodd"
-                                                        d="M7.60229 13.1367C7.41029 13.1367 7.21829 13.0637 7.07229 12.9167C6.77929 12.6237 6.77929 12.1497 7.07229 11.8567L11.8643 7.06472C12.1573 6.77172 12.6313 6.77172 12.9243 7.06472C13.2173 7.35772 13.2173 7.83172 12.9243 8.12472L8.13229 12.9167C7.98629 13.0637 7.79429 13.1367 7.60229 13.1367Z"
-                                                        fill="#ED4040"
-                                                    />
-                                                    <path
-                                                        fill-rule="evenodd"
-                                                        clip-rule="evenodd"
-                                                        d="M12.3963 13.1396C12.2043 13.1396 12.0123 13.0666 11.8663 12.9196L7.07034 8.12265C6.77734 7.82965 6.77734 7.35565 7.07034 7.06265C7.36434 6.76965 7.83834 6.76965 8.13034 7.06265L12.9263 11.8596C13.2193 12.1526 13.2193 12.6266 12.9263 12.9196C12.7803 13.0666 12.5873 13.1396 12.3963 13.1396Z"
-                                                        fill="#ED4040"
-                                                    />
-                                                    <path
-                                                        fill-rule="evenodd"
-                                                        clip-rule="evenodd"
-                                                        d="M5.665 1.5C3.135 1.5 1.5 3.233 1.5 5.916V14.084C1.5 16.767 3.135 18.5 5.665 18.5H14.333C16.864 18.5 18.5 16.767 18.5 14.084V5.916C18.5 3.233 16.864 1.5 14.334 1.5H5.665ZM14.333 20H5.665C2.276 20 0 17.622 0 14.084V5.916C0 2.378 2.276 0 5.665 0H14.334C17.723 0 20 2.378 20 5.916V14.084C20 17.622 17.723 20 14.333 20Z"
-                                                        fill="#ED4040"
-                                                    />
-                                                </svg>
-                                                <span>Очистить</span>
-                                            </div>
-                                            <button class="btn apply-btn btn--red">
-                                                <span class="btn__name">Применить</span>
-                                            </button>
                                         </div>
                                     </div>
                                     <div
@@ -631,7 +634,9 @@
                                                 Показать только те пространства, где доступно
                                                 бронирование без подтверждения
                                             </div>
-                                            <div class="popup-booking__toggle-btn"></div>
+                                            <div class="popup-booking__switch-btn switch-btn">
+                                                <span></span>
+                                            </div>
                                         </div>
                                     </div>
                                     <div
@@ -654,14 +659,22 @@
                                                         "
                                                     >
                                                         <div class="tags__item">
-                                                            <input type="checkbox" id="wifi-tag" />
+                                                            <input
+                                                                class="checkbox"
+                                                                type="checkbox"
+                                                                id="wifi-tag"
+                                                            />
                                                             <label for="wifi-tag"></label>
                                                             <span class="tags__item-name"
                                                                 >Высокоскоростной WiFi</span
                                                             >
                                                         </div>
                                                         <div class="tags__item">
-                                                            <input type="checkbox" id="open-tag" />
+                                                            <input
+                                                                class="checkbox"
+                                                                type="checkbox"
+                                                                id="open-tag"
+                                                            />
                                                             <label for="open-tag"></label>
                                                             <span class="tags__item-name"
                                                                 >Открыто круглосуточно</span
@@ -669,6 +682,7 @@
                                                         </div>
                                                         <div class="tags__item">
                                                             <input
+                                                                class="checkbox"
                                                                 type="checkbox"
                                                                 id="guests-tag"
                                                             />
@@ -680,14 +694,22 @@
                                                     </div>
                                                     <div class="tags__right">
                                                         <div class="tags__item">
-                                                            <input type="checkbox" id="coffe-tag" />
+                                                            <input
+                                                                class="checkbox"
+                                                                type="checkbox"
+                                                                id="coffe-tag"
+                                                            />
                                                             <label for="coffe-tag"></label>
                                                             <span class="tags__item-name"
                                                                 >Кофемашина</span
                                                             >
                                                         </div>
                                                         <div class="tags__item">
-                                                            <input type="checkbox" id="chart-tag" />
+                                                            <input
+                                                                class="checkbox"
+                                                                type="checkbox"
+                                                                id="chart-tag"
+                                                            />
                                                             <label for="chart-tag"></label>
                                                             <span class="tags__item-name"
                                                                 >Флипчарт</span
@@ -695,6 +717,7 @@
                                                         </div>
                                                         <div class="tags__item">
                                                             <input
+                                                                class="checkbox"
                                                                 type="checkbox"
                                                                 id="office-tag"
                                                             />
@@ -736,14 +759,22 @@
                                                         "
                                                     >
                                                         <div class="tags__item">
-                                                            <input type="checkbox" id="equip-tag" />
+                                                            <input
+                                                                class="checkbox"
+                                                                type="checkbox"
+                                                                id="equip-tag"
+                                                            />
                                                             <label for="equip-tag"></label>
                                                             <span class="tags__item-name"
                                                                 >Оборудование для видеоконференции
                                                             </span>
                                                         </div>
                                                         <div class="tags__item">
-                                                            <input type="checkbox" id="tv-tag" />
+                                                            <input
+                                                                class="checkbox"
+                                                                type="checkbox"
+                                                                id="tv-tag"
+                                                            />
                                                             <label for="tv-tag"></label>
                                                             <span class="tags__item-name">TV</span>
                                                         </div>
@@ -751,6 +782,7 @@
                                                     <div class="tags__right">
                                                         <div class="tags__item">
                                                             <input
+                                                                class="checkbox"
                                                                 type="checkbox"
                                                                 id="projector-tag"
                                                             />
@@ -760,7 +792,11 @@
                                                             >
                                                         </div>
                                                         <div class="tags__item">
-                                                            <input type="checkbox" id="apple-tag" />
+                                                            <input
+                                                                class="checkbox"
+                                                                type="checkbox"
+                                                                id="apple-tag"
+                                                            />
                                                             <label for="apple-tag"></label>
                                                             <span class="tags__item-name"
                                                                 >Apple TV</span
@@ -781,21 +817,33 @@
                                                         "
                                                     >
                                                         <div class="tags__item">
-                                                            <input type="checkbox" id="pc-tag" />
+                                                            <input
+                                                                class="checkbox"
+                                                                type="checkbox"
+                                                                id="pc-tag"
+                                                            />
                                                             <label for="pc-tag"></label>
                                                             <span class="tags__item-name"
                                                                 >Есть ПК</span
                                                             >
                                                         </div>
                                                         <div class="tags__item">
-                                                            <input type="checkbox" id="micro-tag" />
+                                                            <input
+                                                                class="checkbox"
+                                                                type="checkbox"
+                                                                id="micro-tag"
+                                                            />
                                                             <label for="micro-tag"></label>
                                                             <span class="tags__item-name"
                                                                 >Микрофон</span
                                                             >
                                                         </div>
                                                         <div class="tags__item">
-                                                            <input type="checkbox" id="light-tag" />
+                                                            <input
+                                                                class="checkbox"
+                                                                type="checkbox"
+                                                                id="light-tag"
+                                                            />
                                                             <label for="light-tag"></label>
                                                             <span class="tags__item-name">
                                                                 Профессиональное световое
@@ -806,6 +854,7 @@
                                                     <div class="tags__right">
                                                         <div class="tags__item">
                                                             <input
+                                                                class="checkbox"
                                                                 type="checkbox"
                                                                 id="printer-tag"
                                                             />
@@ -815,14 +864,22 @@
                                                             </span>
                                                         </div>
                                                         <div class="tags__item">
-                                                            <input type="checkbox" id="scan-tag" />
+                                                            <input
+                                                                class="checkbox"
+                                                                type="checkbox"
+                                                                id="scan-tag"
+                                                            />
                                                             <label for="scan-tag"></label>
                                                             <span class="tags__item-name"
                                                                 >Сканер</span
                                                             >
                                                         </div>
                                                         <div class="tags__item">
-                                                            <input type="checkbox" id="copy-tag" />
+                                                            <input
+                                                                class="checkbox"
+                                                                type="checkbox"
+                                                                id="copy-tag"
+                                                            />
                                                             <label for="copy-tag"></label>
                                                             <span class="tags__item-name"
                                                                 >Фотокопировальный аппарат</span

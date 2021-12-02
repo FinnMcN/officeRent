@@ -112,6 +112,40 @@ button {
         animation: favoriteSvgScale 0.2s ease 0s;
     }
 }
+.switch-btn {
+    position: relative;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    height: 35px;
+    background-color: #fff;
+    border: 1px solid #d9dadc;
+    border-radius: 100px;
+    transition: all ease 0.3s;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-100%, -50%);
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 1px solid #d9dadc;
+        transition: all ease 0.3s;
+        text-align: center;
+    }
+    &:checked {
+        background-color: #ffecec;
+        border: 1px solid #ffecec;
+    }
+    &:checked:after {
+        transform: translate(0, -50%);
+        border: 1px solid #ed4040;
+        background: #fff url("../images/svg/check.svg") no-repeat center center;
+    }
+}
 @keyframes favoriteSvgScale {
     0% {
         transform: scale(1);

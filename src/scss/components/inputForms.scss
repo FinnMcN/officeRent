@@ -125,8 +125,8 @@
 .checkbox:checked + label:before {
     background: #ed4040 url("../images/svg/check.svg") no-repeat center center;
 }
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+.checkbox::-webkit-outer-spin-button,
+.checkbox::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }

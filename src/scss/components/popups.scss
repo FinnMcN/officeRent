@@ -116,10 +116,15 @@
         font-size: 16px;
         color: #717171;
     }
-    &__booking-toggle {
+    &__toggle {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+        align-items: flex-end;
+        gap: 40px;
+    }
+    &__switch-btn {
+        flex: 0 0 70px;
     }
 }
 .popup-facilities {

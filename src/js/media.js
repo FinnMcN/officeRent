@@ -154,7 +154,7 @@ export default function media() {
             const filtersBtn = {
                 selector: document.querySelector(".filters-btn"),
                 start: {
-                    relativeEl: document.querySelector(".search__map-nav"),
+                    relativeEl: document.querySelector(".map-buttons"),
                     method: "append",
                 },
                 replace: {

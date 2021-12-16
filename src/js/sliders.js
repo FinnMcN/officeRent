@@ -1,5 +1,5 @@
-/* import Swiper from "swiper";
-import SwiperCore, { Navigation, Pagination } from "swiper/core"; */
+import Swiper from "swiper";
+import SwiperCore, { Navigation, Pagination } from "swiper/core";
 
 
 //gallery sliders
@@ -9,7 +9,7 @@ let isInit = false;
 
 export default function initSwipers() {
     
-    /* SwiperCore.use([Navigation, Pagination]); */
+    SwiperCore.use([Navigation, Pagination]);
     
     if (document.querySelector(".office-gallery")) {
         window.addEventListener("resize", () => {
@@ -22,6 +22,7 @@ export default function initSwipers() {
         officeSlider();
     })
 }
+
 function gallerySlider() {
     const sliders = document.querySelectorAll(".office-gallery");
 

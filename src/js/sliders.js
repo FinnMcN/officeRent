@@ -9,11 +9,7 @@ let isInit = false;
 
 export default function initSwipers() {
     
-<<<<<<< HEAD
     SwiperCore.use([Navigation, Pagination]);
-=======
-    /* SwiperCore.use([Navigation, Pagination]); */
->>>>>>> 614353d31bb2b1676c1df1bd39c5b36f920f45bb
     
     if (document.querySelector(".office-gallery")) {
         window.addEventListener("resize", () => {
@@ -26,10 +22,6 @@ export default function initSwipers() {
         officeSlider();
     })
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 614353d31bb2b1676c1df1bd39c5b36f920f45bb
 function gallerySlider() {
     const sliders = document.querySelectorAll(".office-gallery");
 

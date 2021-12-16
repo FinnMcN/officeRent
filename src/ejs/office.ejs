@@ -15,21 +15,24 @@
                 <div class="office">
                     <div class="container">
                         <div class="office-gallery">
-                            <div class="office-gallery__item">
-                                <img src="./public/images/gallery1.jpg" alt="" />
+                            <div class="office-gallery__items">
+                                <div class="office-gallery__item">
+                                    <img src="./public/images/gallery1.jpg" alt="" />
+                                </div>
+                                <div class="office-gallery__item">
+                                    <img src="./public/images/gallery2.jpg" alt="" />
+                                </div>
+                                <div class="office-gallery__item">
+                                    <img src="./public/images/gallery3.jpg" alt="" />
+                                </div>
+                                <div class="office-gallery__item">
+                                    <img src="./public/images/gallery4.jpg" alt="" />
+                                </div>
+                                <div class="office-gallery__item">
+                                    <img src="./public/images/gallery5.jpg" alt="" />
+                                </div>
                             </div>
-                            <div class="office-gallery__item">
-                                <img src="./public/images/gallery2.jpg" alt="" />
-                            </div>
-                            <div class="office-gallery__item">
-                                <img src="./public/images/gallery3.jpg" alt="" />
-                            </div>
-                            <div class="office-gallery__item">
-                                <img src="./public/images/gallery4.jpg" alt="" />
-                            </div>
-                            <div class="office-gallery__item">
-                                <img src="./public/images/gallery5.jpg" alt="" />
-                            </div>
+                            <div class="office-gallery__pagination swiper-pagination"></div>
                         </div>
                         <div class="office__main">
                             <div class="office-about">
@@ -176,7 +179,7 @@
                                             </div>
                                             <div class="office-comfort__tag">
                                                 <div class="office-comfort__tag-name">
-                                                    <span>Кофемашина</span>
+                                                    Кофемашина
                                                 </div>
                                             </div>
                                             <div class="office-comfort__tag">
@@ -238,54 +241,116 @@
                                             <li><a href="">Конференц-залы</a></li>
                                         </ul>
                                         <div class="table">
-                                            <div class="table__row">
-                                                <div class="table__row-item">Название</div>
-                                                <div class="table__row-item">Вместимость</div>
-                                                <div class="table__row-item">Кол-во</div>
-                                                <div class="table__row-item">Цена</div>
-                                                <div class="table__row-item">Часы доступа</div>
-                                                <div class="table__row-item">
-                                                    Минимальный<br />
-                                                    срок аренды
+                                            <div class="table__row-titles">
+                                                <div class="table__row-item-wrapper">
+                                                    <div
+                                                        class="table__row-item table__column-title"
+                                                    >
+                                                        Название
+                                                    </div>
+                                                </div>
+                                                <div class="table__row-item-wrapper">
+                                                    <div
+                                                        class="table__row-item table__column-title"
+                                                    >
+                                                        Вместимость
+                                                    </div>
+                                                </div>
+                                                <div class="table__row-item-wrapper">
+                                                    <div
+                                                        class="table__row-item table__column-title"
+                                                    >
+                                                        Кол-во
+                                                    </div>
+                                                </div>
+                                                <div class="table__row-item-wrapper">
+                                                    <div
+                                                        class="table__row-item table__column-title"
+                                                    >
+                                                        Цена
+                                                    </div>
+                                                </div>
+                                                <div class="table__row-item-wrapper">
+                                                    <div
+                                                        class="table__row-item table__column-title"
+                                                    >
+                                                        Часы доступа
+                                                    </div>
+                                                </div>
+                                                <div class="table__row-item-wrapper">
+                                                    <div
+                                                        class="table__row-item table__column-title"
+                                                    >
+                                                        Минимальный<br />
+                                                        срок аренды
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="table__item">
                                                 <div class="table__row">
-                                                    <div class="table__row-item">
-                                                        Офис на этаже<br />
-                                                        БЦ Васильевский
+                                                    <div class="table__row-item-wrapper">
+                                                        <div class="table__row-item">
+                                                            Офис на этаже<br />
+                                                            БЦ Васильевский
+                                                        </div>
                                                     </div>
-                                                    <div class="table__row-item">
-                                                        <span>80 мест</span>
+                                                    <div class="table__row-item-wrapper">
+                                                        <div class="table__row-item-title">
+                                                            Вместимость
+                                                        </div>
+                                                        <div
+                                                            class="
+                                                                table__row-item
+                                                                table__row-item-seats
+                                                            "
+                                                        >
+                                                            80 мест
+                                                        </div>
                                                     </div>
-                                                    <div class="table__row-item">1</div>
-                                                    <div class="table__row-item">2 500 ₽</div>
-                                                    <div class="table__row-item">
-                                                        <div class="table__row-item__wrapper">
-                                                            <svg
-                                                                width="20"
-                                                                height="20"
-                                                                viewBox="0 0 20 20"
-                                                                fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                            >
-                                                                <path
-                                                                    fill-rule="evenodd"
-                                                                    clip-rule="evenodd"
-                                                                    d="M5.665 1.5C3.135 1.5 1.5 3.233 1.5 5.916V14.084C1.5 16.767 3.135 18.5 5.665 18.5H14.333C16.864 18.5 18.5 16.767 18.5 14.084V5.916C18.5 3.233 16.865 1.5 14.334 1.5H5.665ZM14.333 20H5.665C2.276 20 0 17.622 0 14.084V5.916C0 2.378 2.276 0 5.665 0H14.334C17.723 0 20 2.378 20 5.916V14.084C20 17.622 17.723 20 14.333 20Z"
-                                                                    fill="#ED4040"
-                                                                />
-                                                                <path
-                                                                    fill-rule="evenodd"
-                                                                    clip-rule="evenodd"
-                                                                    d="M13.39 12.7675C13.259 12.7675 13.127 12.7335 13.006 12.6625L9.61502 10.6395C9.38902 10.5035 9.24902 10.2585 9.24902 9.99554V5.63354C9.24902 5.21954 9.58502 4.88354 9.99902 4.88354C10.413 4.88354 10.749 5.21954 10.749 5.63354V9.56954L13.775 11.3725C14.13 11.5855 14.247 12.0455 14.035 12.4015C13.894 12.6365 13.645 12.7675 13.39 12.7675Z"
-                                                                    fill="#ED4040"
-                                                                />
-                                                            </svg>
+                                                    <div class="table__row-item-wrapper">
+                                                        <div class="table__row-item-title">
+                                                            Количество
+                                                        </div>
+                                                        <div class="table__row-item">1</div>
+                                                    </div>
+                                                    <div class="table__row-item-wrapper">
+                                                        <div
+                                                            class="table__row-item table__row-price"
+                                                        >
+                                                            2 500 ₽
+                                                        </div>
+                                                    </div>
+                                                    <div class="table__row-item-wrapper">
+                                                        <svg
+                                                            width="20"
+                                                            height="20"
+                                                            viewBox="0 0 20 20"
+                                                            fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                        >
+                                                            <path
+                                                                fill-rule="evenodd"
+                                                                clip-rule="evenodd"
+                                                                d="M5.665 1.5C3.135 1.5 1.5 3.233 1.5 5.916V14.084C1.5 16.767 3.135 18.5 5.665 18.5H14.333C16.864 18.5 18.5 16.767 18.5 14.084V5.916C18.5 3.233 16.865 1.5 14.334 1.5H5.665ZM14.333 20H5.665C2.276 20 0 17.622 0 14.084V5.916C0 2.378 2.276 0 5.665 0H14.334C17.723 0 20 2.378 20 5.916V14.084C20 17.622 17.723 20 14.333 20Z"
+                                                                fill="#ED4040"
+                                                            />
+                                                            <path
+                                                                fill-rule="evenodd"
+                                                                clip-rule="evenodd"
+                                                                d="M13.39 12.7675C13.259 12.7675 13.127 12.7335 13.006 12.6625L9.61502 10.6395C9.38902 10.5035 9.24902 10.2585 9.24902 9.99554V5.63354C9.24902 5.21954 9.58502 4.88354 9.99902 4.88354C10.413 4.88354 10.749 5.21954 10.749 5.63354V9.56954L13.775 11.3725C14.13 11.5855 14.247 12.0455 14.035 12.4015C13.894 12.6365 13.645 12.7675 13.39 12.7675Z"
+                                                                fill="#ED4040"
+                                                            />
+                                                        </svg>
+                                                        <div class="table__row-item">
                                                             10:00 - 22:00
                                                         </div>
                                                     </div>
-                                                    <div class="table__row-item">час</div>
+                                                    <div class="table__row-item-wrapper">
+                                                        <div class="table__row-item-title">
+                                                            Минимальный срок аренды
+                                                        </div>
+                                                        <div class="table__row-item">час</div>
+                                                    </div>
                                                 </div>
                                                 <div class="table__desc">
                                                     <div class="table__desc-inner">
@@ -348,40 +413,67 @@
                                             </div>
                                             <div class="table__item">
                                                 <div class="table__row">
-                                                    <div class="table__row-item">
+                                                    <div class="table__row-item-wrapper">
+                                                        <div class="table__row-item"></div>
                                                         Офис на Орловской
                                                     </div>
-                                                    <div class="table__row-item">
-                                                        <span>45 мест</span>
+                                                    <div class="table__row-item-wrapper">
+                                                        <div class="table__row-item-title">
+                                                            Вместимость
+                                                        </div>
+                                                        <div
+                                                            class="
+                                                                table__row-item
+                                                                table__row-item-seats
+                                                            "
+                                                        >
+                                                            45 мест
+                                                        </div>
                                                     </div>
-                                                    <div class="table__row-item">2</div>
-                                                    <div class="table__row-item">800 ₽</div>
-                                                    <div class="table__row-item">
-                                                        <div class="table__row-item__wrapper">
-                                                            <svg
-                                                                width="20"
-                                                                height="20"
-                                                                viewBox="0 0 20 20"
-                                                                fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                            >
-                                                                <path
-                                                                    fill-rule="evenodd"
-                                                                    clip-rule="evenodd"
-                                                                    d="M5.665 1.5C3.135 1.5 1.5 3.233 1.5 5.916V14.084C1.5 16.767 3.135 18.5 5.665 18.5H14.333C16.864 18.5 18.5 16.767 18.5 14.084V5.916C18.5 3.233 16.865 1.5 14.334 1.5H5.665ZM14.333 20H5.665C2.276 20 0 17.622 0 14.084V5.916C0 2.378 2.276 0 5.665 0H14.334C17.723 0 20 2.378 20 5.916V14.084C20 17.622 17.723 20 14.333 20Z"
-                                                                    fill="#ED4040"
-                                                                />
-                                                                <path
-                                                                    fill-rule="evenodd"
-                                                                    clip-rule="evenodd"
-                                                                    d="M13.39 12.7675C13.259 12.7675 13.127 12.7335 13.006 12.6625L9.61502 10.6395C9.38902 10.5035 9.24902 10.2585 9.24902 9.99554V5.63354C9.24902 5.21954 9.58502 4.88354 9.99902 4.88354C10.413 4.88354 10.749 5.21954 10.749 5.63354V9.56954L13.775 11.3725C14.13 11.5855 14.247 12.0455 14.035 12.4015C13.894 12.6365 13.645 12.7675 13.39 12.7675Z"
-                                                                    fill="#ED4040"
-                                                                />
-                                                            </svg>
+                                                    <div class="table__row-item-wrapper">
+                                                        <div class="table__row-item-title">
+                                                            Количество
+                                                        </div>
+                                                        <div class="table__row-item">2</div>
+                                                    </div>
+                                                    <div class="table__row-item-wrapper">
+                                                        <div
+                                                            class="table__row-item table__row-price"
+                                                        >
+                                                            800 ₽
+                                                        </div>
+                                                    </div>
+                                                    <div class="table__row-item-wrapper">
+                                                        <svg
+                                                            width="20"
+                                                            height="20"
+                                                            viewBox="0 0 20 20"
+                                                            fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                        >
+                                                            <path
+                                                                fill-rule="evenodd"
+                                                                clip-rule="evenodd"
+                                                                d="M5.665 1.5C3.135 1.5 1.5 3.233 1.5 5.916V14.084C1.5 16.767 3.135 18.5 5.665 18.5H14.333C16.864 18.5 18.5 16.767 18.5 14.084V5.916C18.5 3.233 16.865 1.5 14.334 1.5H5.665ZM14.333 20H5.665C2.276 20 0 17.622 0 14.084V5.916C0 2.378 2.276 0 5.665 0H14.334C17.723 0 20 2.378 20 5.916V14.084C20 17.622 17.723 20 14.333 20Z"
+                                                                fill="#ED4040"
+                                                            />
+                                                            <path
+                                                                fill-rule="evenodd"
+                                                                clip-rule="evenodd"
+                                                                d="M13.39 12.7675C13.259 12.7675 13.127 12.7335 13.006 12.6625L9.61502 10.6395C9.38902 10.5035 9.24902 10.2585 9.24902 9.99554V5.63354C9.24902 5.21954 9.58502 4.88354 9.99902 4.88354C10.413 4.88354 10.749 5.21954 10.749 5.63354V9.56954L13.775 11.3725C14.13 11.5855 14.247 12.0455 14.035 12.4015C13.894 12.6365 13.645 12.7675 13.39 12.7675Z"
+                                                                fill="#ED4040"
+                                                            />
+                                                        </svg>
+                                                        <div class="table__row-item">
                                                             10:00 - 22:00
                                                         </div>
                                                     </div>
-                                                    <div class="table__row-item">день</div>
+                                                    <div class="table__row-item-wrapper">
+                                                        <div class="table__row-item-title">
+                                                            Минимальный срок аренды
+                                                        </div>
+                                                        <div class="table__row-item">день</div>
+                                                    </div>
                                                 </div>
                                                 <div class="table__desc">
                                                     <div class="table__desc-inner">
@@ -444,40 +536,69 @@
                                             </div>
                                             <div class="table__item">
                                                 <div class="table__row">
-                                                    <div class="table__row-item">
-                                                        Зал для переговоров
+                                                    <div class="table__row-item-wrapper">
+                                                        <div class="table__row-item">
+                                                            Зал для переговоров
+                                                        </div>
                                                     </div>
-                                                    <div class="table__row-item">
-                                                        <span>36 мест</span>
+
+                                                    <div class="table__row-item-wrapper">
+                                                        <div class="table__row-item-title">
+                                                            Вместимость
+                                                        </div>
+                                                        <div
+                                                            class="
+                                                                table__row-item
+                                                                table__row-item-seats
+                                                            "
+                                                        >
+                                                            36 мест
+                                                        </div>
                                                     </div>
-                                                    <div class="table__row-item">2</div>
-                                                    <div class="table__row-item">1 500 ₽</div>
-                                                    <div class="table__row-item">
-                                                        <div class="table__row-item__wrapper">
-                                                            <svg
-                                                                width="20"
-                                                                height="20"
-                                                                viewBox="0 0 20 20"
-                                                                fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                            >
-                                                                <path
-                                                                    fill-rule="evenodd"
-                                                                    clip-rule="evenodd"
-                                                                    d="M5.665 1.5C3.135 1.5 1.5 3.233 1.5 5.916V14.084C1.5 16.767 3.135 18.5 5.665 18.5H14.333C16.864 18.5 18.5 16.767 18.5 14.084V5.916C18.5 3.233 16.865 1.5 14.334 1.5H5.665ZM14.333 20H5.665C2.276 20 0 17.622 0 14.084V5.916C0 2.378 2.276 0 5.665 0H14.334C17.723 0 20 2.378 20 5.916V14.084C20 17.622 17.723 20 14.333 20Z"
-                                                                    fill="#ED4040"
-                                                                />
-                                                                <path
-                                                                    fill-rule="evenodd"
-                                                                    clip-rule="evenodd"
-                                                                    d="M13.39 12.7675C13.259 12.7675 13.127 12.7335 13.006 12.6625L9.61502 10.6395C9.38902 10.5035 9.24902 10.2585 9.24902 9.99554V5.63354C9.24902 5.21954 9.58502 4.88354 9.99902 4.88354C10.413 4.88354 10.749 5.21954 10.749 5.63354V9.56954L13.775 11.3725C14.13 11.5855 14.247 12.0455 14.035 12.4015C13.894 12.6365 13.645 12.7675 13.39 12.7675Z"
-                                                                    fill="#ED4040"
-                                                                />
-                                                            </svg>
+                                                    <div class="table__row-item-wrapper">
+                                                        <div class="table__row-item-title">
+                                                            Количество
+                                                        </div>
+                                                        <div class="table__row-item">2</div>
+                                                    </div>
+                                                    <div class="table__row-item-wrapper">
+                                                        <div
+                                                            class="table__row-item table__row-price"
+                                                        >
+                                                            1 500 ₽
+                                                        </div>
+                                                    </div>
+                                                    <div class="table__row-item-wrapper">
+                                                        <svg
+                                                            width="20"
+                                                            height="20"
+                                                            viewBox="0 0 20 20"
+                                                            fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                        >
+                                                            <path
+                                                                fill-rule="evenodd"
+                                                                clip-rule="evenodd"
+                                                                d="M5.665 1.5C3.135 1.5 1.5 3.233 1.5 5.916V14.084C1.5 16.767 3.135 18.5 5.665 18.5H14.333C16.864 18.5 18.5 16.767 18.5 14.084V5.916C18.5 3.233 16.865 1.5 14.334 1.5H5.665ZM14.333 20H5.665C2.276 20 0 17.622 0 14.084V5.916C0 2.378 2.276 0 5.665 0H14.334C17.723 0 20 2.378 20 5.916V14.084C20 17.622 17.723 20 14.333 20Z"
+                                                                fill="#ED4040"
+                                                            />
+                                                            <path
+                                                                fill-rule="evenodd"
+                                                                clip-rule="evenodd"
+                                                                d="M13.39 12.7675C13.259 12.7675 13.127 12.7335 13.006 12.6625L9.61502 10.6395C9.38902 10.5035 9.24902 10.2585 9.24902 9.99554V5.63354C9.24902 5.21954 9.58502 4.88354 9.99902 4.88354C10.413 4.88354 10.749 5.21954 10.749 5.63354V9.56954L13.775 11.3725C14.13 11.5855 14.247 12.0455 14.035 12.4015C13.894 12.6365 13.645 12.7675 13.39 12.7675Z"
+                                                                fill="#ED4040"
+                                                            />
+                                                        </svg>
+                                                        <div class="table__row-item">
                                                             10:00 - 22:00
                                                         </div>
                                                     </div>
-                                                    <div class="table__row-item">день</div>
+                                                    <div class="table__row-item-wrapper">
+                                                        <div class="table__row-item-title">
+                                                            Минимальный срок аренды
+                                                        </div>
+                                                        <div class="table__row-item">день</div>
+                                                    </div>
                                                 </div>
                                                 <div class="table__desc">
                                                     <div class="table__desc-inner">
@@ -540,38 +661,68 @@
                                             </div>
                                             <div class="table__item">
                                                 <div class="table__row">
-                                                    <div class="table__row-item">Офис Бизнес</div>
-                                                    <div class="table__row-item">
-                                                        <span>45 мест</span>
+                                                    <div class="table__row-item-wrapper">
+                                                        <div class="table__row-item">
+                                                            Офис Бизнес
+                                                        </div>
                                                     </div>
-                                                    <div class="table__row-item">2</div>
-                                                    <div class="table__row-item">800 ₽</div>
-                                                    <div class="table__row-item">
-                                                        <div class="table__row-item__wrapper">
-                                                            <svg
-                                                                width="20"
-                                                                height="20"
-                                                                viewBox="0 0 20 20"
-                                                                fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                            >
-                                                                <path
-                                                                    fill-rule="evenodd"
-                                                                    clip-rule="evenodd"
-                                                                    d="M5.665 1.5C3.135 1.5 1.5 3.233 1.5 5.916V14.084C1.5 16.767 3.135 18.5 5.665 18.5H14.333C16.864 18.5 18.5 16.767 18.5 14.084V5.916C18.5 3.233 16.865 1.5 14.334 1.5H5.665ZM14.333 20H5.665C2.276 20 0 17.622 0 14.084V5.916C0 2.378 2.276 0 5.665 0H14.334C17.723 0 20 2.378 20 5.916V14.084C20 17.622 17.723 20 14.333 20Z"
-                                                                    fill="#ED4040"
-                                                                />
-                                                                <path
-                                                                    fill-rule="evenodd"
-                                                                    clip-rule="evenodd"
-                                                                    d="M13.39 12.7675C13.259 12.7675 13.127 12.7335 13.006 12.6625L9.61502 10.6395C9.38902 10.5035 9.24902 10.2585 9.24902 9.99554V5.63354C9.24902 5.21954 9.58502 4.88354 9.99902 4.88354C10.413 4.88354 10.749 5.21954 10.749 5.63354V9.56954L13.775 11.3725C14.13 11.5855 14.247 12.0455 14.035 12.4015C13.894 12.6365 13.645 12.7675 13.39 12.7675Z"
-                                                                    fill="#ED4040"
-                                                                />
-                                                            </svg>
+                                                    <div class="table__row-item-wrapper">
+                                                        <div class="table__row-item-title">
+                                                            Вместимость
+                                                        </div>
+                                                        <div
+                                                            class="
+                                                                table__row-item
+                                                                table__row-item-seats
+                                                            "
+                                                        >
+                                                            45 мест
+                                                        </div>
+                                                    </div>
+                                                    <div class="table__row-item-wrapper">
+                                                        <div class="table__row-item-title">
+                                                            Количество
+                                                        </div>
+                                                        <div class="table__row-item">2</div>
+                                                    </div>
+                                                    <div class="table__row-item-wrapper">
+                                                        <div
+                                                            class="table__row-item table__row-price"
+                                                        >
+                                                            800 ₽
+                                                        </div>
+                                                    </div>
+                                                    <div class="table__row-item-wrapper">
+                                                        <svg
+                                                            width="20"
+                                                            height="20"
+                                                            viewBox="0 0 20 20"
+                                                            fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                        >
+                                                            <path
+                                                                fill-rule="evenodd"
+                                                                clip-rule="evenodd"
+                                                                d="M5.665 1.5C3.135 1.5 1.5 3.233 1.5 5.916V14.084C1.5 16.767 3.135 18.5 5.665 18.5H14.333C16.864 18.5 18.5 16.767 18.5 14.084V5.916C18.5 3.233 16.865 1.5 14.334 1.5H5.665ZM14.333 20H5.665C2.276 20 0 17.622 0 14.084V5.916C0 2.378 2.276 0 5.665 0H14.334C17.723 0 20 2.378 20 5.916V14.084C20 17.622 17.723 20 14.333 20Z"
+                                                                fill="#ED4040"
+                                                            />
+                                                            <path
+                                                                fill-rule="evenodd"
+                                                                clip-rule="evenodd"
+                                                                d="M13.39 12.7675C13.259 12.7675 13.127 12.7335 13.006 12.6625L9.61502 10.6395C9.38902 10.5035 9.24902 10.2585 9.24902 9.99554V5.63354C9.24902 5.21954 9.58502 4.88354 9.99902 4.88354C10.413 4.88354 10.749 5.21954 10.749 5.63354V9.56954L13.775 11.3725C14.13 11.5855 14.247 12.0455 14.035 12.4015C13.894 12.6365 13.645 12.7675 13.39 12.7675Z"
+                                                                fill="#ED4040"
+                                                            />
+                                                        </svg>
+                                                        <div class="table__row-item">
                                                             10:00 - 22:00
                                                         </div>
                                                     </div>
-                                                    <div class="table__row-item">день</div>
+                                                    <div class="table__row-item-wrapper">
+                                                        <div class="table__row-item-title">
+                                                            Минимальный срок аренды
+                                                        </div>
+                                                        <div class="table__row-item">день</div>
+                                                    </div>
                                                 </div>
                                                 <div class="table__desc">
                                                     <div class="table__desc-inner">
@@ -635,7 +786,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- TABLES -->
+                                <!-- END TABLES -->
                                 <div class="office-location">
                                     <div class="office-location__title">Офис на карте</div>
                                     <div class="office-location__map">
@@ -845,9 +996,10 @@
                 </div>
             </div>
             <%- include("blocks/footer.ejs") -%>
+            <button class="btn btn--red booking-form__show-btn">
+                <span class="btn__name">Забронировать</span>
+            </button>
         </div>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script type="module" src="src/js/index.js"></script>
     </body>

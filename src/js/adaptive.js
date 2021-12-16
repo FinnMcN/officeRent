@@ -6,7 +6,7 @@ export default function move(elements, statement) {
                 replace: { relativeEl, method }
             } = element;
 
-            selector.classList.toggle("moved");
+            selector.classList.add("moved");
             replace(selector, relativeEl, method);
         } else if (!statement && element.selector.classList.contains("moved")) {
             const {
@@ -14,7 +14,7 @@ export default function move(elements, statement) {
                 start: { relativeEl, method }
             } = element;
             
-            selector.classList.toggle("moved");
+            selector.classList.remove("moved");
             replace(selector, relativeEl, method);
         }
     }) 

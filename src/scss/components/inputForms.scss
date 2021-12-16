@@ -125,10 +125,12 @@
 .checkbox:checked + label:before {
     background: #ed4040 url("../images/svg/check.svg") no-repeat center center;
 }
-.checkbox::-webkit-outer-spin-button,
-.checkbox::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+.counter {
+    &__input::-webkit-outer-spin-button,
+    &__input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
 }
 //media
 @media screen and (max-width: 1391px) {

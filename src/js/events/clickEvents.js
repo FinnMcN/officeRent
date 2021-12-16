@@ -1,16 +1,37 @@
-import adaptive from "./adaptive.js";
-export default function addClickEvents() {
+import Tabs from "./tabs.js";
+import SwipeForm from "./swipeEvents.js";
+
+const overlay = document.querySelector(".overlay");
+
+export function addClickEvents() {
     const inputBlocks = document.querySelectorAll(".def-input");
-    const favorites = document.querySelectorAll(".favorite-btn");
-    const filterButtons = document.querySelectorAll(".filter-btn");
     const popup = document.querySelectorAll(".popup");
-    const overlay = document.querySelector(".overlay");
     const tables = document.querySelectorAll(".table__item");
     const menu = document.querySelector(".header__menu-icon");
+    const bookingForm = document.querySelector(".office__booking");
+    const comments = document.querySelectorAll(".office-comments");
 
+    //Buttons
+    const favorites = document.querySelectorAll(".favorite-btn");
+    const filterButtons = document.querySelectorAll(".filter-btn");
     const mapBtn = document.querySelector(".search__map-show__btn");
     const backToListBtn = document.querySelector(".list-btn");
     const filtersBtn = document.querySelector(".filters-btn");
+    
+
+    //show more comments
+
+    //booking form
+    if (bookingForm) {
+        const btnShow = document.querySelector(".booking-form__show-btn");
+        const btnCallback = () => {
+            new SwipeForm(bookingForm);
+            bookingForm.classList.toggle("office__booking_active");
+            disableScroll();
+        }
+        
+        btnShow.addEventListener("click", btnCallback);
+    }
 
     //menu
     if (menu) {
@@ -43,38 +64,27 @@ export default function addClickEvents() {
     //show filters
     if (filtersBtn) {
         filtersBtn.addEventListener("click", function () {
-            const width = window.innerWidth;
+            const width = screen.width;
             if (width <= 1000) {
                 const searchFilters = document.querySelector(".search-filters");
-                searchFilters.classList.toggle("search-filters_active"); 
+                searchFilters.classList.toggle("search-filters_active");
             }
         });
     }
 
     //table info toggle
     if (tables.length !== 0) {
-        let activeRow;
-
-        tables.forEach(table => {
-            const tableRow = table.children[0];
-            tableRow.addEventListener("click", function (e) {
-                if (activeRow !== undefined) {
-                    activeRow.classList.remove("table__item_active");
-                }
-                table.classList.add("table__item_active");
-                activeRow = table;
-            });
-        });
+        new Tabs(tables, "table__item_active");
     }
 
     //input focus anim
     if (inputBlocks.length !== 0) {
         inputBlocks.forEach((inputBlock) => {
             const input = inputBlock.children[1];
-            input.addEventListener("focus", function() {
+            input.addEventListener("focus", function () {
                 inputBlock.classList.add("def-input--active");
             });
-            input.addEventListener("blur", function() {
+            input.addEventListener("blur", function () {
                 inputBlock.classList.remove("def-input--active");
             });
         });
@@ -83,7 +93,7 @@ export default function addClickEvents() {
     //like toggle anim
     if (favorites.length !== 0) {
         favorites.forEach(function (item) {
-            item.addEventListener("click", function() {
+            item.addEventListener("click", function () {
                 this.classList.toggle("favorite-btn_active");
             });
         });
@@ -92,7 +102,7 @@ export default function addClickEvents() {
     //filter buttons anim and popup toggle
     if (filterButtons.length !== 0) {
         filterButtons.forEach(function (filterButton) {
-            filterButton.addEventListener("click", function() {
+            filterButton.addEventListener("click", function () {
                 popup.forEach(function (popupWindow) {
                     if (filterButton.id === popupWindow.id) {
                         popupWindow.classList.toggle("popup_active");
@@ -107,7 +117,7 @@ export default function addClickEvents() {
     //anim when clicking on overlay
     if (overlay && overlay.length !== 0) {
         overlay.addEventListener("click", function () {
-            filterButtons.forEach(item => {
+            filterButtons.forEach((item) => {
                 if (item.classList.contains("filter-btn_active")) {
                     item.classList.toggle("filter-btn_active");
                 }
@@ -118,4 +128,12 @@ export default function addClickEvents() {
             overlay.classList.toggle("overlay_active");
         });
     }
+
+}
+
+export function disableScroll() {
+    document.body.style.overflow = "hidden";
+}
+export function enableScroll() {
+    document.body.removeAttribute("style");
 }

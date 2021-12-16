@@ -44,6 +44,9 @@
         height: 100%;
         z-index: 15;
     }
+    &__map-nav {
+        margin: 30px 0 0 20px;
+    }
     &__map-show__btn {
         display: none;
         z-index: 10;
@@ -214,6 +217,9 @@
             width: 100%;
             transform: translate(0, 100%);
             transition: transform ease 0.5s;
+        }
+        &__map-nav {
+            margin: 30px 0 0 0;
         }
         &__map-show__btn {
             display: flex;

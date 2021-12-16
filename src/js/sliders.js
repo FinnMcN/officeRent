@@ -2,28 +2,82 @@
 import SwiperCore, { Navigation, Pagination } from "swiper/core"; */
 
 
+//gallery sliders
+let gallerySwiper;
+let gallerySliderBP = window.matchMedia("(max-width: 580px)");
+let isInit = false;
+
 export default function initSwipers() {
-    const swiperItems = document.querySelectorAll(".slider-item");
-    const swiperWrappers = document.querySelectorAll(".slider-wrapper");
     
-    const officesSliders = document.querySelectorAll(".offices-slider");
-    const officeSliders = document.querySelectorAll(".office-slider");
-
     /* SwiperCore.use([Navigation, Pagination]); */
+    
+    if (document.querySelector(".office-gallery")) {
+        window.addEventListener("resize", () => {
+            gallerySlider();
+        });
+    }
+    window.addEventListener("load", () => {
+        gallerySlider();
+        officesSlider();
+        officeSlider();
+    })
+}
+function gallerySlider() {
+    const sliders = document.querySelectorAll(".office-gallery");
 
-    //add swiper classes to slider items -> need optimization
-    swiperItems.forEach(item => {
-        item.classList.add("swiper-slide");
-    });
-    swiperWrappers.forEach(item => {
-        item.classList.add("swiper-wrapper");
-    });  
-    officesSliders.forEach(function(item) {
+    if (!document.querySelector(".office-gallery")) {
+        return;
+    }
+
+    if (gallerySliderBP.matches) {
+        if (!isInit) {
+            sliders.forEach((item) => {
+                const nextBtn = item.querySelector(".slider__next-btn");
+                const prevBtn = item.querySelector(".slider__prev-btn");
+
+                addSwiperClasses(item);
+                
+                gallerySwiper = new Swiper(item, {
+                    slidesPerView: 1,
+                    navigation: {
+                        prevEl: prevBtn,
+                        nextEl: nextBtn,
+                    },
+                    spaceBetween: 30,
+                    pagination: {
+                        el: ".office-gallery__pagination",
+                        type: "fraction",
+                    },
+                });
+            });
+            isInit = true;
+        }
+    } else {
+        if (isInit) {
+            sliders.forEach(item => {
+                const wrapper = item.querySelector(".swiper-wrapper");
+                wrapper.classList.remove("swiper-wrapper");
+            })
+            gallerySwiper.destroy();
+            isInit = false;
+        }
+    }
+}
+
+function officesSlider() {
+    const sliders = document.querySelectorAll(".offices-slider");
+
+    if (!sliders) {
+        return;
+    }
+
+    sliders.forEach((item) => {
         const prevBtn = item.nextElementSibling;
         const nextBtn = prevBtn.nextElementSibling;
         const pagination = document.createElement("div");
 
-        item.classList.add("swiper");
+        addSwiperClasses(item);
+
         pagination.classList.add("offices-slider__pagination");
         item.append(pagination);
 
@@ -50,25 +104,41 @@ export default function initSwipers() {
             },
         });
     });
-    officeSliders.forEach(function (item) {
+}
+
+function officeSlider() {
+    const sliders = document.querySelectorAll(".office-slider");
+
+    if (!sliders) {
+        return;
+    }
+
+    sliders.forEach((item) => {
         const nextBtn = item.lastElementChild;
         const prevBtn = nextBtn.previousElementSibling;
-        item.classList.add("swiper");
+
+        addSwiperClasses(item);
         const swiper = new Swiper(item, {
             slidesPerView: 1,
             simulateTouch: false,
             observer: true,
             observeParents: true,
-            /* autoHeight: true, */
+            spaceBetween: 20,
             navigation: {
                 prevEl: prevBtn,
                 nextEl: nextBtn,
             },
-            /* breakpoints: {
-                1000: {
-                    autoHeight: false,
-                },
-            }, */
         });
+    });
+}
+
+function addSwiperClasses(slider) {
+    const wrapper = slider.children[0];
+    const [...slides] = wrapper.children;
+
+    slider.classList.add("swiper");
+    wrapper.classList.add("swiper-wrapper");
+    slides.forEach(slide => {
+        slide.classList.add("swiper-slide");
     });
 }

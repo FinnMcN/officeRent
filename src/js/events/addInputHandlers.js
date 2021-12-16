@@ -123,11 +123,11 @@ export function rangeInputs() {
     }
 }
 
-export function clearCheckBoxInputs(block) {
-    if (document.querySelector(block)) {
-        const qwe = document.querySelector(block);
-        const inputs = qwe.querySelectorAll(".tags__item");
-        const resetBtn = qwe.querySelector(".clear-btn");
+export function resetCheckBoxInputs(block) {
+    const tagsBlock = document.querySelector(block);
+    if (tagsBlock) {
+        const inputs = tagsBlock.querySelectorAll(".tags__item");
+        const resetBtn = tagsBlock.querySelector(".clear-btn");
 
         //reset checkbox inputs button handler
         resetBtn.addEventListener("click", () => {

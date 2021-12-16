@@ -1,5 +1,7 @@
 .office-slider {
     position: relative;
+    border-radius: 5px;
+    overflow: hidden;
 
     &:hover &__btn-prev,
     &:hover &__btn-next {
@@ -47,7 +49,7 @@
         display: flex;
     }
     &__item {
-        width: 100%;
+        flex: 0 0 100%;
         height: 100%;
         border-radius: 5px;
         overflow: hidden;

@@ -1,9 +1,9 @@
 @import "components/fonts";
 @import "blocks/header";
 @import "blocks/footer";
-@import "blocks/bookingForm";
 @import "blocks/table";
 @import "components/buttons";
+@import "blocks/bookingForm";
 @import "components/logo";
 @import "components/main";
 @import "components/inputForms";
@@ -12,66 +12,8 @@
 @import "components/schedule";
 @import "components/counter";
 @import "components/officeSlider";
+@import "components/overlay";
 
-.office-comments {
-    &__top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 40px;
-    }
-    &__title {
-        font-size: 28px;
-    }
-    &__info {
-        display: flex;
-        align-items: center;
-    }
-    &__rate {
-        margin-right: 20px;
-    }
-    &__rate-value {
-        margin-right: 15px;
-    }
-    &__items {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    &__item {
-        flex: 0 0 23%;
-        margin-bottom: 42px;
-    }
-    &__item-profile {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-    }
-    &__item-avatar {
-        margin-right: 16px;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        overflow: hidden;
-        img {
-            width: 100%;
-            height: 100%;
-        }
-    }
-    &__item-name {
-        color: #717171;
-    }
-    &__item-text {
-        height: 77px;
-        line-height: 20px;
-        margin-bottom: 8px;
-        overflow-y: hidden;
-    }
-    &__item-text.active {
-        height: unset;
-        overflow-y: auto;
-    }
-}
 .office {
     padding: 50px 0 90px;
     &__main {
@@ -91,11 +33,13 @@
     }
 }
 .office-gallery {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    column-gap: 40px;
-    row-gap: 40px;
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 40px;
+        row-gap: 40px;
+    }
     &__item {
         border-radius: 10px;
         overflow: hidden;
@@ -137,6 +81,7 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 60px;
+        gap: 20px;
     }
     &__top-btns {
         display: flex;
@@ -231,14 +176,17 @@
     &__tags {
         display: flex;
         margin-bottom: 23px;
-    }
-    &__tag-column:not(:last-child) {
-        margin-right: 80px;
+        gap: 80px;
     }
     &__tag {
         padding-left: 15px;
         position: relative;
         display: flex;
+    }
+    &__tag-column {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
     &__tag:before {
         position: absolute;
@@ -250,9 +198,6 @@
         border-radius: 50%;
         background: #f74d4a;
         transform: translate(0, -50%);
-    }
-    &__tag:not(:last-child) {
-        margin-bottom: 10px;
     }
     &__tag-name {
         background: #ffffff;
@@ -283,5 +228,380 @@
     &__map {
         height: 500px;
         width: 100%;
+    }
+}
+.office-comments {
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    &__title {
+        font-size: 28px;
+    }
+    &__info {
+        display: flex;
+        align-items: center;
+    }
+    &__rate {
+        margin-right: 20px;
+    }
+    &__rate-value {
+        margin-right: 15px;
+    }
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__item {
+        flex: 0 0 23%;
+        margin-bottom: 42px;
+        font-size: 20px;
+    }
+    &__item-profile {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        font-size: inherit;
+    }
+    &__item-avatar {
+        margin-right: 16px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__item-name {
+        font-size: 0.8em;
+        color: #717171;
+    }
+    &__item-text {
+        font-size: 1em;
+        max-height: 4.9em;
+        line-height: 1.2em;
+        margin-bottom: 8px;
+        overflow-y: hidden;
+        &_active {
+            max-height: unset;
+            overflow-y: auto;
+        }
+    }
+}
+
+//media
+@media screen and (max-width: 1740px) {
+    .office-about {
+        flex: 0 0 55%;
+    }
+    .office-comfort {
+        &__tags {
+            gap: 50px;
+        }
+    }
+}
+@media screen and (max-width: 1391px) {
+    .office-gallery {
+        &__items {
+            grid-template-columns: repeat(9, 1fr);
+            column-gap: 20px;
+            row-gap: 20px;
+        }
+        &__item:first-child {
+            grid-column: 1 / 7;
+        }
+        &__item:nth-child(2) {
+            grid-column: 7 / 10;
+            grid-row: 1 / 2;
+        }
+        &__item:nth-child(3) {
+            grid-column: 7 / 10;
+            grid-row: 2 / 3;
+        }
+        &__item:nth-child(4) {
+            display: none;
+        }
+        &__item:nth-child(5) {
+            display: none;
+        }
+    }
+    .office-about {
+        flex: 0 0 100%;
+    }
+    .office__booking {
+        flex: 0 0 100%;
+    }
+    .office-comments {
+        &__items {
+            gap: 5%;
+            justify-content: flex-start;
+        }
+        &__item {
+            flex: 0 0 30%;
+        }
+    }
+}
+@media screen and (max-width: 1000px) {
+    .office {
+        padding: 0 0 90px;
+    }
+    .office-gallery {
+        margin: 0 -40px;
+        &__items {
+            column-gap: 10px;
+            row-gap: 10px;
+        }
+    }
+    .office-about {
+        &__title {
+            font-size: 36px;
+        }
+        &__top-btns {
+            flex-direction: column-reverse;
+        }
+    }
+    .office-info {
+        &__price {
+            font-size: 32px;
+        }
+    }
+    .office-tabs {
+        &__content {
+            font-size: 18px;
+        }
+    }
+    .office-comfort {
+        &__tags {
+            flex-wrap: wrap;
+        }
+    }
+    .office-tables__tabs {
+        ul {
+            justify-content: space-between;
+        }
+        ul a {
+            font-size: 20px;
+        }
+        li {
+            text-align: center;
+        }
+    }
+    .office-location {
+        margin: 0 -40px;
+        &__title {
+            padding-left: 40px;
+        }
+    }
+    .office-comments {
+        &__items {
+            gap: 4%;
+        }
+        &__item {
+            flex: 0 0 48%;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .office-gallery {
+        margin: 0 -15px;
+    }
+    .office-about {
+        width: 100%;
+        &__title {
+            font-size: 28px;
+        }
+    }
+    .office-info {
+        padding: 20px;
+        gap: 12px;
+        flex-wrap: wrap;
+        &__price {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        &__right {
+            align-self: flex-end;
+        }
+        &__schedule {
+            font-size: 16px;
+        }
+    }
+    .office-tabs {
+        &__items {
+            flex-wrap: wrap;
+            column-gap: 30px;
+            row-gap: 15px;
+        }
+    }
+    .office-comfort {
+        &__tags {
+            gap: 15px;
+        }
+        &__tag {
+            padding-left: 0;
+        }
+        &__tag:before {
+            display: none;
+        }
+        &__tag-column {
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 10px;
+            row-gap: 15px;
+        }
+        &__tag-name {
+            padding: 4px 12px;
+        }
+    }
+    .office-tables {
+        ul {
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: unset;
+        }
+        li {
+            padding: 10px;
+            background: #ffffff;
+            border: 1px solid #d8d8d8;
+            box-shadow: 0px 2px 20px rgba(113, 113, 113, 0.15);
+            border-radius: 5px;
+            text-align: initial;
+        }
+    }
+    .office-location {
+        margin: 0 -15px;
+        &__title {
+            padding-left: 15px;
+        }
+    }
+    .office-comments {
+        &__info {
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 7px;
+        }
+        &__rate {
+            margin-right: 0;
+        }
+    }
+}
+@media screen and (max-width: 580px) {
+    .office {
+        position: relative;
+        padding: 0 0 20px;
+        &__main {
+            padding-top: 20px;
+        }
+        &__booking {
+            position: fixed;
+            bottom: -100%;
+            left: 0;
+            /* transform: translate(0, 100%); */
+            transition: all ease 0.3s;
+            z-index: 100;
+            width: 100%;
+            height: 75vh;
+            /* min-height: 100vh; */
+            &_active {
+                bottom: 0;
+                /* transform: translate(0, 0); */
+            }
+        }
+        &__booking:after {
+            position: absolute;
+            content: "";
+            width: 100px;
+            height: 7px;
+            border-radius: 30px;
+            background: #d8d8d8;
+            top: 20px;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+        &__booking .booking-form {
+            position: unset;
+            align-self: unset;
+            height: 100%;
+        }
+    }
+    .office-gallery {
+        position: relative;
+        width: 100%;
+        min-height: 240px;
+        height: calc(240px + (100vw - 320px));
+        margin: 0;
+        &__pagination {
+            left: unset;
+            right: 20px;
+            bottom: 20px;
+            font-size: 20px;
+            color: #fff;
+            width: unset;
+            .swiper-pagination-current,
+            .swiper-pagination-total {
+                font-size: 20px;
+                color: #fff;
+            }
+        }
+        &__items {
+            display: flex;
+            height: 100%;
+            gap: unset;
+        }
+        &__item {
+            flex: 0 0 100%;
+            height: 100%;
+        }
+        &__item:nth-child(4) {
+            display: initial;
+        }
+        &__item:nth-child(5) {
+            display: initial;
+        }
+    }
+    .office-about {
+        &__top {
+            margin-bottom: 20px;
+        }
+    }
+    .office-tabs {
+        &__items {
+            margin-bottom: 30px;
+        }
+    }
+    .office-tables {
+        ul {
+            margin-bottom: 30px;
+        }
+    }
+    .office-comments {
+        &__item {
+            flex: 0 0 100%;
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .office-tables {
+        li {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+@media screen and (max-width: 420px) {
+    .office-about {
+        &__top {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        &__top-btns {
+            flex-direction: row;
+        }
     }
 }

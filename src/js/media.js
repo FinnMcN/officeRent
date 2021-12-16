@@ -1,4 +1,3 @@
-import move from "./adaptive.js";
 import adaptive from "./adaptive.js";
 
 export default function media() {
@@ -178,6 +177,82 @@ export default function media() {
         }
     }
 
+    function adaptiveBookingForm(width) {
+        if (document.querySelector(".office__booking")) {
+            const bookingFormItems = document.querySelectorAll(".booking-form__item");
+
+            const bookingForm = {
+                selector: document.querySelector(".office__booking"),
+                start: {
+                    relativeEl: document.querySelector(".office__main"),
+                    method: "append",
+                },
+                replace: {
+                    relativeEl: document.querySelector(".office-comments"),
+                    method: "after",
+                },
+            };
+            
+            bookingFormItems.forEach(item => {
+                const removeIcon = {
+                    selector: item.querySelector(".booking-form__item-remove"),
+                    start: {
+                        relativeEl: item.querySelector(".booking-form__item-counter"),
+                        method: "append",
+                    },
+                    replace: {
+                        relativeEl: item,
+                        method: "append",
+                    },
+                };
+                adaptive([removeIcon], width <= 1390);
+            })
+            
+            adaptive([bookingForm], width <= 1390);
+        }
+    }
+
+    function unwrapTags(width) {
+        const tagsWrapper = document.querySelector(".office-comfort__tags");
+
+        if (!tagsWrapper) {
+            return;
+        }
+
+        if (width <= 768) {
+            if (!tagsWrapper.classList.contains("moved")) {
+                const tagsColumns = document.querySelectorAll(".office-comfort__tag-column");
+
+                tagsColumns.forEach((column) => {
+                    column.outerHTML = column.innerHTML;
+                });
+
+                tagsWrapper.classList.add("moved");
+            }
+        } else {
+            if (tagsWrapper.classList.contains("moved")) {
+                const maxColumnItems = 5;
+                const tags = [...tagsWrapper.children];
+                const totalColumns = Math.ceil(tags.length / maxColumnItems);
+
+                for (let i = 0; i < totalColumns; i++) {
+                    const column = document.createElement("div");
+                    const tagsToWrap = tags.splice(0, maxColumnItems);
+
+                    column.classList.add("office-comfort__tag-column");
+
+                    tagsToWrap.forEach((tag) => {
+                        column.append(tag);
+                    });
+
+                    tagsWrapper.append(column);
+                }
+
+                tagsWrapper.classList.remove("moved");
+            }
+        }
+    }
+
     function adaptiveFooter(width) {
         const footerPolicyName = {
             selector: document.querySelector(".footer-policy__name"),
@@ -195,11 +270,13 @@ export default function media() {
     }
 
     function allMedia() {
-        const currentWidth = window.innerWidth;
+        const currentWidth = screen.width;
         adaptiveOfficeForm(currentWidth);
-        adaptiveMapFilters(currentWidth);
         adaptiveFooter(currentWidth);
+        adaptiveMapFilters(currentWidth);
         adaptiveSearchItem(currentWidth);
+        adaptiveBookingForm(currentWidth);
+        unwrapTags(currentWidth);
     }
     window.addEventListener("resize", allMedia);
     allMedia();

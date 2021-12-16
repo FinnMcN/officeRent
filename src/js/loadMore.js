@@ -1,26 +1,53 @@
-export default function addLoadMore() {
-    if ($(".office-comments__item-text").length !== 0) {
-        const _comment = $(".office-comments__item");
-        const _loadMore = jQuery.ajax({
-            url: "loadMore.html",
-            dataType: "html",
-            success: function (response) {
-                $(".office-comments__item-text").each(function () {
-                    if (this.scrollHeight > this.offsetHeight) {
-                        $(response).insertAfter(this);
+export default async function addLoadMore() {
+    const commentsBlock = document.querySelector(".office-comments");
+
+    if (!commentsBlock) {
+        return;
+    }
+    
+    try {
+        const comments = commentsBlock.querySelectorAll(".office-comments__item");
+        const showMoreBtn = await getInnerHtml("../../loadMore.html");
+
+        comments.forEach((comment) => {
+            const commentText = comment.querySelector(".office-comments__item-text");
+            
+            if (commentText.scrollHeight > commentText.offsetHeight) {
+                const btn = showMoreBtn.documentElement
+                    .cloneNode(true)
+                    .querySelector(".show-more-btn");
+                
+
+                btn.addEventListener("click", function () {
+                    if (!this.classList.contains("show-more-btn_active")) {
+                        commentText.classList.add("office-comments__item-text_active");
+                        this.children[0].innerHTML = "Скрыть";
+                        this.classList.add("show-more-btn_active");
+                    } else {
+                        commentText.classList.remove("office-comments__item-text_active");
+                        this.children[0].innerHTML = "Показать еще";
+                        this.classList.remove("show-more-btn_active");
                     }
                 });
-                _comment.each(function () {
-                    if ($(".show__more", this).length !== 0) {
-                        const _commentItem = this;
-                        const _button = $(".show__more", this)[0];
-                        _button.addEventListener("click", function () {
-                            $(".office-comments__item-text", _commentItem).toggleClass("active");
-                        });
-                    }
-                }); 
+                commentText.after(btn);
             }
         });
-            
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+async function getInnerHtml(path) {
+    try {
+        const response = await fetch(path);
+        const responseString = await response.text();
+
+        const parser = new DOMParser();
+        const html = parser.parseFromString(responseString, "text/html"); 
+      
+        return html;
+              
+    } catch (error) {
+        console.error(error);
     }
 }

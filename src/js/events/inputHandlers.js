@@ -1,11 +1,3 @@
-function changeBgInput(start, end) {
-    this.style.background = `linear-gradient(
-                90deg, ${this.defaultColor} ${start}%,
-                ${this.inputColor} ${start}%,
-                ${this.inputColor} ${end}%,
-                ${this.defaultColor} ${end}%
-            )`;
-}
 export function changeInputBg() {
     const currentValue = (this.value / this.max) * 100;
 
@@ -67,4 +59,13 @@ export function setDefaultValues(inputs, start, end) {
         changeInputBg.bind(input)();
         displayValues(input, start, end);
     });
+}
+
+function changeBgInput(start, end) {
+    this.style.background = `linear-gradient(
+                90deg, ${this.defaultColor} ${start}%,
+                ${this.inputColor} ${start}%,
+                ${this.inputColor} ${end}%,
+                ${this.defaultColor} ${end}%
+            )`;
 }

@@ -7,7 +7,7 @@ export default async function addLoadMore() {
     
     try {
         const comments = commentsBlock.querySelectorAll(".office-comments__item");
-        const showMoreBtn = await getInnerHtml("../../loadMore.html");
+        const showMoreBtn = await getInnerHtml("https://finnmcn.github.io/officeRent/loadMore.html");
 
         comments.forEach((comment) => {
             const commentText = comment.querySelector(".office-comments__item-text");
